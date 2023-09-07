@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>헬창놈들</title>
+	<script src="Join/Join.js"></script>
+	<link rel="stylesheet" href="Join/Join.css">
+</head>
+<!--로그인 페이지 만듦-->
+<body>
+	<!--Header-->
+	<div id="headerController"></div>
+	<header id="headContainer">
+		<h1>헬창놈들</h1>
+		<!--Navigation-->
+		<nav id="navSection">
+		
+		</nav>
+	</header>
+	
+	<!--Bodies-->
+	<section id="container">
+		<!--Contents-->
+		<article id="MainSection">
+			<!--LogIn-->
+			<h2>회원가입</h2>
+			<form action="JoinAction.jsp" method="post" onsubmit="return validationCheck()">
+				<div id="formInput">
+					<input type="text" name="USERID" id="Id" placeholder="이메일을 입력하세요">
+					<hr>
+					<input type="password" name="USERPW" id="Pw" placeholder="비밀번호를 입력하세요" minlength="8" maxlength="20">
+					<input type="password" name="USERPWRE" id="PwRe" placeholder="비밀번호를 다시 입력하세요" minlength="8" maxlength="20">
+				</div>
+				<div id="formClick">
+					<div>
+						<a href="#">로그인</a><br>
+						<a href="#">아이디/비밀번호 찾기</a>
+					</div>
+					<label>
+						<a href="#">약관동의</a>
+						<input type="checkbox" name="TERMS" id="Terms" value="">
+					</label>
+				</div>
+				<input type="submit" value="회원가입">
+			</form>
+		</article>
+	</section>
+	
+	<!--Footer-->
+	<footer>
+		@copyright
+	</footer>
+</body>
+</html>
