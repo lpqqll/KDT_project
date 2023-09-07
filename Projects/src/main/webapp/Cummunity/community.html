@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    /* 카테고리 탭 스타일 */
+    .sidenav {
+        height: 100%; width: 200px; position: fixed; z-index: 1;
+        top: 0; left: -150px; /* 왼쪽으로 조금 숨김 */
+        background-color: #202020; padding-top: 20px;
+        transition: left 0.3s;
+    }
+
+    .sidenav:hover, .sidenav.active {
+        left: 0; /* 마우스를 올리거나 활성화 상태일 때 나타남 */
+    }
+
+
+    /* 각각의 카테고리 탭 버튼 스타일 */
+    .sidenav button {
+        background-color: inherit; border: none; outline: none; cursor: pointer;
+        padding: 10px 15px; display: block; width: 100%; text-align: left;
+        transition: 0.3s; color: white;
+    }
+
+    /* 활성 탭 버튼 스타일 */
+    .sidenav button.active {
+        font-size:1.5em; color: rgb(243, 156, 18);
+    }
+
+    /* 카테고리 탭 내용 스타일 */
+    .content {
+        margin-left: 75px;
+        padding: 20px;
+    }
+</style>
+<script>
+    // 현재 활성화된 탭의 ID를 저장할 변수
+    var activeTab = "Community";
+
+    // 네비게이션 바 활성화
+    function activateNav() {
+        var sidenav = document.querySelector('.sidenav');
+        sidenav.classList.add('active');
+    }
+
+    // 네비게이션 바 비활성화
+    function deactivateNav() {
+        var sidenav = document.querySelector('.sidenav');
+        sidenav.classList.remove('active');
+    }
+
+    // 카테고리 탭 열기
+    function openTab(tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+        document.getElementById(activeTab + "-button").classList.remove("active");
+        document.getElementById(tabName + "-button").classList.add("active");
+        activeTab = tabName;
+    }
+
+    // 초기 카테고리 탭 설정
+    openTab("Community");
+</script>
+</head>
+<body>
+
+<div class="sidenav" onmouseover="activateNav()" onmouseout="deactivateNav()">
+    <!-- 오른쪽 일부분 화면 좌측에 넣기 -->
+    <div class="left-placeholder"></div>
+    
+    <!-- 각각의 카테고리 탭 버튼 생성 -->
+    <button class="tablinks" id="Community-button" onclick="openTab('Community')"><b>커뮤니티</b></button>
+    <br/>
+    <button class="tablinks" id="Notice-button" onclick="openTab('Notice')"><b>공지사항</b></button>
+    <button class="tablinks" id="Humor-button" onclick="openTab('Humor')"><b>유머 게시판</b></button>
+    <button class="tablinks" id="Free-button" onclick="openTab('Free')"><b>자유게시판</b></button>
+    <button class="tablinks" id="Tips-button" onclick="openTab('Tips')"><b>팁 게시판</b></button>
+    <button class="tablinks" id="Questions-button" onclick="openTab('Questions')"><b>질문 게시판</b></button>
+</div>
+
+<!-- 카테고리 탭 내용 생성 -->
+<div class="content">
+    <div id="Community" class="tabcontent">
+        커뮤니티 내용이 여기에 들어갑니다.
+    </div>
+
+    <div id="Notice" class="tabcontent">
+        공지사항 내용이 여기에 들어갑니다.
+    </div>
+
+    <div id="Humor" class="tabcontent">
+        유머 게시판 내용이 여기에 들어갑니다.
+    </div>
+
+    <div id="Free" class="tabcontent">
+        자유게시판 내용이 여기에 들어갑니다.
+    </div>
+
+    <div id="Tips" class="tabcontent">
+        팁 게시판 내용이 여기에 들어갑니다.
+    </div>
+
+    <div id="Questions" class="tabcontent">
+        질문 게시판 내용이 여기에 들어갑니다.
+    </div>
+</div>
+
+</body>
+</html>
