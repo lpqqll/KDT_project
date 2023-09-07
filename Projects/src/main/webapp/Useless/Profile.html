@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>헬창놈들</title>
+	
+	<link rel="stylesheet" href="Style/Profile.css">
+	<script src="/Style/MainScript.js"></script>
+	<script src="../../Style/MainScript.js"></script>
+</head>
+<body onload="pop = new PopUp(1);">
+<!--Header-->
+<header id="headContainer">
+	<h1 class="head" id="headLogo" onclick="pop.showNav()">
+		<div>
+			<img src="/Icon/PageLogo_White.png" alt="페이지 로고">
+<!--			<span>헬창놈들</span>-->
+		</div>
+	</h1>
+	<div class="head" id="test2">
+		<span>'대충 유저 아이디'님</span><br>
+		<span>안녕하세요!</span>
+	</div>
+<!--	<ul class="head" onmouseover="showPopUp(2)" onmouseout="hidePopUp(2)">-->
+	<ul class="head" id="test" onclick="pop.showAccount();">
+		<li>
+			<span>계정</span>
+			<ul id="Log0">
+				<li><a href="/Account/Management/Join.html">회원가입</a></li>
+				<li><a href="/Account/Log/In.html">로그인</a></li>
+			</ul>
+			<ul id="Log1">
+				<li><a href="/Account/Management/Profile.html">계정관리</a></li>
+				<li><a href="/Account/Log/OutAction.html">로그아웃</a></li>
+			</ul>
+		</li>
+	</ul>
+</header>
+
+<!--Bodies-->
+<section id="container">
+	<!--Navigation-->
+	<nav id="navSection">
+		<ul>
+			<li><h3><a href="/index.html">HOME</a></h3></li>
+			<hr>
+			<li>
+				<span>계정</span>
+				<ul>
+					<li><a href="#">회원정보관리</a></li>
+					<li><a href="#">비밀번호변경</a></li>
+				</ul>
+			</li>
+			<hr>
+			<li>
+				<span>세트</span>
+				<ul>
+					<li>
+						<label for="dummy">
+							<img class="tab_ico" src="/Icon/CSS.png" alt="">
+						</label>
+						<a href="#" id="dummy">더미데이터1</a>
+					
+					</li>
+					<li><a href="#">더미데이터2</a></li>
+					<li><a href="#">더미데이터3</a></li>
+				</ul>
+			
+			</li>
+			<hr>
+			<li>
+				<span>달력</span>
+				<ul>
+					<li><a href="#">더미데이터1</a></li>
+					<li><a href="#">더미데이터2</a></li>
+					<li><a href="#">더미데이터3</a></li>
+				</ul>
+			
+			</li>
+			<hr>
+			<li>
+				<span>커뮤니티</span>
+				<ul>
+					<li><a href="#">더미데이터1</a></li>
+					<li><a href="#">더미데이터2</a></li>
+					<li><a href="#">더미데이터3</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	
+	<!--Contents-->
+	<article id="MainSection"
+	         onclick="if(pop.nav_condition == true){pop.hideNav()}
+					  if(pop.account_condition == true){pop.hideAccount()}">
+		<!--Content 1-->
+		<div id="FirstArticle">
+			<header>
+				<h1>회원정보관리</h1>
+			</header>
+			<main>
+				<div id="info">
+					<img src="/Account/profile_image/00001.png" alt="">
+					<div id="userInfo">
+						<form action="" method="post">
+							<label><input type="text" name="UsernickName" id="nickName" placeholder="새 닉네임"></label><br>
+							<div id="btn-group">
+								<input type="file" name="file" id="img-file" value="img2">
+								<input type="submit" value="변경" id="submit"><br>
+							</div>
+							<hr>
+						</form>
+						<table>
+							<tr>
+								<th>이름</th>
+								<td>이선왕</td>
+							</tr>
+							<tr>
+								<th>전화번호</th>
+								<td>01072291197</td>
+							</tr>
+							<tr>
+								<th>이메일</th>
+								<td>leiaira92@gmail.com</td>
+							</tr>
+							<tr>
+								<th>가입일</th>
+								<td>2023-06-24</td>
+							</tr>
+						</table>
+						<hr>
+					</div>
+				</div>
+			</main>
+		</div>
+		<!--Content 2-->
+		<div id="SecondArticle">
+			<header>
+				<h3>인바디 관리</h3>
+			</header>
+			<main>
+				<form action="" method="post" id="inbodyInfo">
+					<label><span>신장(Cm)</span><input type="text" name="" placeholder=""></label>
+					<label><span>체중(Kg)</span><input type="text" name="" placeholder=""></label>
+					<label><span>골격근량(Kg)</span><input type="text" name="" placeholder=""></label>
+					<label><span>체지방량(Kg)</span><input type="text" name="" placeholder=""></label>
+					<label><span>복부지방률</span><input type="text" name="" placeholder=""></label>
+					<label><span>내장지방레벨</span><input type="text" name="" placeholder=""></label>
+				</form>
+			</main>
+		</div>
+	</article>
+</section>
+
+<!--Footer-->
+<footer>
+	@copyright
+</footer>
+</body>
+</html>
