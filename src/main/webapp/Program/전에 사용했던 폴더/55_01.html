@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+    #main {
+        width: 440px;
+        height: 440px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        margin: 0 auto;
+    }
+    .clock_view {
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        font-size: 5em;
+        background-color: greenyellow;
+    }
+    #head {
+        padding: 10px 0;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    #cal_view>ul {
+        overflow: auto;
+    }
+    #cal_view li {
+        float: left;
+        width: 14.28%;
+        text-align: center;
+        padding: 10px 0;
+        cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+    }
+    .selected {
+        background-color: lightblue; /* 선택된 날짜의 배경색 */
+    }
+     #monthSelect {
+        position: absolute;
+        top: 135px;
+        right: 600px;
+    }
+</style>
+<script>
+    //달력
+    let weekName = ["일", "월", "화", "수", "목", "금", "토"];
+    function calendar(year, month) {
+
+        let now = new Date(year, month - 1, 1); // 월은 0부터 시작하므로 month - 1
+        let nowDate = now.getDate();
+        let y = now.getFullYear();
+        let m = now.getMonth() + 1; // 월은 0부터 시작하므로 1을 더함
+        let w = now.getDay();
+
+        // 마지막날    new Date(2023, 8, 0)
+        let lastDay = new Date(y, m, 0).getDate();
+
+        let tag = "<div id = 'head'>" + y + "년 " + m + "월" + "</div>";
+
+        tag += "<ul>";
+        for (var i = 0; i < weekName.length; i++) {
+            tag += "<li>" + weekName[i] + "</li>";
+        }
+        for (var i = 1; i <= w; i++) {
+            tag += "<li>&nbsp;</li>";
+        }
+
+        let dayCounter = 1; // 일수 카운터 변수 초기화
+
+        tag += "<ul>";
+     for (var i = 1; i <= lastDay; i++) {
+	    if (i == nowDate) {
+	        tag += "<li class='y selected'>" + i + "</li>";
+	    } else {
+	        tag += "<li>" + i + "</li>";
+	    }
+	
+	    if (i % 7 == 0) { // 7일마다 줄바꿈
+	        tag += "</ul><ul>";
+	   }
+}
+        tag += "</ul>";
+        document.getElementById("cal_view").innerHTML = tag;
+
+        // 각 날짜에 클릭 이벤트 추가
+        let dateCells = document.querySelectorAll("#cal_view li:not(.y)");
+        dateCells.forEach(cell => {
+            cell.addEventListener("click", function () {
+                // 이미 선택된 날짜라면 선택 해제
+                if (cell.classList.contains("selected")) {
+                    cell.classList.remove("selected");
+                } else {
+                    // 선택되지 않은 날짜라면 선택
+                    cell.classList.add("selected");
+                     
+                }
+            });
+        });
+    }
+
+    window.onload = function () {
+        let now = new Date();
+        let year = now.getFullYear();
+        let month = now.getMonth() + 1;
+        calendar(year, month);
+    }
+</script>
+<body>
+    <div id="main">
+        <div class="clock_view">5X5 운동</div>
+        <div id="cal_view"></div>
+        <select id="monthSelect" onchange="changeMonth()"> 
+            <option value="1">1월</option>
+            <option value="2">2월</option>
+            <option value="3">3월</option>
+            <option value="4">4월</option>
+            <option value="5">5월</option>
+            <option value="6">6월</option>
+            <option value="7">7월</option>
+            <option value="8">8월</option>
+            <option value="9">9월</option>
+            <option value="10">10월</option>
+            <option value="11">11월</option>
+            <option value="12">12월</option>
+        </select>
+    </div>
+    <script>
+        function changeMonth() {
+            let select = document.getElementById("monthSelect");
+            let selectedMonth = select.options[select.selectedIndex].value;
+            let now = new Date();
+            let year = now.getFullYear();
+            calendar(year, selectedMonth);
+        }
+    </script>
+</body>
+</html>

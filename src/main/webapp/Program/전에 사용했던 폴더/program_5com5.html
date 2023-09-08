@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5x5 Workout Program</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  #calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .day {
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<h1>5x5 Workout Calendar</h1>
+<div id="calendar"></div>
+<div id="inputForm">
+  <h2>Enter Start Date and 5RM for Each Exercise</h2>
+  <form id="dateForm">
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" required><br>
+    
+    <label for="squat5RM">Squat 5RM:</label>
+    <input type="number" id="squat5RM" required><br>
+    
+    <label for="bench5RM">Bench Press 5RM:</label>
+    <input type="number" id="bench5RM" required><br>
+    
+    <label for="row5RM">Bent Over Row 5RM:</label>
+    <input type="number" id="row5RM" required><br>
+    
+    <label for="ohp5RM">Overhead Press 5RM:</label>
+    <input type="number" id="ohp5RM" required><br>
+    
+    <label for="deadlift1RM">Deadlift 1RM:</label>
+    <input type="number" id="deadlift1RM" required><br>
+    
+    <button type="submit">Generate Calendar</button>
+  </form>
+</div>
+
+<script>
+let startDate;
+const routine = ["A", "B", "A", "B"];
+
+const exercises = {
+  A: ["Squat 5x5", "Bench Press 5x5", "Bent Over Row 5x5"],
+  B: ["Squat 5x5", "Overhead Press 5x5", "Deadlift 1x5"]
+};
+
+function generateCalendar() {
+  const calendar = document.getElementById("calendar");
+  calendar.innerHTML = "";
+
+  const currentDate = new Date(startDate);
+  
+  let week = 1;
+  let dayInWeek = 0;
+
+  while (week <= 5) {
+    if (dayInWeek === 0) {
+      const weekStart = new Date(currentDate);
+      weekStart.setDate(currentDate.getDate() - (dayInWeek + 2)); // 세트 B 완료 후 2일 전
+      const weekEnd = new Date(currentDate);
+      weekEnd.setDate(currentDate.getDate() + 2); // 세트 A 완료 후 2일 뒤
+      
+      const weekContent = document.createElement("div");
+      weekContent.innerHTML = `
+        <p>Week ${week}</p>
+        <p>${weekStart.toDateString()} - ${weekEnd.toDateString()}</p>
+      `;
+      calendar.appendChild(weekContent);
+    }
+
+    const dateString = currentDate.toISOString().split("T")[0];
+    const dayElement = document.createElement("div");
+    dayElement.className = "day";
+    dayElement.textContent = currentDate.getDate();
+
+    const exercise = exercises[routine[dayInWeek]];
+    const contentElement = document.createElement("p");
+    contentElement.textContent = exercise.join(", ");
+    dayElement.appendChild(contentElement);
+
+    calendar.appendChild(dayElement);
+
+    currentDate.setDate(currentDate.getDate() + 1);
+
+    // 각 세트 뒤에 휴식 추가
+    if (routine[dayInWeek] === "A") {
+      currentDate.setDate(currentDate.getDate() + 1); // 휴식
+    } else if (routine[dayInWeek] === "B") {
+      currentDate.setDate(currentDate.getDate() + 2); // 휴식
+    }
+
+    dayInWeek = (dayInWeek + 1) % routine.length;
+    if (dayInWeek === 0) week++;
+  }
+}
+
+const dateForm = document.getElementById("dateForm");
+dateForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  startDate = document.getElementById("startDate").value;
+  generateCalendar();
+});
+
+</script>
+</body>
+</html>
