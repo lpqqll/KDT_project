@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>헬창놈들</title>
+	<style>
+			#MainSection>form{
+					width: 800px;
+					border : 1px solid white;
+					padding: 20px 30px;
+					margin-left : 40%;
+					margin-top : 4%;
+		   }
+
+	</style>
+	<link rel="stylesheet" href="Style/Program_ID.css">
+	
+</head>
+
+<body>
+	<!--Header-->
+	<header id="headContainer">
+		<h1>헬창놈들</h1>
+	</header>
+	
+	<!--Bodies-->
+	<section id="container">
+		<!--Navigation-->
+		<nav id="navSection">
+		
+		</nav>
+		
+		<!--Contents-->
+		<article id="MainSection">
+			<form id = "InputData">
+				
+				<label for = "Squat5RM">Squat 5RM :&nbsp;</label>
+				<input type = "number" id="SquatData" placeholder="5RM을 입력하세요." required><br><br> 
+				
+				<label for = "BenchPress5RM">Bench Press 5RM:&nbsp;</label>
+				<input type = "number" id="BenchData" placeholder="5RM을 입력하세요." required><br><br>
+				
+				<label for = "DeadLift5RM">Dead Lift 5RM :&nbsp;</label>
+				<input type = "number" id="DeadData" placeholder="5RM을 입력하세요." required><br><br>
+							
+				<label for = "ChinUpWeight">Chin-Up :&nbsp;</label>
+				<input type = "number" id="ChinUpData" placeholder="본인 체중을 입력하세요." required><br><br>
+				
+				 <input type = "reset" value="Reset">
+				 <input type = "submit" value="Done">
+				
+			</form>
+				
+		</article>
+	</section>
+	
+	<!--Footer-->
+	<footer>
+		@copyright
+	</footer>
+</body>
+</html>

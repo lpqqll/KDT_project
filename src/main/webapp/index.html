@@ -1,51 +1,102 @@
-<!--<%@ page contentType="text/html;charset=UTF-8" language="java" %>-->
+<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>헬창놈들</title>
-	<link rel="stylesheet" href="Style/Main.css">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+	.main_top {
+	    background-color: #fff;
+	    border: 1px solid red;
+	    text-align: center;
+	    padding: 20px;
+	}
+	
+	    /* 헤더 스타일 */
+	.header {
+	    background-color: #333;
+	    color: #fff;
+	    display: flex;
+	    justify-content: space-around;
+	    align-items: center;
+	    padding: 75px 40px;
+	    
+	}
+	
+	.header ul {
+	    list-style: none;
+	    margin: 0;
+	    padding: 0;
+	    display: flex;
+	    
+	}
+	
+	.header li {
+	    margin-right: 10px;
+	}
+	
+	.header li:last-child {
+	    margin-right: 0px; 
+	}
+	
+	.header a {
+	    text-decoration: none;
+	    color: #fff;
+	}
+	
+	.login-button {
+	    background-color: #ff5733;
+	    color: #fff;
+	    padding: 5px 10px;
+	    border: none;
+	    border-radius: 5px;
+	    cursor: pointer;
+	}
+    .login-signup {
+        display: flex;
+        align-items: center;
+    }
+
+    .login-signup .login-button {
+        margin-right: 10px;
+    }
+</style>
 </head>
+
 <body>
-<!--Header-->
-    <header id="headContainer">
-	    <!--Logo-->
-        <h1 class="head">
-	        <img src="_Icon/PageLogo_White.png" alt="헬창놈들 로고">
+    <!-- 헤더 -->
+    <div class="header">
+        <ul>
+            <li><a href="Program/Program.html">프로그램</a></li>
+            <li><a href="Community/community.html">커뮤니티</a></li>
+            <li><a href="#">더미1</a></li>
+            <li><a href="#">더미2</a></li>
+        </ul>
+        <div class="login-signup">
+            <button class="login-button"><a href="Account/LogIn.html">로그인</a></button>
+            <button class="login-button"><a href="Account/Join.html">회원가입</a></button>
+        </div>
+    </div>
+
+    <!-- 내용 -->
+    <div class="main_top">
+        <h1 style="text-shadow:2px 2px 4px rgba(0, 0, 0, 0.1)" class="main_text">
+            NOTHING WILL <br> WORK UNLESS <br>YOU DO.<br>
+            <span class="">텍스트 입력 테스트</span>
         </h1>
-        <!--Navigation-->
-        <nav class="head" id="navSection">
-	        <ul>
-		        <li><a href="">프로젝트</a></li>
-		        <li><a href="">커뮤니티</a></li>
-		        <li><a href="">데시보드</a></li>
-		        <li><a href="">광고???</a></li>
-	        </ul>
-        </nav>
-	    <!--Account-->
-	    <div class="head" id="Auth">
-		    <!--Authentication passed-->
-		    
-		    <!--Authentication NONE-->
-		    <ul>
-			    <li><a href="Account/LogIn.html"><span>로그인</span></a></li>
-			    <li><a href="Account/Join.html"><span>회원가입</span></a></li>
-		    </ul>
-	    </div>
-    </header>
+        <div class="">
+            <p style="line-break:strict;word-break:keep-all" class="">
+                나에게 가장 알맞은 운동 프로그램을 생성하고
+                <br>더욱 효과적으로 득근하세요!
+            </p>
+            <div class="">
+                <a class="" href="/start.html">시작하기</a>
+            </div>
+        </div>
+    </div>
 
+    <div class=""></div>
 
-    <!--Bodies-->
-    <section id="container">
-        <!--Contents-->
-        <article id="MainSection">
-
-        </article>
-    </section>
-	<!-- 커밋 2 -->
-    <!--Footer-->
-    <footer>
-        @copyright
-    </footer>
 </body>
 </html>
