@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>헬창놈들</title>
+	
+	<link rel="stylesheet" href="Style/Program.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	<script>
+		//1번 사진
+		$(function(){
+			$("#dialogOpen1_1").click(function(){
+				$("#dialog1_1").dialog('open');
+				
+			});
+			
+			$("#dialog1_1").dialog({
+				autoOpen : false
+				,buttons : {
+					START : function(){
+						location.href = "Program_ID.html"
+					}
+				}
+				, width : 1000
+				, height : 500
+				, modal : true
+			})
+		})
+		
+		//2번 사진
+		$(function(){
+			$("#dialogOpen1_2").click(function(){
+				$("#dialog1_2").dialog('open');
+				
+			});
+			
+			$("#dialog1_2").dialog({
+				autoOpen : false
+				,buttons : {
+					시작하기 : function(){
+						location.href = "Program_ID.html"
+					}
+				}
+				, width : 1000
+				, height : 500
+				
+				, modal : true
+			})
+		})
+	</script>
+<style>
+
+	</style>
+
+</head>
+
+<body>
+	<!--Header-->
+	<header id="headContainer">
+		<h1>헬창놈들</h1>
+	</header>
+	
+	<!--Bodies-->
+	<section id="container">
+		<!--Navigation-->
+		<nav id="navSection">
+		
+		</nav>
+		
+		<!--Contents-->
+		<article id="MainSection">
+			
+				<ul id = "top">
+						<!--1행1열-->
+						<div id = "dialogOpen1_1" ><img src = "../Program/img/taxasMethodLogo.PNG"></div>
+						<div id = "dialog1_1" title = "Strong Lift 5*5 Program" >
+							<ul>
+											<img src = "../Program/img/taxasMethodLogo.PNG"><br>
+												<li><p>
+												스트롱리프트 5×5 루틴은 3대 운동을 포함해 큰 근육을 타겟으로 수행되는 운동 루틴으로 초보자가 근력과 근육량을 빠르게 늘릴 수 있습니다.<br> 
+												스트롱리프트 5×5는 각 운동을 5회, 5세트 진행하기 때문에 다른 루틴보다 고중량으로 운동을 수행하게 됩니다.<Br>
+												세트 수와 반복 횟수가 적기 때문에 그만큼 무거운 중량으로 운동을 수행해야 합니다.<br>
+												본 루틴은 일반적으로 1RM의 70~80% 중량으로 수행하데 초보자의 경우 1RM 측정도 어렵고 처음부터 고중량으로 루틴을 수행하기 부담스러울 수 있습니다.<br>
+												하지만 스토링리프트 5×5 루틴 자체에 중량을 늘리는 프로그램이 설정되어 있기 때문에 수행 강도(중량)에 너무 신경 쓸 필요는 없습니다.<br>
+												본인이 5회 5세트를 겨우 채울 수 있는 정도의 무게로 시작하면 됩니다. 정확하지 않아도 됩니다.<br>
+												중량은 루틴이 종료되고 다시 루틴을 시작할 때 증가시킵니다.<br>
+												루틴은 A, B SET로 구성되며 각 세트 마지막에 팔과 복근 운동을 선택적으로 추가할 수 있습니다.<br>
+												A SET : 스쿼트 / 벤치 프레스 / 바벨 로우<br>
+												B SET : 스쿼트 / 밀리터리 프레스 / 데드리프트<br></p></li>
+							</ul>
+						</div>
+						
+						<!--1행2열-->
+						<div id = "dialogOpen1_2" ><img src = "../Program/img/taxasMethodLogo.PNG">
+						<div id = "dialog1_2" title = "Strong Lift 5*5 Program">
+							<ul>
+											<img src = "../Program/img/taxasMethodLogo.PNG"><br>
+												<li><p>
+							</ul>
+						</div>
+						
+						<!--1행3열-->
+						<div id = "dialogOpen1_3" ><img src = "../Program/img/taxasMethodLogo.PNG"></div>
+				</ul>
+				
+				
+				<ul id = "middle">
+					<!--2행1열-->
+						<a href =""><img src = "../Program/img/btn.png" style = "float:left;margin-right: 125px;"></a>
+						
+					<!--2행2열-->
+						<a href =""><img src = "../Program/img/btn.png" style = "float:center;"></a>
+					
+					<!--2행3열-->
+						<a href =""><img src = "../Program/img/btn.png" style = "float:right;"></a>
+				</ul>
+			
+				
+				<ul id = "bottom">
+					<!--3행1열-->
+						<a href =""><img src = "../Program/img/strLift55.PNG" style = "float:left;margin-right: 125px;"></a>
+					
+					<!--3행2열-->
+						<a href =""><img src = "../Program/img/strLift55.PNG" style = "float:center;"></a>
+					
+					<!--3행3열-->
+						<a href =""><img src = "../Program/img/strLift55.PNG" style = "float:right;"></a>
+				</ul>
+	
+		</article>
+	</section>
+	
+	<!--Footer-->
+	<footer>
+		@copyright
+	</footer>
+</body>
+</html>
