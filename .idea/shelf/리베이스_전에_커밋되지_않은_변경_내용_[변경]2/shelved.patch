@@ -1,0 +1,1208 @@
+Index: src/main/webapp/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!--<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>-->\n<html>\n<head>\n\t<meta charset=\"UTF-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>헬창놈들</title>\n\t<link rel=\"stylesheet\" href=\"Style/Main.css\">\n</head>\n<body>\n<!--Header-->\n    <header id=\"headContainer\">\n\t    <!--Logo-->\n        <h1 class=\"head\">\n\t        <img src=\"_Icon/PageLogo_White.png\" alt=\"헬창놈들 로고\">\n        </h1>\n        <!--Navigation-->\n        <nav class=\"head\" id=\"navSection\">\n\t        <ul>\n\t\t        <li><a href=\"\">프로젝트</a></li>\n\t\t        <li><a href=\"\">커뮤니티</a></li>\n\t\t        <li><a href=\"\">데시보드</a></li>\n\t\t        <li><a href=\"\">광고???</a></li>\n\t        </ul>\n        </nav>\n\t    <!--Account-->\n\t    <div class=\"head\" id=\"Auth\">\n\t\t    <!--Authentication passed-->\n\t\t    \n\t\t    <!--Authentication NONE-->\n\t\t    <ul>\n\t\t\t    <li><a href=\"Account/LogIn.html\"><span>로그인</span></a></li>\n\t\t\t    <li><a href=\"Account/Join.html\"><span>회원가입</span></a></li>\n\t\t    </ul>\n\t    </div>\n    </header>\n\n\n    <!--Bodies-->\n    <section id=\"container\">\n        <!--Contents-->\n        <article id=\"MainSection\">\n\n        </article>\n    </section>\n\t<!-- 커밋 0404 -->\n    <!--Footer-->\n    <footer>\n        @copyright\n    </footer>\n</body>\n</html>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/index.html b/src/main/webapp/index.html
+--- a/src/main/webapp/index.html	(revision 47d2786b6ea6f94ccca0c74388037cdf9fd45038)
++++ b/src/main/webapp/index.html	(date 1694344083644)
+@@ -3,49 +3,47 @@
+ <head>
+ 	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+-    <title>헬창놈들</title>
++	<title>헬창놈들</title>
+ 	<link rel="stylesheet" href="Style/Main.css">
++	<script src="Script/Account.js"></script>
+ </head>
+-<body>
++<body onload="acc = new Account(true);">
+ <!--Header-->
+-    <header id="headContainer">
+-	    <!--Logo-->
+-        <h1 class="head">
+-	        <img src="_Icon/PageLogo_White.png" alt="헬창놈들 로고">
+-        </h1>
+-        <!--Navigation-->
+-        <nav class="head" id="navSection">
+-	        <ul>
+-		        <li><a href="">프로젝트</a></li>
+-		        <li><a href="">커뮤니티</a></li>
+-		        <li><a href="">데시보드</a></li>
+-		        <li><a href="">광고???</a></li>
+-	        </ul>
+-        </nav>
+-	    <!--Account-->
+-	    <div class="head" id="Auth">
+-		    <!--Authentication passed-->
+-		    
+-		    <!--Authentication NONE-->
+-		    <ul>
+-			    <li><a href="Account/LogIn.html"><span>로그인</span></a></li>
+-			    <li><a href="Account/Join.html"><span>회원가입</span></a></li>
+-		    </ul>
+-	    </div>
+-    </header>
++<header id="headContainer">
++	<!--Logo-->
++	<h1 class="head" id="Logo">
++		<a href="index.html">
++			<img src="_Icon/PageLogo_White.png" alt="헬창놈들 로고">
++		</a>
++	</h1>
++	<!--Navigation-->
++	<nav class="head" id="Nav">
++		<ul>
++			<li><a href="#">Project</a></li>
++			<li><a href="#">Community</a></li>
++			<li><a href="#">Reviews</a></li>
++			<li><a href="#">Advertisement</a></li>
++		</ul>
++	</nav>
++	<!--Account-->
++	<div class="head" id="Auth">
++		<!--Authentication passed-->
++		<!--Authentication NONE-->
++	</div>
++</header>
+ 
+ 
+-    <!--Bodies-->
+-    <section id="container">
+-        <!--Contents-->
+-        <article id="MainSection">
+-
+-        </article>
+-    </section>
+-	<!-- 커밋 0404 -->
+-    <!--Footer-->
+-    <footer>
+-        @copyright
+-    </footer>
++<!--Bodies-->
++<section id="container" onclick="acc.hideAccount();">
++	<!--Contents-->
++	<article id="MainSection">
++	
++	</article>
++</section>
++
++<!--Footer-->
++<footer>
++	@copyright
++</footer>
+ </body>
+ </html>
+Index: src/main/webapp/Account/Join/Join.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@import \"../../Style/MainFrame.css\";\n\n/*회원가입//////////////////////////////////////////////////////////////////*/\n#MainSection{\n    margin: 10px auto;\n    padding: 30px;\n    width: 100%;\n    max-width: 750px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n#MainSection>h2{\n    width: 100%;\n    font-size: 2rem;\n    margin: 10px;\n    margin-bottom: 20px;\n    padding-bottom: 20px;\n    color: rgb(255, 159, 41);\n\n    border-bottom: 2px solid white;\n}\n#MainSection>form{\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n}\n/*Form태그 내부의 입력 관련한 내용*/\n#formInput{\n    margin-bottom: 10px;\n}\n#formInput>input{\n    width: 100%;\n    height: 50px;\n    margin-bottom: 10px;\n    padding-left: 10px;\n    border: 2px solid white;\n    border-radius: 10px;\n    font-size: 1rem;\n}\n#formInput>hr{\n    margin-bottom: 20px;\n}\n/*Form태그 내부의 클릭 관련한 내용*/\n#formClick{\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    margin-bottom: 20px;\n}\n/*회원가입/아이디 비밀번호 찾기*/\n#formClick>div{\n    flex-grow: 1;\n}\n/*이용 약관*/\n#formClick>label{\n    display: flex;\n    flex-grow: 1;\n    justify-content: flex-end;\n    height: 20px;\n}\n#formClick>label>#Terms {\n    width: 20px;\n    height: 20px;\n    margin: 0 0 0 10px;\n}\n#formClick>label>#Terms:checked{\n    accent-color: rgb(255, 159, 41);\n}\n/*로그인 버튼*/\n#MainSection>form>input{\n    height: 50px;\n    border: 1px solid white;\n    border-radius: 5px;\n    flex-grow: 1;\n    background-color: rgb(255, 159, 41);\n    color: black;\n    font-size: 1rem;\n    font-weight: 800;\n}\n/*회원가입//////////////////////////////////////////////////////////////////*/
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/Account/Join/Join.css b/src/main/webapp/Account/Join/Join.css
+--- a/src/main/webapp/Account/Join/Join.css	(revision 47d2786b6ea6f94ccca0c74388037cdf9fd45038)
++++ b/src/main/webapp/Account/Join/Join.css	(date 1694344038004)
+@@ -1,6 +1,16 @@
+ @import "../../Style/MainFrame.css";
+-
++body{
++    background-color: #202020;
++}
+ /*회원가입//////////////////////////////////////////////////////////////////*/
++#container{
++    color: white;
++    text-decoration: none;
++}
++a{
++    text-decoration: none;
++    color: white;
++}
+ #MainSection{
+     margin: 10px auto;
+     padding: 30px;
+Index: src/main/webapp/Style/MainFrame.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>*{\n    box-sizing: border-box;\n    background-color: #202020;\n    /*background-color: black;*/\n    color: white;\n}\nhtml {\n    height: 100%;\n}\nbody{\n    height: calc(100% - 100px);\n    margin: 0px;\n}\n\n/*Header 페이지*/\n/*#headerController{\n    position: fixed;\n    top: 0px;\n\n    !*background-color: mediumpurple;*!\n    width: 100%;\n    height: 10px;\n}*/\n#headContainer, #headContainer>*, #headContainer>*>*, #headContainer>*>*>*,#headContainer>*>*>*>*  {\n    background-color: black;\n    text-decoration: none;\n    align-items: center;\n    list-style: none;\n}\n#headContainer{\n    position: fixed;\n    display: flex;\n    top: 0px;\n    left: 0px;\n\n    /*top: 10px;*/\n    /*left: 50%;*/\n    /*transform: translate(-50%, -100px);*/\n    /*transform: translateX(-50%);*/\n    /*transform: translateY(-100px);*/\n    /*width: 80%;*/\n    /*max-width: 1500px;*/\n\n    width: 100%;\n    height: 75px;\n    border-radius: 5px;\n    box-shadow: 0 8px 10px -5px black;\n    /*box-shadow: 0 8px 10px -5px #15ae84;*/\n    /*border-bottom: 2px solid #15ae84;*/\n\n    transition-delay: 0.7s;\n    transition: 0.3s ease;\n    z-index: 100;\n}\n.head{\n    flex-grow: 1;\n    flex-direction: column;\n    flex-basis: 33%;\n\n    justify-content: space-between;\n}\n#headContainer>h1{\n    color: rgb(255, 159, 41);\n    padding-left: 20px;\n    min-width: 200px;\n}\n#headContainer>h1>img{\n    align-items: center;\n    width: max-content;\n    display: flex;\n}\n#headContainer>h1>img{\n    height: 50px;\n    color: rgb(255, 159, 41);\n}\n\n\n\n\n\n\n/*bodies 페이지*/\n#container{\n    display: flex;\n    flex-direction: row;\n    /*padding: 10px;*/\n    /*justify-content: center;*/\n}\n/*전체 리스트 설정*/\n#navSection{\n\n}\n\n\n\n/*footer 페이지*/\n#container{\n    margin-top: 75px;\n    min-height: calc(100% - 50px);\n    width: 100%;\n}\nfooter{\n    position: absolute;\n    z-index: 100 !important;\n    width: 100%;\n    height: 75px;\n\n    background-color: black;\n    /*border-top: 2px solid #15ae84;*/\n    border-top-right-radius: 10px;\n    border-top-left-radius: 10px;\n\n    text-align: center;\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/Style/MainFrame.css b/src/main/webapp/Style/MainFrame.css
+--- a/src/main/webapp/Style/MainFrame.css	(revision 47d2786b6ea6f94ccca0c74388037cdf9fd45038)
++++ b/src/main/webapp/Style/MainFrame.css	(date 1694343924699)
+@@ -1,82 +1,144 @@
+ *{
+     box-sizing: border-box;
+-    background-color: #202020;
+-    /*background-color: black;*/
+-    color: white;
+ }
+ html {
+     height: 100%;
+ }
+ body{
+     height: calc(100% - 100px);
+-    margin: 0px;
++    margin: 0;
++    /*background-color: #202020;*/
+ }
+ 
+ /*Header 페이지*/
+-/*#headerController{
+-    position: fixed;
+-    top: 0px;
+-
+-    !*background-color: mediumpurple;*!
+-    width: 100%;
+-    height: 10px;
+-}*/
+-#headContainer, #headContainer>*, #headContainer>*>*, #headContainer>*>*>*,#headContainer>*>*>*>*  {
+-    background-color: black;
++#headContainer *{
++    color: white;
+     text-decoration: none;
+-    align-items: center;
+     list-style: none;
+ }
+ #headContainer{
++    background-color: black;
+     position: fixed;
+     display: flex;
+-    top: 0px;
+-    left: 0px;
+-
+-    /*top: 10px;*/
+-    /*left: 50%;*/
+-    /*transform: translate(-50%, -100px);*/
+-    /*transform: translateX(-50%);*/
+-    /*transform: translateY(-100px);*/
+-    /*width: 80%;*/
+-    /*max-width: 1500px;*/
+-
++    top: 0;
++    left: 0;
+     width: 100%;
+     height: 75px;
+     border-radius: 5px;
+     box-shadow: 0 8px 10px -5px black;
+-    /*box-shadow: 0 8px 10px -5px #15ae84;*/
+-    /*border-bottom: 2px solid #15ae84;*/
+-
+-    transition-delay: 0.7s;
+-    transition: 0.3s ease;
+-    z-index: 100;
++    justify-content: center;
+ }
+ .head{
++    max-width: 400px;
++    height: 100%;
++    /*콘텐츠 너비 배분*/
+     flex-grow: 1;
+     flex-direction: column;
+     flex-basis: 33%;
+-
+-    justify-content: space-between;
+-}
+-#headContainer>h1{
+-    color: rgb(255, 159, 41);
+-    padding-left: 20px;
+-    min-width: 200px;
+-}
+-#headContainer>h1>img{
++    /*하위 속성 정렬*/
++    display: flex;
++    justify-content: center;
+     align-items: center;
++}
++/*Logo*/
++#Logo{
++    color: #FF9F29;
++    min-width: 150px;
++    margin: 0;
++}
++#Logo>a>img{
++    height: 50px;
++    color: #FF9F29;
++}
++
++/*Navigation*/
++#Nav>ul{
++    margin: 0;
++    padding: 0;
++    display: flex;
++    flex-direction: row;
++}
++#Nav>ul>li{
++    padding: 5px;
++    text-align: center;
++}
++#Nav>ul>li>a{
++    transition: 0.25s ease;
++}
++#Nav>ul>li>a:hover{
++    color: #FF9F29;
++    /*border-bottom: 2px solid #1A4D2E;*/
++    text-decoration: underline;
++    transition: 0.5s;
++}
++
++
++/*Account*/
++#Auth>ul{
++    margin: 0;
++    padding: 0;
++    display: flex;
++    justify-content: right;
++}
++#Auth>#SessionNone>li{
++    width: 80px;
++    height: 35px;
++    margin: 5px;
++    border-radius: 5px;
++}
++#Auth>#SessionNone>li>a{
++    height: 35px;
++    display: block;
++    border-radius: 5px;
++    text-align: center;
++    line-height: 35px;
++}
++#join{
++    background-color: #202020;
++}
++#join:hover{
++    background-color: #FF9F29;
++    /*background-color: #1A4D2E;*/
++}
++#Auth>#SessionIn li{
++    font-size: 0.8rem;
++    text-align: right;
++    margin: auto;
++}
++#Auth>#SessionIn>li>img{
++    width: 35px;
++    height: 35px;
++    margin: 5px;
++    border-radius: 35px;
++}
++
++#management{
++    position: absolute;
++    background: #202020;
++    border: 1px solid white;
++    border-radius: 10px;
++    box-shadow: 0 0 5px 0 white;
++    padding: 0;
++    top: 75px;
++    right: auto;
++    visibility: hidden;/*문제가 있을경우 지우고 display처리*/
++    flex-direction: column;
+     width: max-content;
+-    display: flex;
++    height: max-content;
++}
++#management>span{
++    margin: 10px;
++    padding: 10px;
++    border-bottom: 2px solid white;
+ }
+-#headContainer>h1>img{
+-    height: 50px;
+-    color: rgb(255, 159, 41);
++#management>li{
++    text-align: center;
+ }
+-
+-
+-
+-
++#management>li>a{
++    margin: 5px;
++    padding: 10px;
++    display: block;
++}
+ 
+ 
+ /*bodies 페이지*/
+@@ -85,10 +147,7 @@
+     flex-direction: row;
+     /*padding: 10px;*/
+     /*justify-content: center;*/
+-}
+-/*전체 리스트 설정*/
+-#navSection{
+-
++    /*background-color: black;*/
+ }
+ 
+ 
+@@ -100,6 +159,7 @@
+     width: 100%;
+ }
+ footer{
++    color: white;
+     position: absolute;
+     z-index: 100 !important;
+     width: 100%;
+@@ -111,4 +171,36 @@
+     border-top-left-radius: 10px;
+ 
+     text-align: center;
+-}
+\ No newline at end of file
++}
++
++
++/*//////////////////////////////////////////////////////////////////////*/
++@media(max-width: 800px) {
++    #headContainer{
++        border-bottom-right-radius: 0px;
++        border-bottom-left-radius: 0px;
++    }
++    #Nav{
++        background-color: black;
++        border-bottom-right-radius: 5px;
++        border-bottom-left-radius: 5px;
++        position: fixed;
++        top: 75px;
++        right: 0px;
++        width: 100%;
++        min-width: 100%;
++        height: 30px;
++    }
++    #Nav>ul{
++        max-width: 600px;
++        width: 100%;
++    }
++    #Nav>ul>li{
++        flex-grow: 1;
++        /*flex-basis: 100px;*/
++    }
++    #management{
++        top: 105px;
++    }
++}
++/*//////////////////////////////////////////////////////////////////////*/
+\ No newline at end of file
+Index: src/main/webapp/Account/Join/Join.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>function validationCheck(){\n    let userid = document.getElementById(\"Id\").value;\n    console.log(userid);\n    let Email_reg = /^\\w{4,14}[@][a-z]{2,8}[.][a-z]{2,3}([.][a-z]{2,3})?$/;\n    if (userid === \"\"){\n        alert(\"이메일을 입력하세요.\");\n        return false;\n    } else if(!Email_reg.test(userid)){\n        alert(\"이메일을 잘못 입력하셨습니다.\");\n        return false;\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/Account/Join/Join.js b/src/main/webapp/Account/Join/Join.js
+--- a/src/main/webapp/Account/Join/Join.js	(revision 47d2786b6ea6f94ccca0c74388037cdf9fd45038)
++++ b/src/main/webapp/Account/Join/Join.js	(date 1694344044342)
+@@ -1,6 +1,5 @@
+ function validationCheck(){
+     let userid = document.getElementById("Id").value;
+-    console.log(userid);
+     let Email_reg = /^\w{4,14}[@][a-z]{2,8}[.][a-z]{2,3}([.][a-z]{2,3})?$/;
+     if (userid === ""){
+         alert("이메일을 입력하세요.");
+@@ -9,4 +8,10 @@
+         alert("이메일을 잘못 입력하셨습니다.");
+         return false;
+     }
++    let UserPw = document.getElementById("Pw").value;
++    let PwCheck = document.getElementById("Pw_Check").value;
++    if(UserPw != PwCheck){
++        alert("비밀번호가 같지 않습니다");
++        return false;
++    }
+ }
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"b3d0235d-268b-40a1-8447-4ce7488f80f3\" name=\"변경\" comment=\"ㅎㅇㄹㅎ\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Rebase.Settings\">\n    <option name=\"NEW_BASE\" value=\"origin/main\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"LSW\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\"><![CDATA[{\n  \"lastFilter\": {\n    \"state\": \"OPEN\",\n    \"assignee\": \"Leia1ra\"\n  }\n}]]></component>\n  <component name=\"GithubPullRequestsUISettings\">\n    <option name=\"selectedUrlAndAccountId\">\n      <UrlAndAccount>\n        <option name=\"accountId\" value=\"47647a87-540c-4ea6-9852-1e1ceae2d23e\" />\n        <option name=\"url\" value=\"https://github.com/lpqqll/KDT_project.git\" />\n      </UrlAndAccount>\n    </option>\n  </component>\n  <component name=\"MacroExpansionManager\">\n    <option name=\"directoryName\" value=\"mouxnkxa\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 8\n}</component>\n  <component name=\"ProjectId\" id=\"2V3RLnewWWTCw0Rh0ef7eEFPnck\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;LSW&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/Users/leia_ira/Documents/GitHub/KDT_project&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"애플리케이션 수준\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"디폴트 작업\">\n      <changelist id=\"b3d0235d-268b-40a1-8447-4ce7488f80f3\" name=\"변경\" comment=\"\" />\n      <created>1694062730914</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1694062730914</updated>\n      <workItem from=\"1694062732286\" duration=\"1039000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"ㅎㅇㄹㅎ\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"ㅎㅇㄹㅎ\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 47d2786b6ea6f94ccca0c74388037cdf9fd45038)
++++ b/.idea/workspace.xml	(date 1694344217292)
+@@ -4,7 +4,22 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="b3d0235d-268b-40a1-8447-4ce7488f80f3" name="변경" comment="ㅎㅇㄹㅎ" />
++    <list default="true" id="b3d0235d-268b-40a1-8447-4ce7488f80f3" name="변경" comment="ㅎㅇㄹㅎ">
++      <change afterPath="$PROJECT_DIR$/src/main/webapp/Account/Join/JoinAction.jsp" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/webapp/Account/Login/LogInAction.jsp" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/webapp/Account/MyPage.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/webapp/Account/MyPage/MyPage.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/webapp/Script/Account.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/webapp/Style/Fox.png" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/webapp/Account/Join.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Account/Join.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/webapp/Account/Join/Join.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Account/Join/Join.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/webapp/Account/Join/Join.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Account/Join/Join.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/webapp/Account/LogIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Account/LogIn.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/webapp/Account/Login/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Account/Login/Login.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/webapp/Style/MainFrame.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Style/MainFrame.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -21,12 +36,12 @@
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+-  "lastFilter": {
+-    "state": "OPEN",
+-    "assignee": "Leia1ra"
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;,
++    &quot;assignee&quot;: &quot;Leia1ra&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="GithubPullRequestsUISettings">
+     <option name="selectedUrlAndAccountId">
+       <UrlAndAccount>
+@@ -49,20 +64,30 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;LSW&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;/Users/leia_ira/Documents/GitHub/KDT_project&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "git-widget-placeholder": "LSW",
++    "last_opened_file_path": "/Users/leia_ira/Documents/GitHub/KDT_project/src/main/webapp/Account/Join",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
++  <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$/src/main/webapp/Account/Join" />
++      <recent name="$PROJECT_DIR$/src/main/webapp/Account/Login" />
++      <recent name="$PROJECT_DIR$/src/main/webapp/Account" />
++      <recent name="$PROJECT_DIR$/src/main/webapp" />
++      <recent name="$PROJECT_DIR$/src/main/webapp/Style" />
++    </key>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="디폴트 작업">
+Index: src/main/webapp/Account/Join/JoinAction.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/Account/Join/JoinAction.jsp b/src/main/webapp/Account/Join/JoinAction.jsp
+new file mode 100644
+--- /dev/null	(date 1694277882000)
++++ b/src/main/webapp/Account/Join/JoinAction.jsp	(date 1694277882000)
+@@ -0,0 +1,16 @@
++<%--
++  Created by IntelliJ IDEA.
++  User: leia_ira
++  Date: 9/10/23
++  Time: 1:44 AM
++  To change this template use File | Settings | File Templates.
++--%>
++<%@ page contentType="text/html;charset=UTF-8" language="java" %>
++<html>
++<head>
++    <title>Title</title>
++</head>
++<body>
++
++</body>
++</html>
+Index: src/main/webapp/Account/Login/Login.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@import \"../../Style/MainFrame.css\";\n\n/*로그인//////////////////////////////////////////////////////////////////*/\n#MainSection{\n    margin: 10px auto;\n    padding: 30px;\n    width: 100%;\n    max-width: 750px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n#MainSection>h2{\n    width: 100%;\n    font-size: 2rem;\n    margin: 10px;\n    margin-bottom: 20px;\n    padding-bottom: 20px;\n    color: rgb(255, 159, 41);\n\n    border-bottom: 2px solid white;\n}\n#MainSection>form{\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n}\n/*Form태그 내부의 입력 관련한 내용*/\n#formInput{\n    margin-bottom: 10px;\n}\n#formInput>input{\n    width: 100%;\n    height: 50px;\n    margin-bottom: 10px;\n    padding-left: 10px;\n    border: 2px solid white;\n    border-radius: 10px;\n    font-size: 1rem;\n}\n/*Form태그 내부의 클릭 관련한 내용*/\n#formClick{\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    margin-bottom: 20px;\n}\n/*회원가입/아이디 비밀번호 찾기*/\n#formClick>div{\n    flex-grow: 1;\n}\n/*로그인 정보 기억*/\n#formClick>label{\n    display: flex;\n    flex-grow: 1;\n    justify-content: flex-end;\n    height: 20px;\n}\n#formClick>label>#Auto {\n    width: 20px;\n    height: 20px;\n    margin: 0 0 0 10px;\n}\n#formClick>label>#Auto:checked{\n    accent-color: rgb(255, 159, 41);\n}\n/*로그인 버튼*/\n#MainSection>form>input{\n    height: 50px;\n    border: 1px solid white;\n    border-radius: 5px;\n    flex-grow: 1;\n    background-color: rgb(255, 159, 41);\n    color: black;\n    font-size: 1rem;\n    font-weight: 800;\n}\n/*로그인//////////////////////////////////////////////////////////////////*/
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/Account/Login/Login.css b/src/main/webapp/Account/Login/Login.css
+--- a/src/main/webapp/Account/Login/Login.css	(revision 47d2786b6ea6f94ccca0c74388037cdf9fd45038)
++++ b/src/main/webapp/Account/Login/Login.css	(date 1694344015023)
+@@ -1,6 +1,12 @@
+ @import "../../Style/MainFrame.css";
+-
++body{
++    background-color: #202020;
++}
+ /*로그인//////////////////////////////////////////////////////////////////*/
++#container{
++    color: white;
++    text-decoration: none;
++}
+ #MainSection{
+     margin: 10px auto;
+     padding: 30px;
+@@ -48,6 +54,11 @@
+ /*회원가입/아이디 비밀번호 찾기*/
+ #formClick>div{
+     flex-grow: 1;
++    text-decoration: none;
++}
++#formClick>div>a{
++    text-decoration: none;
++    color: white;
+ }
+ /*로그인 정보 기억*/
+ #formClick>label{
+Index: src/main/webapp/Account/LogIn.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"ko\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\t<title>헬창놈들</title>\n\t<link rel=\"stylesheet\" href=\"Login/Login.css\">\n</head>\n<!--로그인 페이지 만듦-->\n<body>\n\t<!--Header-->\n\t<div id=\"headerController\"></div>\n\t<header id=\"headContainer\">\n\t\t<h1>헬창놈들</h1>\n\t\t<!--Navigation-->\n\t\t<nav id=\"navSection\">\n\t\t\n\t\t</nav>\n\t</header>\n\t\n\t<!--Bodies-->\n\t<section id=\"container\">\n\t\t<!--Contents-->\n\t\t<article id=\"MainSection\">\n\t\t\t<!--LogIn-->\n\t\t\t<h2>로그인</h2>\n\t\t\t<form action=\"InAction.jsp\" method=\"post\">\n\t\t\t\t<div id=\"formInput\">\n\t\t\t\t\t<input type=\"text\" name=\"USERID\" id=\"Id\" placeholder=\"아이디를 입력하세요\">\n\t\t\t\t\t<input type=\"password\" name=\"USERPW\" id=\"Pw\" placeholder=\"비밀번호를 입력하세요\">\n\t\t\t\t</div>\n\t\t\t\t<div id=\"formClick\">\n\t\t\t\t\t<div>\n\t\t\t\t\t\t<a href=\"#\">회원가입</a><br>\n\t\t\t\t\t\t<a href=\"#\">아이디/비밀번호 찾기</a>\n\t\t\t\t\t</div>\n\t\t\t\t\t<label>\n\t\t\t\t\t\t<span>로그인 정보 기억</span>\n\t\t\t\t\t\t<input type=\"checkbox\" name=\"AutoLogin\" id=\"Auto\" value=\"\">\n\t\t\t\t\t</label>\n\t\t\t\t</div>\n\t\t\t\t<input type=\"submit\" value=\"로그인\">\n\t\t\t</form>\n\t\t</article>\n\t</section>\n\t\n\t<!--Footer-->\n\t<footer>\n\t\t@copyright\n\t</footer>\n</body>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/Account/LogIn.html b/src/main/webapp/Account/LogIn.html
+--- a/src/main/webapp/Account/LogIn.html	(revision 47d2786b6ea6f94ccca0c74388037cdf9fd45038)
++++ b/src/main/webapp/Account/LogIn.html	(date 1694343998444)
+@@ -5,48 +5,60 @@
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<title>헬창놈들</title>
+ 	<link rel="stylesheet" href="Login/Login.css">
++	<script src="../Script/Account.js"></script>
+ </head>
+ <!--로그인 페이지 만듦-->
+-<body>
+-	<!--Header-->
+-	<div id="headerController"></div>
+-	<header id="headContainer">
+-		<h1>헬창놈들</h1>
+-		<!--Navigation-->
+-		<nav id="navSection">
+-		
+-		</nav>
+-	</header>
+-	
+-	<!--Bodies-->
+-	<section id="container">
+-		<!--Contents-->
+-		<article id="MainSection">
+-			<!--LogIn-->
+-			<h2>로그인</h2>
+-			<form action="InAction.jsp" method="post">
+-				<div id="formInput">
+-					<input type="text" name="USERID" id="Id" placeholder="아이디를 입력하세요">
+-					<input type="password" name="USERPW" id="Pw" placeholder="비밀번호를 입력하세요">
+-				</div>
+-				<div id="formClick">
+-					<div>
+-						<a href="#">회원가입</a><br>
+-						<a href="#">아이디/비밀번호 찾기</a>
+-					</div>
+-					<label>
+-						<span>로그인 정보 기억</span>
+-						<input type="checkbox" name="AutoLogin" id="Auto" value="">
+-					</label>
+-				</div>
+-				<input type="submit" value="로그인">
+-			</form>
+-		</article>
+-	</section>
+-	
+-	<!--Footer-->
+-	<footer>
+-		@copyright
+-	</footer>
++<body onload="acc = new Account(false);">
++<!--Header-->
++<header id="headContainer">
++	<!--Logo-->
++	<h1 class="head" id="Logo">
++		<a href="../index.html">
++			<img src="../_Icon/PageLogo_White.png" alt="헬창놈들 로고">
++		</a>
++	</h1>
++	<!--Navigation-->
++	<nav class="head" id="Nav">
++		<ul>
++			<li><a href="#">Project</a></li>
++			<li><a href="#">Community</a></li>
++			<li><a href="#">Reviews</a></li>
++			<li><a href="#">Advertisement</a></li>
++		</ul>
++	</nav>
++	<!--Account-->
++	<div class="head" id="Auth"></div>
++</header>
++
++<!--Bodies-->
++<section id="container" onclick="acc.hideAccount();">
++	<!--Contents-->
++	<article id="MainSection">
++		<!--LogIn-->
++		<h2>로그인</h2>
++		<form action="Login/LogInAction.jsp" method="post">
++			<div id="formInput">
++				<input type="text" name="USERID" id="Id" placeholder="아이디를 입력하세요">
++				<input type="password" name="USERPW" id="Pw" placeholder="비밀번호를 입력하세요">
++			</div>
++			<div id="formClick">
++				<div>
++					<a href="Join.html">회원가입</a><br>
++					<a href="#">아이디/비밀번호 찾기</a>
++				</div>
++				<label>
++					<span>로그인 정보 기억</span>
++					<input type="checkbox" name="AutoLogin" id="Auto" value="">
++				</label>
++			</div>
++			<input type="submit" value="로그인">
++		</form>
++	</article>
++</section>
++
++<!--Footer-->
++<footer>
++	@copyright
++</footer>
+ </body>
+ </html>
+\ No newline at end of file
+Index: src/main/webapp/Account/MyPage/MyPage.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/Account/MyPage/MyPage.css b/src/main/webapp/Account/MyPage/MyPage.css
+new file mode 100644
+--- /dev/null	(date 1694343459000)
++++ b/src/main/webapp/Account/MyPage/MyPage.css	(date 1694343459000)
+@@ -0,0 +1,196 @@
++@import "../../Style/MainFrame.css";
++body{
++    background-color: #202020;
++}
++/*마이페이지//////////////////////////////////////////////////////////////////*/
++#container{
++    color: white;
++    text-decoration: none;
++}
++#MainSection{
++    margin: 10px auto;
++    padding: 30px;
++    width: 100%;
++    max-width: 1000px;
++    display: flex;
++    flex-direction: column;
++    align-items: center;
++}
++#MainSection>h2{
++    width: 100%;
++    font-size: 2rem;
++    margin: 10px;
++    margin-bottom: 20px;
++    padding-bottom: 20px;
++    color: rgb(255, 159, 41);
++
++    border-bottom: 2px solid white;
++}
++#MainSection>form{
++    width: 100%;
++    display: flex;
++    flex-direction: column;
++}
++/*Account################################################*/
++#account{
++    display: flex;
++    flex-direction: row;
++    margin-bottom: 20px;
++    padding-bottom: 20px;
++    border-bottom: 2px solid white;
++}
++#account input{
++    height: 40px;
++    margin-bottom: 5px;
++    padding-left: 10px;
++    border: 2px solid white;
++    border-radius: 10px;
++}
++#account>img{
++    margin: 5px;
++    flex-shrink: 0;
++    width: 200px;
++    height: 200px;
++    border: 2px solid white;
++    border-radius: 10px;
++}
++/*계정관련 입력*/
++#accInput{
++    margin: 5px;
++    width: 100%;
++    display: flex;
++    flex-direction: column;
++    justify-content: space-between;
++}
++#accInput>*{
++    width: 100%;
++}
++
++/*닉네임*/
++#nickName{
++    display: flex;
++    flex-direction: row;
++    width: 100%;
++}
++#userNickName{
++    flex-grow: 3;
++}
++#CheckBtn{
++    flex-grow: 1;
++    min-width: 75px;
++}
++/*유저정보*/
++#Info{
++    display: flex;
++    flex-direction: row;
++    justify-content: space-between;
++}
++#Info input{
++    flex-grow: 1;
++    width: 30%;
++}
++
++
++/*inbody################################################*/
++#progress{
++    display: flex;
++    flex-direction: row;
++    margin-bottom: 20px;
++    padding-bottom: 20px;
++    border-bottom: 2px solid white;
++}
++#progress>div{
++    width: 50%;
++}
++#progress h3{
++    color: #FF9F29;
++    font-size: 1.5em;
++    text-align: center;
++    margin-top: 0;
++    margin-bottom: 5px;
++}
++/*인바디 정보*/
++#inbody{
++    padding: 5px;
++    display: flex;
++    flex-direction: column;
++
++    flex-grow: 1;
++
++    align-items: center;
++    width: 100%;
++}
++#inbody>label{
++    width: 100%;
++    height: 40px;
++    margin-top: 5px;
++    margin-bottom: 5px;
++    padding-left: 10px;
++    border: 2px solid white;
++    border-radius: 10px;
++
++    display: flex;
++    flex-direction: row;
++    align-items: center;
++}
++#inbody>label>span{
++    flex-grow: 1;
++    flex-basis: 30px;
++    min-width: 60px;
++}
++#inbody>label>input{
++    flex-grow: 2;
++    height: 40px;
++    padding-left: 10px;
++    border: 2px solid white;
++    border-radius: 10px;
++}
++/*프로그램*/
++#program{
++    flex-grow: 1;
++    width: 100%;
++    padding: 5px;
++
++    display: flex;
++    flex-direction: row;
++    align-items: center;
++    justify-content: center;
++}
++#program>img{
++    margin: 5px;
++    flex-shrink: 0;
++    width: 200px;
++    height: 200px;
++    border: 2px solid white;
++    border-radius: 10px;
++}
++/*저장*/
++#MainSection>form>input{
++    height: 50px;
++    border: 1px solid white;
++    border-radius: 5px;
++    flex-grow: 1;
++    background-color: rgb(255, 159, 41);
++    color: black;
++    font-size: 1rem;
++    font-weight: 800;
++}
++/*로그인//////////////////////////////////////////////////////////////////*/
++@media(max-width: 800px) {
++    #account{
++        flex-direction: column;
++        align-items: center;
++    }
++    #progress{
++        flex-direction: column;
++        align-items: center;
++    }
++    #progress>div{
++        width: 100%;
++    }
++    #inbody{
++        margin-bottom: 20px;
++        padding-bottom: 20px;
++        border-bottom: 2px solid white;
++    }
++}
+\ No newline at end of file
+Index: src/main/webapp/Account/MyPage.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/Account/MyPage.html b/src/main/webapp/Account/MyPage.html
+new file mode 100644
+--- /dev/null	(date 1694342022000)
++++ b/src/main/webapp/Account/MyPage.html	(date 1694342022000)
+@@ -0,0 +1,87 @@
++<!--<%@ page contentType="text/html;charset=UTF-8" language="java" %>-->
++<html>
++<head>
++	<meta charset="UTF-8">
++	<meta name="viewport" content="width=device-width, initial-scale=1">
++    <title>헬창놈들</title>
++	<link rel="stylesheet" href="MyPage/MyPage.css">
++	<script src="../Script/Account.js"></script>
++</head>
++<body onload="acc = new Account(true);">
++<!--Header-->
++    <header id="headContainer">
++	    <!--Logo-->
++        <h1 class="head" id="Logo">
++	        <a href="../index.html">
++		        <img src="../_Icon/PageLogo_White.png" alt="헬창놈들 로고">
++	        </a>
++        </h1>
++        <!--Navigation-->
++        <nav class="head" id="Nav">
++	        <ul>
++		        <li><a href="#">Project</a></li>
++		        <li><a href="#">Community</a></li>
++		        <li><a href="#">Reviews</a></li>
++		        <li><a href="#">Advertisement</a></li>
++	        </ul>
++        </nav>
++	    <!--Account-->
++	    <div class="head" id="Auth">
++		    <!--Authentication passed-->
++		    <!--Authentication NONE-->
++	    </div>
++    </header>
++
++
++    <!--Bodies-->
++    <section id="container" onclick="acc.hideAccount();">
++        <!--Contents-->
++        <article id="MainSection">
++	        <!--My Page-->
++	        <h2>마이 페이지</h2>
++	        <form action="Login/LogInAction.jsp" method="post">
++		        <div id="account">
++			        <img src="../Style/Fox.png" alt="">
++			        <div id="accInput">
++				        <div id="nickName">
++					        <input type="text" name="userNickName" id="userNickName" placeholder="닉네임">
++					        <input type="button" name="userDuplicateCheck" id="CheckBtn" value="중복검사">
++				        </div>
++				        <input type="text" name="userEmail" id="Email" placeholder="이메일" disabled>
++				        <div id="Info">
++					        <input type="text" name="userDummy" id="Dummy" placeholder="더미">
++					        <input type="text" name="userAge" id="Age" placeholder="연령">
++					        <input type="text" name="userGender" id="Gender" placeholder="성별">
++				        </div>
++			        </div>
++		        </div>
++		        
++		        <div id="progress">
++			        <div>
++				        <h3>나의스펙</h3>
++				        <div id="inbody">
++					        <label><span>키</span><input type="text" name="userHeight" id="height" placeholder="(Cm)"></label>
++					        <label><span>몸무게</span><input type="text" name="userWeight" id="weight" placeholder="(Kg)"></label>
++					        <label><span>골격근량</span><input type="text" name="userHeight" id="skeletalMuscleMass" placeholder="(Kg)"></label>
++					        <label><span>체지방량</span><input type="text" name="userHeight" id="bodyFatMass" placeholder="(Kg)"></label>
++				        </div>
++			        </div>
++					<div>
++						<h3>진행중인 프로그램</h3>
++						<div id="program">
++							<img src="../Style/Fox.png" alt="">
++						</div>
++					</div>
++		        </div>
++		        
++		        <input type="submit" value="저장">
++	        </form>
++        </article>
++    </section>
++
++    <!--Footer-->
++    <footer>
++        @copyright
++    </footer>
++</body>
++</html>
+Index: src/main/webapp/Account/Login/LogInAction.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/Account/Login/LogInAction.jsp b/src/main/webapp/Account/Login/LogInAction.jsp
+new file mode 100644
+--- /dev/null	(date 1694277385000)
++++ b/src/main/webapp/Account/Login/LogInAction.jsp	(date 1694277385000)
+@@ -0,0 +1,19 @@
++<%--
++  Created by IntelliJ IDEA.
++  User: leia_ira
++  Date: 9/10/23
++  Time: 12:08 AM
++  To change this template use File | Settings | File Templates.
++--%>
++<%@ page contentType="text/html;charset=UTF-8" language="java" %>
++<html>
++<head>
++    <title>Title</title>
++
++</head>
++<body>
++    <script>
++        location.href = "../../index.html"
++    </script>
++</body>
++</html>
+Index: src/main/webapp/Script/Account.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/Script/Account.js b/src/main/webapp/Script/Account.js
+new file mode 100644
+--- /dev/null	(date 1694344121527)
++++ b/src/main/webapp/Script/Account.js	(date 1694344121527)
+@@ -0,0 +1,56 @@
++class Account{
++    constructor(Session) {
++        this.account_condition = false;
++        this.Session = Session;
++        this.log();
++    }
++    log(){
++        const state = document.getElementById("Auth");
++        if(this.Session === false){
++            state.innerHTML = `
++            <ul id="SessionNone">
++                <li id="login"><a href="../Account/LogIn.html"><span>로그인</span></a></li>
++                <li id="join"><a href="../Account/Join.html"><span>회원가입</span></a></li>
++            </ul>
++        `;
++        } else if(this.Session === true){
++            state.innerHTML = `
++            <ul id="SessionIn" onclick="acc.showAccount();">
++                <li>
++                    <span>'대충유저아이디님'</span>
++                    <br>안녕하세요!
++                </li>
++                <li id="userProfile">
++                    <img src="../Style/Fox.png" alt="">
++                </li>
++                
++            </ul>
++            <ul id="management"><!--style="display: none"-->
++                <span>Leiaira92@gmail.com</span>
++                <li><a href="../Account/MyPage.html">계정관리</a></li>
++                <li><a href="#">대시보드</a></li>
++                <li><a href="#">로그아웃</a></li>
++            </ul>
++        `;
++        }
++    }
++
++    showAccount(){
++        if(this.account_condition == false){
++            let st = document.getElementById("management").style;
++            console.log(this.account_condition);
++            // st.display = 'inline-flex';
++            st.visibility = 'visible'
++            this.account_condition = true;
++        } else if(this.account_condition == true){
++            this.hideAccount();
++        }
++    }
++    hideAccount(){
++        let st = document.getElementById("management").style;
++        console.log(this.account_condition);
++        // st.display = 'none';
++        st.visibility = 'hidden'
++        this.account_condition = false;
++    }
++}
+\ No newline at end of file
+Index: src/main/webapp/Account/Join.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"ko\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\t<title>헬창놈들</title>\n\t<script src=\"Join/Join.js\"></script>\n\t<link rel=\"stylesheet\" href=\"Join/Join.css\">\n</head>\n<!--로그인 페이지 만듦-->\n<body>\n\t<!--Header-->\n\t<div id=\"headerController\"></div>\n\t<header id=\"headContainer\">\n\t\t<h1>헬창놈들</h1>\n\t\t<!--Navigation-->\n\t\t<nav id=\"navSection\">\n\t\t\n\t\t</nav>\n\t</header>\n\t\n\t<!--Bodies-->\n\t<section id=\"container\">\n\t\t<!--Contents-->\n\t\t<article id=\"MainSection\">\n\t\t\t<!--LogIn-->\n\t\t\t<h2>회원가입</h2>\n\t\t\t<form action=\"JoinAction.jsp\" method=\"post\" onsubmit=\"return validationCheck()\">\n\t\t\t\t<div id=\"formInput\">\n\t\t\t\t\t<input type=\"text\" name=\"USERID\" id=\"Id\" placeholder=\"이메일을 입력하세요\">\n\t\t\t\t\t<hr>\n\t\t\t\t\t<input type=\"password\" name=\"USERPW\" id=\"Pw\" placeholder=\"비밀번호를 입력하세요\" minlength=\"8\" maxlength=\"20\">\n\t\t\t\t\t<input type=\"password\" name=\"USERPWRE\" id=\"PwRe\" placeholder=\"비밀번호를 다시 입력하세요\" minlength=\"8\" maxlength=\"20\">\n\t\t\t\t</div>\n\t\t\t\t<div id=\"formClick\">\n\t\t\t\t\t<div>\n\t\t\t\t\t\t<a href=\"#\">로그인</a><br>\n\t\t\t\t\t\t<a href=\"#\">아이디/비밀번호 찾기</a>\n\t\t\t\t\t</div>\n\t\t\t\t\t<label>\n\t\t\t\t\t\t<a href=\"#\">약관동의</a>\n\t\t\t\t\t\t<input type=\"checkbox\" name=\"TERMS\" id=\"Terms\" value=\"\">\n\t\t\t\t\t</label>\n\t\t\t\t</div>\n\t\t\t\t<input type=\"submit\" value=\"회원가입\">\n\t\t\t</form>\n\t\t</article>\n\t</section>\n\t\n\t<!--Footer-->\n\t<footer>\n\t\t@copyright\n\t</footer>\n</body>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/Account/Join.html b/src/main/webapp/Account/Join.html
+--- a/src/main/webapp/Account/Join.html	(revision 47d2786b6ea6f94ccca0c74388037cdf9fd45038)
++++ b/src/main/webapp/Account/Join.html	(date 1694343989747)
+@@ -4,52 +4,64 @@
+ 	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<title>헬창놈들</title>
++	<script src="../Script/Account.js"></script>
+ 	<script src="Join/Join.js"></script>
+ 	<link rel="stylesheet" href="Join/Join.css">
+ </head>
+ <!--로그인 페이지 만듦-->
+-<body>
+-	<!--Header-->
+-	<div id="headerController"></div>
+-	<header id="headContainer">
+-		<h1>헬창놈들</h1>
+-		<!--Navigation-->
+-		<nav id="navSection">
+-		
+-		</nav>
+-	</header>
+-	
+-	<!--Bodies-->
+-	<section id="container">
+-		<!--Contents-->
+-		<article id="MainSection">
+-			<!--LogIn-->
+-			<h2>회원가입</h2>
+-			<form action="JoinAction.jsp" method="post" onsubmit="return validationCheck()">
+-				<div id="formInput">
+-					<input type="text" name="USERID" id="Id" placeholder="이메일을 입력하세요">
+-					<hr>
+-					<input type="password" name="USERPW" id="Pw" placeholder="비밀번호를 입력하세요" minlength="8" maxlength="20">
+-					<input type="password" name="USERPWRE" id="PwRe" placeholder="비밀번호를 다시 입력하세요" minlength="8" maxlength="20">
+-				</div>
+-				<div id="formClick">
+-					<div>
+-						<a href="#">로그인</a><br>
+-						<a href="#">아이디/비밀번호 찾기</a>
+-					</div>
+-					<label>
+-						<a href="#">약관동의</a>
+-						<input type="checkbox" name="TERMS" id="Terms" value="">
+-					</label>
+-				</div>
+-				<input type="submit" value="회원가입">
+-			</form>
+-		</article>
+-	</section>
+-	
+-	<!--Footer-->
+-	<footer>
+-		@copyright
+-	</footer>
++<body onload="acc = new Account(false);">
++<!--Header-->
++<header id="headContainer">
++	<!--Logo-->
++	<h1 class="head" id="Logo">
++		<a href="../index.html">
++			<img src="../_Icon/PageLogo_White.png" alt="헬창놈들 로고">
++		</a>
++	</h1>
++	<!--Navigation-->
++	<nav class="head" id="Nav">
++		<ul>
++			<li><a href="#">Project</a></li>
++			<li><a href="#">Community</a></li>
++			<li><a href="#">Reviews</a></li>
++			<li><a href="#">Advertisement</a></li>
++		</ul>
++	</nav>
++	<!--Account-->
++	<div class="head" id="Auth"></div>
++</header>
++
++<!--Bodies-->
++<section id="container" onclick="acc.hideAccount();">
++	<!--Contents-->
++	<article id="MainSection">
++		<!--LogIn-->
++		<h2>회원가입</h2>
++		<form action="Join/JoinAction.jsp" method="post" onsubmit="return validationCheck()">
++			<div id="formInput">
++				<input type="text" name="USERID" id="Id" placeholder="이메일을 입력하세요">
++				<hr>
++				<input type="password" name="USERPW" id="Pw" placeholder="비밀번호를 입력하세요" minlength="8" maxlength="20">
++				<input type="password" name="USERPW_check" id="Pw_Check" placeholder="비밀번호를 다시 입력하세요" minlength="8" maxlength="20">
++			</div>
++			<div id="formClick">
++				<div>
++					<a href="LogIn.html">로그인</a><br>
++					<a href="#">아이디/비밀번호 찾기</a>
++				</div>
++				<label>
++					<a href="#">약관동의</a>
++					<input type="checkbox" name="TERMS" id="Terms" value="">
++				</label>
++			</div>
++			<input type="submit" value="회원가입">
++		</form>
++	</article>
++</section>
++
++<!--Footer-->
++<footer>
++	@copyright
++</footer>
+ </body>
+ </html>
+\ No newline at end of file

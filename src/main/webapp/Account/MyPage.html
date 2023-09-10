@@ -1,0 +1,87 @@
+<!--<%@ page contentType="text/html;charset=UTF-8" language="java" %>-->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>헬창놈들</title>
+	<link rel="stylesheet" href="MyPage/MyPage.css">
+	<script src="../Script/Account.js"></script>
+</head>
+<body onload="acc = new Account(true);">
+<!--Header-->
+    <header id="headContainer">
+	    <!--Logo-->
+        <h1 class="head" id="Logo">
+	        <a href="../index.html">
+		        <img src="../_Icon/PageLogo_White.png" alt="헬창놈들 로고">
+	        </a>
+        </h1>
+        <!--Navigation-->
+        <nav class="head" id="Nav">
+	        <ul>
+		        <li><a href="#">Project</a></li>
+		        <li><a href="#">Community</a></li>
+		        <li><a href="#">Reviews</a></li>
+		        <li><a href="#">Advertisement</a></li>
+	        </ul>
+        </nav>
+	    <!--Account-->
+	    <div class="head" id="Auth">
+		    <!--Authentication passed-->
+		    <!--Authentication NONE-->
+	    </div>
+    </header>
+
+
+    <!--Bodies-->
+    <section id="container" onclick="acc.hideAccount();">
+        <!--Contents-->
+        <article id="MainSection">
+	        <!--My Page-->
+	        <h2>마이 페이지</h2>
+	        <form action="Login/LogInAction.jsp" method="post">
+		        <div id="account">
+			        <img src="../Style/Fox.png" alt="">
+			        <div id="accInput">
+				        <div id="nickName">
+					        <input type="text" name="userNickName" id="userNickName" placeholder="닉네임">
+					        <input type="button" name="userDuplicateCheck" id="CheckBtn" value="중복검사">
+				        </div>
+				        <input type="text" name="userEmail" id="Email" placeholder="이메일" disabled>
+				        <div id="Info">
+					        <input type="text" name="userDummy" id="Dummy" placeholder="더미">
+					        <input type="text" name="userAge" id="Age" placeholder="연령">
+					        <input type="text" name="userGender" id="Gender" placeholder="성별">
+				        </div>
+			        </div>
+		        </div>
+		        
+		        <div id="progress">
+			        <div>
+				        <h3>나의스펙</h3>
+				        <div id="inbody">
+					        <label><span>키</span><input type="text" name="userHeight" id="height" placeholder="(Cm)"></label>
+					        <label><span>몸무게</span><input type="text" name="userWeight" id="weight" placeholder="(Kg)"></label>
+					        <label><span>골격근량</span><input type="text" name="userHeight" id="skeletalMuscleMass" placeholder="(Kg)"></label>
+					        <label><span>체지방량</span><input type="text" name="userHeight" id="bodyFatMass" placeholder="(Kg)"></label>
+				        </div>
+			        </div>
+					<div>
+						<h3>진행중인 프로그램</h3>
+						<div id="program">
+							<img src="../Style/Fox.png" alt="">
+						</div>
+					</div>
+		        </div>
+		        
+		        <input type="submit" value="저장">
+	        </form>
+        </article>
+    </section>
+
+    <!--Footer-->
+    <footer>
+        @copyright
+    </footer>
+</body>
+</html>

@@ -1,6 +1,12 @@
 @import "../../Style/MainFrame.css";
-
+body{
+    background-color: #202020;
+}
 /*로그인//////////////////////////////////////////////////////////////////*/
+#container{
+    color: white;
+    text-decoration: none;
+}
 #MainSection{
     margin: 10px auto;
     padding: 30px;
@@ -48,6 +54,11 @@
 /*회원가입/아이디 비밀번호 찾기*/
 #formClick>div{
     flex-grow: 1;
+    text-decoration: none;
+}
+#formClick>div>a{
+    text-decoration: none;
+    color: white;
 }
 /*로그인 정보 기억*/
 #formClick>label{
