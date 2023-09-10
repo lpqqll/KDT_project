@@ -27,7 +27,15 @@
 				, width : 1000
 				, height : 500
 				, modal : true
-			})
+			});
+			
+			
+			//
+			window.onresize = function(){
+				$("#dialog1_1").dialog('close');
+				$("#dialog1_1").dialog('open');
+			}
+			
 		})
 		
 		//2번 사진
