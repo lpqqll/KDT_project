@@ -1,3 +1,18 @@
+*{
+    box-sizing: border-box;
+}
+html{
+	height : 100%;
+	
+}
+body{
+				background-color: #323336;
+    height: calc(100% - 100px);
+    margin: 0px;
+}
+
+
+
 /*Header 페이지*/
 #headContainer, #headContainer>*, #headContainer>*>*, #headContainer>*>*>*,#headContainer>*>*>*>*  {
     background-color: black;
@@ -8,13 +23,15 @@
 
 }
 #headContainer{
-				color : white;
+	  
+    color: white;
     position: fixed;
     display: flex;
     top: 0px;
     right: 0px;
     width: 100%;
     height: 75px;
+    
     border-bottom: 2px solid #15ae84;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -80,8 +97,7 @@
     display: flex;
     flex-direction: row;
     /*padding: 10px;*/
-    /*justify-content: center;*/
-    
+    /*justify-content: center;*/    
 }
 
 /*전체 리스트 설정*/
@@ -90,11 +106,10 @@
     text-decoration: none;
     list-style: none;
     padding: 0px;
-    
 }
 
 #navSection{
-				padding: 10px;
+    padding: 10px;
     z-index: 90;
     position: fixed;
     left: -250px;
@@ -103,61 +118,67 @@
     height: 100%;
     min-height: calc(100% - 150px);
     transition: 1s ease;
+				}
 
-}
+				#navSection .tab_ico{
+    		width: 25px;
+    		height: 25px;
+				}
 
-#navSection .tab_ico{
-    width: 25px;
-    height: 25px;
-}
-
-#MainSection{
-    /*flex-grow: 3;*/
+				#MainSection{
+    		/*flex-grow: 3;*/
+   			width : 1000px; margin:0 auto;;
+			}
+		
+		#main{
+			width : 400px;
+			height : 350px;
+			padding : 10px;
+			border : 2px solid #ddd;
+			margin-top : 10px;
+			float:left; 
+		} 
+		#head{
+			padding : 10px 0;
+			text-align: center;
+			font-size:1.5em;
+			color : white;
+		}
+		ul,
+    li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    #cal_view>ul {
+        overflow: auto;
+    }
+    #cal_view li {
+        float: left;
+        width: 14.28%;
+        text-align: center;
+        color : white;
+        padding: 10px 0;
+        cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+    }
+    .selected {
+        background-color: lightblue; /* 선택된 날짜의 배경색 */
+    }
     
-    width: 100%;
-
-}
-	#MainSection>ul{
-			width : 1000px;
-			margin : 0 auto;
-		}
-
-		ul,li{
-			list-style-type : none;
-			margin : 0px;
-			padding : 0px;
-		}
-		#MainSection>#top{
-			margin-top : 150px;
-		}
-		#MainSection > #top, #MainSection > #bottom, #MainSection > #middle{
-		 margin-bottom : 100px;
-		}
-		
-		/*dialog*/
-	#dialogOpen1_1{
-		float : left;
-		margin-right : 125px;
-	}		
-	
-	#dialogOpen1_2{
-		float : center;
-		
-	}
-	#dialogOpen1_3{
-		float:right;
-	}
-
-	#dialog1_1, #dialog1_2,#dialog1_3{
-		background-color: tomato;
-	}
-	#dialog1_1>ul>img,#dialog1_2>ul>img,#dialog1_3>ul>img{
-		float:left;
-		margin:50px;
-		margin-bottom:200px;
-		background: white;
-	}
-	
+    #selected_date{
+					
+					color : white;
+					width : 100px;
+					float : left;
+					margin-left : 100px;
+					margin-top : 10px;
+				}
+			h2{
+					color : rgb(231, 76, 60);
+					float: left;
+					font-size: 50px;
+					margin-right : 500px;
+				}		
 
 /*footer 페이지*/
 #container{
