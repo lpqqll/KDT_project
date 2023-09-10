@@ -70,17 +70,35 @@
 	}
 	
 	/*li 4개씩 그룹화 및 정렬*/
-	ul li:nth-child(4n+1){
+	ul li:nth-child(4n-3){
 		float: left; clear: left; list-style: none; margin-right: 10px;
 	}
-	ul li:nth-child(4n+2){
+	ul li:nth-child(4n-2){
 		float: right; clear:right; list-style: none; margin-left: 10px;
 	}
-	ul li:nth-child(4n+3){
+	ul li:nth-child(4n-1){
 		float: left; list-style: none; margin-right: 10px;
 	}	
-	ul li:nth-child(4n+4){
+	ul li:nth-child(4n){
 		float: right; list-style: none; margin-left: 10px;
+	}
+	
+	/*
+	.writelist{
+		display: flex;
+		flex-wrap: wrap;
+		gap:20px;
+	}
+	.writelist ul{
+		flex-basis: calc(50%-20px);
+		margin-bottom: 20px;
+	}
+	.writelist li{
+		list-style: none;
+	}*/
+	
+	.writelist{
+		margin-bottom: 30px;
 	}
 
 </style>
@@ -117,17 +135,6 @@
     openTab("Community");
     }
     
-    //writelist 4줄마다 줄 설정
-/*    function addHR(){
-	    var writelist = document.getElementById("writelist").getElementsByTagName("li");
-	    
-	    for(var i= 3; i<writelist.length; i += 4){
-			var hr = document.createElement("hr");
-			writelist[i].insertAdjacentElement('afterend',hr);
-		}
-	}
-	window.onload = function(){
-	addHR();}*/
 </script>
 </head>
 <body>
@@ -157,6 +164,7 @@
         <div class="left-content">                
             <b>공지사항</b>
             <hr>
+            
             <b>유머 게시판</b>
             <hr>
             <b>자유 게시판</b>
@@ -195,20 +203,35 @@
 		<div class="left-content">	       
 	        <button id="writebutton">글쓰기</button><br/>
 	        <hr>
-	        <ul id="writelist">
-				<li>ㅋㅋㅋㅋ</li>
-				<li>추천수 : 20</li>
-				<li>나는 슈퍼맨</li>			
-				<li>2023-09-06</li>
-				<li>헬창놈들 파이팅</li>
-				<li>추천수 : 15</li>
-				<li>채이스내</li>				
-				<li>2023-09-06</li>
-				<li>프로틴 유머</li>
-				<li>추천수 : 17</li>
-				<li>이건아</li>				
-				<li>2023-09-06</li>
-			</ul>
+	        <div class="writelist">
+		        <ul>
+					
+					<li>ㅋㅋㅋㅋ</li>
+					<li>추천수 : 20</li>
+					<li>나는 슈퍼맨</li>			
+					<li>2023-09-06</li>
+					<li>헬창놈들 파이팅</li>
+					<li>추천수 : 15</li>
+					<li>채이스내</li>				
+					<li>2023-09-06</li>
+					<li>프로틴 유머</li>
+					<li>추천수 : 17</li>
+					<li>이건아</li>				
+					<li>2023-09-06</li>
+					<li>ㅋㅋㅋㅋ</li>
+					<li>추천수 : 20</li>
+					<li>나는 슈퍼맨</li>			
+					<li>2023-09-06</li>
+					<li>헬창놈들 파이팅</li>
+					<li>추천수 : 15</li>
+					<li>채이스내</li>				
+					<li>2023-09-06</li>
+					<li>프로틴 유머</li>
+					<li>추천수 : 17</li>
+					<li>이건아</li>				
+					<li>2023-09-06</li>
+				</ul>
+			</div>
 	    </div>
         <div class="right-content">
             <li id="hot"><b>인기글</b></li>
