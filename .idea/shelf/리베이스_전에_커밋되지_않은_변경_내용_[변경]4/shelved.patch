@@ -1,0 +1,122 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"b3d0235d-268b-40a1-8447-4ce7488f80f3\" name=\"변경\" comment=\"ㅎㅇ\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Rebase.Settings\">\n    <option name=\"NEW_BASE\" value=\"origin/LSW\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"LSW\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;Leia1ra&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">\n    <option name=\"selectedUrlAndAccountId\">\n      <UrlAndAccount>\n        <option name=\"accountId\" value=\"47647a87-540c-4ea6-9852-1e1ceae2d23e\" />\n        <option name=\"url\" value=\"https://github.com/lpqqll/KDT_project.git\" />\n      </UrlAndAccount>\n    </option>\n  </component>\n  <component name=\"MacroExpansionManager\">\n    <option name=\"directoryName\" value=\"mouxnkxa\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 8\n}</component>\n  <component name=\"ProjectId\" id=\"2V3RLnewWWTCw0Rh0ef7eEFPnck\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;LSW&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/Users/leia_ira/Documents/GitHub/KDT_project/src/main/webapp/Account/Join&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/main/webapp/Account/Join\" />\n      <recent name=\"$PROJECT_DIR$/src/main/webapp/Account/Login\" />\n      <recent name=\"$PROJECT_DIR$/src/main/webapp/Account\" />\n      <recent name=\"$PROJECT_DIR$/src/main/webapp\" />\n      <recent name=\"$PROJECT_DIR$/src/main/webapp/Style\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"애플리케이션 수준\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"디폴트 작업\">\n      <changelist id=\"b3d0235d-268b-40a1-8447-4ce7488f80f3\" name=\"변경\" comment=\"\" />\n      <created>1694062730914</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1694062730914</updated>\n      <workItem from=\"1694062732286\" duration=\"1039000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"ㅎㅇㄹㅎ\" />\n    <MESSAGE value=\"ㅎㅇ\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"ㅎㅇ\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision abd4c0c665ddf27bb4299c190ef38cf7166f1446)
++++ b/.idea/workspace.xml	(date 1694351471167)
+@@ -4,8 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="b3d0235d-268b-40a1-8447-4ce7488f80f3" name="변경" comment="ㅎㅇ">
++    <list default="true" id="b3d0235d-268b-40a1-8447-4ce7488f80f3" name="변경" comment="ㅎㅇㄹㅎ">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -13,7 +14,7 @@
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+   <component name="Git.Rebase.Settings">
+-    <option name="NEW_BASE" value="origin/LSW" />
++    <option name="NEW_BASE" value="origin/main" />
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+Index: src/main/webapp/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta charset=\"UTF-8\">\r\n<title>Insert title here</title>\r\n<link rel=\"stylesheet\" href=\"styles.css\">\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js\"></script>\r\n<style>\r\n\t.main_term0 {\r\n    background-color: #202020;\r\n    padding: 20px;\r\n\t}\r\n\t.main_top {\r\n\t    background-color: #202020;\r\n\t    /*border: 1px solid red;  잠깐 표시만 해놓음 */\r\n\t    text-align: center;\r\n\t    padding: 20px;\r\n\t}\r\n\t.main_popular {\r\n\t    /*background-color: rgb(255, 159, 41);*/\r\n\t   /* border: 1px solid red;  잠깐 표시만 해놓음 */\r\n\t    text-align: right;\r\n\t    padding: 20px;\r\n\t    background: linear-gradient(-5deg, rgb(255, 159, 41), rgb(255, 159, 41) 50%);\r\n\t    height: 500px;\r\n\t}\r\n\t\r\n\t.main_community{\r\n\t    background-color: #202020;\r\n\t   /* border: 1px solid red;  잠깐 표시만 해놓음 */\r\n\t    text-align: center;\r\n\t    padding: 20px;\r\n\t    height: 500px;\r\n\t}\r\n\t.main_ad{\r\n\t    background-color: rgb(250, 243, 227);\r\n\t   /* border: 1px solid red;  잠깐 표시만 해놓음 */\r\n\t    text-align: center;\r\n\t    padding: 20px;\r\n\t    height: 500px;\r\n\t}\r\n\t.main_term1 {\r\n\t    /*border: 1px solid red;  잠깐 표시만 해놓음 */\r\n\t    text-align: center;\r\n\t    padding: 20px;\r\n\t    background: linear-gradient(-5deg, rgb(255, 159, 41) 50%, #202020 50%);\r\n\t}\r\n\t.main_term2 {\r\n\t    background-color: rgb(255, 159, 41);\r\n\t    padding: 20px;\r\n\t}\r\n\t.main_term3 {\r\n\t    background: linear-gradient(-5deg, rgb(250, 243, 227) 50%, #202020 50%);\r\n\t    padding: 20px;\r\n\t}\r\n\t.main_term4 {\r\n\t    background: linear-gradient(-5deg, #202020 50%, rgb(250, 243, 227) 50%);\r\n\t    padding: 20px;\r\n\t}\r\n\t\r\n\t    /* 헤더 스타일 */\r\n\t.header {\r\n\t    background-color: rgb(0, 0, 0);\r\n\t    color: #fff;\r\n\t    display: flex;\r\n\t    justify-content: space-around;\r\n\t    align-items: center;\r\n\t    padding: 75px 40px;\r\n\t    \r\n\t}\r\n\t\r\n\t.header ul {\r\n\t    list-style: none;\r\n\t    margin: 0;\r\n\t    padding: 0;\r\n\t    display: flex;\r\n\t    \r\n\t}\r\n\t\r\n\t.header li {\r\n\t    margin-right: 10px;\r\n\t}\r\n\t\r\n\t.header li:last-child {\r\n\t    margin-right: 0px; \r\n\t}\r\n\t\r\n\t.header a {\r\n\t    text-decoration: none;\r\n\t    color: #fff;\r\n\t}\r\n\t\r\n\t.login-button {\r\n\t    background-color: #ff5733;\r\n\t    color: #fff;\r\n\t    padding: 5px 10px;\r\n\t    border: none;\r\n\t    border-radius: 5px;\r\n\t    cursor: pointer;\r\n\t}\r\n    .login-signup {\r\n        display: flex;\r\n        align-items: center;\r\n    }\r\n\r\n    .login-signup .login-button {\r\n        margin-right: 10px;\r\n    }\r\n    \r\n    /* 포스터 */\r\n  #mainDiv{width:872px; height:164px; margin:0 auto;}\r\n   #imgView, #mainDiv>input{\r\n      float:left; height: 364px;\r\n   }\r\n   #mainDiv>input{\r\n   width:30px;\r\n   }\r\n   #imgView{\r\n   width:812px; position:relative; overflow:hidden;\r\n   }\r\n   #imgList{\r\n      width:2320px; position:absolute;\r\n   }\r\n</style>\r\n</head>\r\n<script>\r\n   function setPosterList(){\r\n      var imgTag = \"<div id='imgList'>\";\r\n         \r\n      for(var i=1; i<=5; i++){\r\n         imgTag += \"<img src='imgs_main/postAd/ad_\" + i + \".png'/>\";\r\n      }\r\n      imgTag += \"</div>\";\r\n      \r\n      document.getElementById(\"imgView\").innerHTML = imgTag;\r\n   }\r\n   \r\n   // 포스트 이동\r\n   var xStep = -1;\r\n   var x = 0;\r\n   var timer;\r\n   \r\n   function posterMove(){\r\n      x += xStep;\r\n      document.getElementById(\"imgList\").style.left = x + \"px\";\r\n      \r\n      // 방향 전환 left 이동 -> right 이동으로 변경\r\n      if(x <= -1800) xStep = 1;\r\n      \r\n      // right 이동 -> left 이동으로 변경\r\n      if(x >= 0) xStep = -1;\r\n   }\r\n   \r\n   window.onload = function(){\r\n      setPosterList();\r\n      timer = setInterval(posterMove, 10);\r\n      \r\n      document.getElementById(\"imgView\").onmouseover = function(){\r\n         clearInterval(timer);\r\n      };\r\n      \r\n      document.getElementById(\"imgView\").addEventListener('mouseout',function(){\r\n         timer = setInterval(posterMove, 10);\r\n      });\r\n   }\r\n</script>\r\n<body>\r\n    <!-- 헤더 -->\r\n    <div class=\"header\">\r\n        <ul>\r\n            <li><a href=\"Program/Program.html\">프로그램</a></li>\r\n            <li><a href=\"Community/community.html\">커뮤니티</a></li>\r\n            <li><a href=\"#\">더미1</a></li>\r\n            <li><a href=\"#\">더미2</a></li>\r\n        </ul>\r\n        <div class=\"login-signup\">\r\n            <button class=\"login-button\"><a href=\"Account/LogIn.html\">로그인</a></button>\r\n            <button class=\"login-button\"><a href=\"Account/Join.html\">회원가입</a></button>\r\n        </div>\r\n    </div>\r\n\r\n    <!-- 내용 -->\r\n    <div class=\"main_term0\">\r\n        <h1><br> \r\n        </h1>\r\n        <div class=\"\">\r\n            <div class=\"\">\r\n                <span class=\"\"> </span>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"main_top\">\r\n        <h1 style=\"text-shadow:2px 2px 4px; color: rgb(255, 255, 255)\"; class=\"main_text\">\r\n            NOTHING WILL <br> WORK UNLESS <br>YOU DO.<br>\r\n            <span class=\"\" style=\"color: rgb(255, 255, 255);\">텍스트 입력 테스트</span>\r\n        </h1>\r\n        <div class=\"\">\r\n            <p style=\"line-break:strict;word-break:keep-all; color:white\" class=\"\">\r\n                나에게 가장 알맞은 운동 프로그램을 생성하고\r\n                <br>더욱 효과적으로 득근하세요!\r\n            </p>\r\n            <br><br>\r\n            <div class=\"\">\r\n                <a class=\"\" href=\"/start.html\" style=\"border: solid 1px red; color:black; padding: 10px;\r\n                background-color: white;\">시작하기</a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\t<div class=\"main_term1\">\r\n        <h1 style=\"text-shadow:2px 2px 4px black;\">\r\n            <br><br><br>\r\n            <span style=\"font-size: 60px;color: white; position: relative; left:550px;\">Popular</span>\r\n        </h1>\r\n        <h2 style=\"text-shadow:2px 2px 4px black; \r\n        \t\tposition: relative; left:550px; color: white;\"  class=\"main_text\">\r\n\t\t\t\r\n            가장 추천하는 베스트 프로그램<br>\r\n            \r\n        </h2>\r\n        <div>\r\n             <a class=\"\" href=\"Program/Program.html\" \r\n             \tstyle=\"position: relative; left:550px; font-size: 25px;\"\r\n             \t>시작하기</a>\r\n        </div>\r\n    </div>\r\n    <div class=\"main_popular\">\r\n    <div id=\"exPrgmImgs\" style=\"text-align: center;\">\r\n        <img src=\"imgs_main/taxasMethodLogo.PNG\" width=\"300px\" style=\"margin-right: 50px;\" />\r\n        <img src=\"imgs_main/strLift55.PNG\" width=\"300px\" style=\"margin-right: 50px;\" />\r\n        <img src=\"imgs_main/program_PHUL.jpg\" width=\"300px\" />\r\n    </div>\r\n</div>    \n    </div>\r\n    \n     <div class=\"main_community\">\n        <div id=\"commuImgs\" style=\"text-align:left; margin-left: 380px; margin-top: 30px;\">\r\n        <img src=\"imgs_main/workout2_social.jpg\" width=\"800px\" style=\"margin-right: 50px; float:left\" />\r\n    \t<h1 style=\"text-shadow:2px 2px 4px black;\">\r\n            <br>\r\n            <span style=\"font-size: 60px;color: white; position: relative; left:150px;\">\r\n\t\t\t\tTrain together<br>\r\n            \t&amp; <br>\r\n\t\t\t\tShare your experience.<br></span>\r\n\t\t\t<h2 style=\"text-shadow:2px 2px 4px black; \r\n        \t\tposition: relative; left:250px; color: white;\"  class=\"main_text\">\r\n\t\t\t\t함께 할 수록 강해집니다.<br>\r\n            \r\n        \t</h2>\r\n        <div>\r\n             <a class=\"\" href=\"Community/community.html\" \r\n             \tstyle=\"position: relative; left:250px; font-size: 25px;\">커뮤니티 이동</a>\r\n\t        </div>\r\n\t    </div>\r\n        </h1>\r\n        \r\n    </div>\r\n       \r\n    <div class=\"main_term3\" >\r\n        <h1><br>   <br>  <br>\r\n            <span class=\"\"> </span>\r\n        </h1>\r\n        <div class=\"\">\r\n            <p class=\"\">\r\n                <br> \r\n            </p>\r\n            <div class=\"\">\r\n                <span class=\"\"> </span>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"main_ad\">\r\n   <div id=\"mainDiv\">\r\n   <input type=\"button\" value=\"◁\" onclick=\"xStep=-1; posterMove();\"/>\r\n   <div id=\"imgView\" style=\"position: relative;\"></div>\r\n   <input type=\"button\" value=\"▷\" onclick=\"xStep=1; posterMove();\"/>\r\n\t</div>\r\n    </div>\r\n    \r\n\r\n    <div class=\"main_term4\">\r\n        <h1><br>   <br>  <br>\r\n            <span class=\"\"> </span>\r\n        </h1>\r\n        <div class=\"\">\r\n            <p class=\"\">\r\n                <br> \r\n            </p>\r\n            <div class=\"\">\r\n                <span class=\"\"> </span>\r\n            </div>\r\n        </div>\r\n    </div>\n    \r\n\r\n</body>\r\n</html>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/index.html b/src/main/webapp/index.html
+--- a/src/main/webapp/index.html	(revision abd4c0c665ddf27bb4299c190ef38cf7166f1446)
++++ b/src/main/webapp/index.html	(date 1694350093077)
+@@ -224,37 +224,37 @@
+         </div>
+     </div>
+     <div class="main_popular">
+-    <div id="exPrgmImgs" style="text-align: center;">
+-        <img src="imgs_main/taxasMethodLogo.PNG" width="300px" style="margin-right: 50px;" />
+-        <img src="imgs_main/strLift55.PNG" width="300px" style="margin-right: 50px;" />
+-        <img src="imgs_main/program_PHUL.jpg" width="300px" />
+-    </div>
+-</div>    
++	    <div id="exPrgmImgs" style="text-align: center;">
++	        <img src="imgs_main/taxasMethodLogo.PNG" width="300px" style="margin-right: 50px;" />
++	        <img src="imgs_main/strLift55.PNG" width="300px" style="margin-right: 50px;" />
++	        <img src="imgs_main/program_PHUL.jpg" width="300px" />
++	    </div>
++	</div>
+     </div>
+     
+-     <div class="main_community">
+-        <div id="commuImgs" style="text-align:left; margin-left: 380px; margin-top: 30px;">
+-        <img src="imgs_main/workout2_social.jpg" width="800px" style="margin-right: 50px; float:left" />
+-    	<h1 style="text-shadow:2px 2px 4px black;">
+-            <br>
+-            <span style="font-size: 60px;color: white; position: relative; left:150px;">
+-				Train together<br>
+-            	&amp; <br>
+-				Share your experience.<br></span>
+-			<h2 style="text-shadow:2px 2px 4px black; 
+-        		position: relative; left:250px; color: white;"  class="main_text">
+-				함께 할 수록 강해집니다.<br>
+-            
+-        	</h2>
+-        <div>
+-             <a class="" href="Community/community.html" 
+-             	style="position: relative; left:250px; font-size: 25px;">커뮤니티 이동</a>
+-	        </div>
+-	    </div>
+-        </h1>
+-        
+-    </div>
+-       
++	<div class="main_community">
++		<div id="commuImgs" style="text-align:left; margin-left: 380px; margin-top: 30px;">
++			<img src="imgs_main/workout2_social.jpg" width="800px" style="margin-right: 50px; float:left" />
++			<h1 style="text-shadow:2px 2px 4px black;">
++			    <br>
++			    <span style="font-size: 60px;color: white; position: relative; left:150px;">
++					Train together<br>
++			        &amp; <br>
++					Share your experience.<br></span>
++				<h2 style="text-shadow:2px 2px 4px black;
++			        position: relative; left:250px; color: white;"  class="main_text">
++					함께 할 수록 강해집니다.<br>
++			    
++			    </h2>
++			<div>
++			     <a class="" href="Community/community.html"
++			        style="position: relative; left:250px; font-size: 25px;">커뮤니티 이동</a>
++			</div>
++			
++			</h1>
++		</div>
++	</div>
++
+     <div class="main_term3" >
+         <h1><br>   <br>  <br>
+             <span class=""> </span>
+@@ -269,10 +269,10 @@
+         </div>
+     </div>
+     <div class="main_ad">
+-   <div id="mainDiv">
+-   <input type="button" value="◁" onclick="xStep=-1; posterMove();"/>
+-   <div id="imgView" style="position: relative;"></div>
+-   <input type="button" value="▷" onclick="xStep=1; posterMove();"/>
++	<div id="mainDiv">
++	<input type="button" value="◁" onclick="xStep=-1; posterMove();"/>
++	<div id="imgView" style="position: relative;"></div>
++	<input type="button" value="▷" onclick="xStep=1; posterMove();"/>
+ 	</div>
+     </div>
+     
