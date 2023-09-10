@@ -4,14 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3d0235d-268b-40a1-8447-4ce7488f80f3" name="변경" comment="" />
+    <list default="true" id="b3d0235d-268b-40a1-8447-4ce7488f80f3" name="변경" comment="ㅎㅇㄹㅎ">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Account/Join/JoinAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Account/Login/LogInAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Account/MyPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Account/MyPage/MyPage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Script/Account.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Style/Fox.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Account/Join.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Account/Join.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Account/Join/Join.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Account/Join/Join.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Account/Join/Join.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Account/Join/Join.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Account/LogIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Account/LogIn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Account/Login/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Account/Login/Login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Style/MainFrame.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Style/MainFrame.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="origin/main" />
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="LSW" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Leia1ra&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="47647a87-540c-4ea6-9852-1e1ceae2d23e" />
+        <option name="url" value="https://github.com/lpqqll/KDT_project.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="mouxnkxa" />
@@ -19,9 +56,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2V3RLnewWWTCw0Rh0ef7eEFPnck" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,14 +70,24 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "LSW",
-    "last_opened_file_path": "/Users/leia_ira/Documents/GitHub/KDT_project",
+    "last_opened_file_path": "/Users/leia_ira/Documents/GitHub/KDT_project/src/main/webapp/Account/Join",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/Account/Join" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/Account/Login" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/Account" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/Style" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">
@@ -55,5 +102,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ㅎㅇㄹㅎ" />
+    <option name="LAST_COMMIT_MESSAGE" value="ㅎㅇㄹㅎ" />
   </component>
 </project>
