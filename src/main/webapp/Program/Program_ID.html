@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>헬창놈들</title>
 
-	<link rel="stylesheet" href="Style/Program_ID.css">
+	<link rel="stylesheet" href="Program_ID.css">
 		<style>
 			
 	</style>
@@ -19,18 +19,18 @@
             var ohpkilograms = parseFloat(document.getElementById('OHP').value);
             
             // 변환 공식: 1 킬로그램 = 2.20462 파운드
-            var squatpounds = squatkilograms * 2.20462;
-            var benchpounds = benchkilograms * 2.20462;
-            var deadpounds  = deadkilograms * 2.20462;
-            var Barrowpounds  = Barrowkilograms * 2.20462;
-            var ohppounds  = ohpkilograms * 2.20462;
+            var squatpounds = squatkilograms * 2.2;
+            var benchpounds = benchkilograms * 2.2;
+            var deadpounds  = deadkilograms * 2.2;
+            var Barrowpounds  = Barrowkilograms * 2.2;
+            var ohppounds  = ohpkilograms * 2.2;
             
             // 결과를 화면에 표시합니다.
-            document.getElementById('result').innerHTML = "Squat: " + squatkilograms + "kg -> " + squatpounds.toFixed(2) + "lb<br>BenchPress: " 
-            																																																								+ benchkilograms + "kg -> " + benchpounds.toFixed(2) + "lb<br>DeadLift: "
-            																																																								+ deadkilograms + "kg -> " + deadpounds.toFixed(2) + "lb<br>Barbelrow: "
-            																																																								+ Barrowkilograms + "kg -> " + Barrowpounds.toFixed(2) + "lb<br>OHP: "
-            																																																								+ ohpkilograms + "kg -> " + ohppounds.toFixed(2); +"lb";
+				           document.getElementById('squat').value = squatpounds;
+															document.getElementById('BenchPress').value = benchpounds;
+															document.getElementById('DeadLift').value = deadpounds;
+															document.getElementById('Barbelrow').value = Barrowpounds;
+															document.getElementById('OHP').value = ohppounds;
         }
                 // 파운드(lb)를 킬로그램(kg)로 변환하는 함수
         function convertPoundsToKilograms() {
@@ -42,18 +42,20 @@
 												var ohppounds = parseFloat(document.getElementById('OHP').value);
 
             // 변환 공식: 1 파운드 = 0.453592 킬로그램
-            var squatKilograms = squatPounds * 0.453592;
-            var benchPressKilograms = benchPressPounds * 0.453592;
-            var deadkilograms = deadpounds * 0.453592;
-            var Barrowkilograms = Barrowpounds * 0.453592;
-            var ohpkilograms = ohppounds * 0.453592;
+            var squatKilograms = squatPounds * 0.4;
+            var benchPressKilograms = benchPressPounds * 0.4;
+            var deadkilograms = deadpounds * 0.4;
+            var Barrowkilograms = Barrowpounds * 0.4;
+            var ohpkilograms = ohppounds * 0.4;
             
             // 결과를 화면에 표시합니다.
-            document.getElementById('result').innerHTML = "Squat: " + squatPounds + "lb -> " + squatKilograms.toFixed(2) + "kg<br>BenchPress: " 
-            																																																								+ benchPressPounds + "lb -> " + benchPressKilograms.toFixed(2) + "kg<br>DeadLift: " 
-            																																																								+ deadpounds + "lb -> " + deadkilograms.toFixed(2) + "kg<br>Barbelrow: "
-            																																																								+ Barrowpounds + "lb -> " + Barrowkilograms.toFixed(2) + "kg<br>OHP: "
-            																																																								+ ohppounds + "lb -> " + ohpkilograms.toFixed(2) + "kg";
+            
+											document.getElementById('squat').value = squatKilograms;
+											document.getElementById('BenchPress').value = benchPressKilograms;
+											document.getElementById('DeadLift').value = deadkilograms;
+											document.getElementById('Barbelrow').value = Barrowkilograms;
+											document.getElementById('OHP').value = ohpkilograms;
+            																																																				
         }
 
         function resetForm() {
@@ -94,40 +96,54 @@
 			
 				<div><img src = "img/strLift55.PNG" style="padding-right:20px;"></div>
 				<form id = "content">
-						<ul style="overflow:auto">
+						<ul id = "side" style="overflow:auto">
+							<div>
 								<li>종목</li>
 							 <li>횟수</li>
 							 <li>수행 가능 최대 중량</li>
+							</div>
 							 
-							 <li>Squat</li>
-							 <li>1회</li>
-							 <li><input type ="number" min="0" id = "squat" style="height:30px;" required></li>
+							 <div>
+								 <li>Squat</li>
+								 <li>1회</li>
+								 <li><input type ="number" step : 0.1;  min="0" id = "squat"   step style="height:30px; text-align: center;" required></li>
+							 </div>
 							 
+							 <div>
 							 <li>BenchPress</li>
 							 <li>1회</li>
-							 <li><input type ="number" min="0" id = "BenchPress" style="height:30px;" required></li>
+							 <li><input type ="number" min="0" id = "BenchPress" style="height:30px; text-align: center;" required></li>
+							 </div>
 							 
+							 <div>
 							 <li>DeadLift</li>
 							 <li>1회</li>
-							 <li><input type ="number" min="0" id = "DeadLift" style="height:30px;" required></li>
+							 <li><input type ="number" min="0" id = "DeadLift" style="height:30px; text-align: center;" required></li>
+							 </div>
 							 
+							 <div>
 							 <li>Barbelrow</li>
 							 <li>1회</li>
-							 <li><input type ="number" min="0" id = "Barbelrow" style="height:30px;" required></li>
+							 <li><input type ="number" min="0" id = "Barbelrow" style="height:30px; text-align: center;" required></li>
+							 </div>
 							 
+							 <div>
 							 <li>OHP</li>
 							 <li>1회</li>
-							 <li><input type ="number" min="0" id = "OHP" style = "height:30px;" required></li>
+							 <li><input type ="number" min="0" id = "OHP" style = "height:30px; text-align: center;" required></li>
+							 </div>
 							 
-							 
+							 <div>
 						  <li>&nbsp;</li>
 						  <li>&nbsp;</li>
 						  <li>
 									<div id="result" style = "font-size : 15px;"></div>
 									<button onclick="convertKilogramsToPounds()">킬로그램(kg)</button>
 									<button onclick="convertPoundsToKilograms()">파운드(lb)</button>			
-								</li>	
+								</li>
+								</div>	
 								
+								<div>
 								<li>&nbsp;</li>
 							<li>		
 								
@@ -135,6 +151,7 @@
 							<input type = "submit" value="Done">
 								</li>
 								<li>&nbsp;</li>
+								</div>
 						</ul>
 					
 		

@@ -9,7 +9,7 @@
 		<style>
 			table{
 				width: 700px;
-				
+
 			}
 			tr,td{
 				border : 1px solid white;
@@ -41,16 +41,19 @@
 				let dayCounter = 1;
 				tag += "<ul>";
      for (var i = 1; i <= lastDay; i++) {
-	    if (i == nowDate) {
-	        tag += "<li>" + i + "</li>";
-	    } else {
+	    if (w == 1 ||w == 3	 ||w == 5 ) {	        
+						tag += "<li class = 'highlight' >" + i +"</li>";
+						}else {						
 	        tag += "<li>" + i + "</li>";
 	    }
-	
+			  w = (w + 1) % 7; 
+			  
 	    if (i % 7 == 0) { // 7일마다 줄바꿈
 	        tag += "</ul><ul>";
+	   
 	   }
 }
+
         tag += "</ul>";
         document.getElementById("cal_view").innerHTML = tag;
 
@@ -61,25 +64,21 @@
         if (cell.innerText < 1 || weekName.includes(cell.innerText)) {
             return;
         } else {
-												cell.classList.add("selected");
+												
             // 선택된 날짜의 월과 일 출력
             let selectedMonth = m;
             let selectedDay = cell.innerText;
-            document.getElementById("selected_date").innerHTML = selectedMonth + "월 " + selectedDay + "일<br>";
-
-            // "보기" 버튼 생성 및 추가
-            let viewButton = document.createElement("button");
-            viewButton.innerText = "보기";
-            viewButton.id = "viewBtn";
-
+            let selectedDateText = selectedMonth + "월 "	+ selectedDay + "일"
             
-            // "selected_date" div에 "보기" 버튼 추가
-            document.getElementById("selected_date").appendChild(viewButton);
-        }
+            document.getElementById("selected_date").innerHTML = selectedDateText;
+            
+            
+           
+          
+								}
     });
 });
-        
-       
+
     			}
         window.onload = function () {
         let now = new Date();
@@ -87,22 +86,7 @@
         let month = now.getMonth() + 1;
         calendar(year, month);
     }
-    //보기 누르면 테이블 출력
-   document.addEventListener("DOMContentLoaded", function () {
-									    const toggleButton = document.getElementById("showBtn");
-									    const tableContainer = document.getElementById("table");
-
-							    toggleButton.addEventListener("click", function () {
-							        if (tableContainer.style.display === "none" || tableContainer.style.display === "") {
-							            tableContainer.style.display = "block"; // 테이블 보이기
-							        } else {
-							            tableContainer.style.display = "none"; // 테이블 숨기기
-							        }
-   											});
-													});
-       		 
-
-		
+   
 	
 	</script>
 </head>
@@ -127,77 +111,8 @@
 				 <div id="main">
 		       	<div id="cal_view"></div>
 		   </div>
-	   <div id = "selected_date">
-					<button id = "showBtn">보기</button>
-	   <div id = "table" style = "display: none;">
-				<table style = "text-align: center;">
-					<tr>
-						<td colspan = "2">스쿼트</td>
-						<td colspan = "2">벤치프레스</td>
-						<td colspan = "2">오버헤드프레스</td>
-					</tr>
-					<tr>
-						<td>중량</td>
-						<td>횟수</td>
-						<td>중량</td>
-						<td>횟수</td>
-						<td>중량</td>
-						<td>횟수</td>
-					</tr>
-					<tr>
-						<td>112</td>
-						<td>5</td>
-						<td>80</td>
-						<td>5</td>
-						<td>48</td>
-						<td>5</td>
-					</tr>
-					<tr>
-						<td>112</td>
-						<td>5</td>
-						<td>80</td>
-						<td>5</td>
-						<td>48</td>
-						<td>5</td>
-					</tr>
-					<tr>
-						<td>112</td>
-						<td>5</td>
-						<td>80</td>
-						<td>5</td>
-						<td>48</td>
-						<td>5</td>
-					</tr>
-					<tr>
-						<td>112</td>
-						<td>5</td>
-						<td>80</td>
-						<td>5</td>
-						<td>48</td>
-						<td>5</td>
-					</tr>
-					<tr>
-						<td>112</td>
-						<td>5</td>
-						<td>80</td>
-						<td>5</td>
-						<td>48</td>
-						<td>5</td>
-					</tr>
-						
-						</table>
-						<div id = "checkbox" style = "margin-top : 25px;  width:700px; ">
-						<input type ="checkbox" style = "margin-left : 90px;">
-						<input type ="checkbox" style = "margin-left : 180px;">
-						<input type ="checkbox" style = "margin-left : 233px;">
-						</div>
-						<button style = "font-size : 20px;width : 100px;margin-top : 40px; margin-left: 250px;">▶</button>
-					</div>
-					
-				</div>
+	   <div id = "selected_date"></div>
 				
-	   
-   </div>
 		</article>
 	</section>
 	
