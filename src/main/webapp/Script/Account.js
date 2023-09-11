@@ -27,7 +27,7 @@ class Account{
             </ul>
             <ul id="management"><!--style="display: none"-->
                 <span>Leiaira92@gmail.com</span>
-                <li><a href="../Account/MyPage.html">계정관리</a></li>
+                <li><a href="#">계정관리</a></li>
                 <li><a href="#">대시보드</a></li>
                 <li><a href="#">로그아웃</a></li>
             </ul>
@@ -38,7 +38,6 @@ class Account{
     showAccount(){
         if(this.account_condition == false){
             let st = document.getElementById("management").style;
-            console.log(this.account_condition);
             // st.display = 'inline-flex';
             st.visibility = 'visible'
             this.account_condition = true;
@@ -48,7 +47,6 @@ class Account{
     }
     hideAccount(){
         let st = document.getElementById("management").style;
-        console.log(this.account_condition);
         // st.display = 'none';
         st.visibility = 'hidden'
         this.account_condition = false;
