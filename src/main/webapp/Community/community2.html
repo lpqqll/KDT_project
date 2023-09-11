@@ -5,13 +5,18 @@
 <title>커뮤니티</title>
 <link rel="stylesheet" href="../Style/MainFrame.css">
 <style>
-	 
+	/*
+	 body{
+		 background-color: slategray;
+		 color:white;
+	 }*/
     /* 카테고리 탭 스타일 */
     .sidenav {
-        height: 100%; width: 200px; position: fixed; z-index: 1;
-        top: 0; left: -150px; /* 왼쪽으로 조금 숨김 */
+        height: 100%; width: 240px; position: fixed; z-index: 1;
+        top: 0; left: -170px; /* 왼쪽으로 조금 숨김 */
         background-color: black; padding-top: 20px;
-        transition: left 0.3s;
+        transition: left 0.3s; margin-top:100px;
+        border-top-right-radius: 20px;
     }
 
     .sidenav:hover, .sidenav.active {
@@ -65,9 +70,11 @@
     }
 	/*배너, 추후 사진 등으로 교체?*/
 	#banner {
-		color : white; background-color: #202020; text-align:center; list-style: none;
-		padding-top: 70px; padding-bottom: 70px; border-color:#202020; font-size:2.5em;
-	}
+      color : white; background-color: #202020; text-align:center; list-style: none;
+      padding-top: 10px; padding-bottom: 10px; border-color:#202020; font-size:2.5em;
+      
+   }
+	/*글쓰기 버튼*/
 	#writebutton{
 		color:white; background-color: #202020; float: right; border-radius: 5px;
 	}
@@ -126,10 +133,11 @@
 		height: 70px;
 	}
 	
+	/*게시글 목록 스타일*/
  	.writelist *{
             list-style-type: none;
         }
-    #list{
+    #list, #list1, #list2, #list3{
             margin: 0;
             padding: 0;
         }
@@ -141,6 +149,14 @@
             flex-direction: row;
             justify-content: space-between;
         }
+    /*페이지 넘기는 버튼*/
+    .number{
+		list-style: none; font-size: 20px;
+		padding:0; display: flex; justify-content: center; width: 75%;
+	}
+	.number>li{
+		 padding-right:10px; padding-left:10px; border-radius: 20px;
+	}
     </style>
 	
 	
@@ -177,8 +193,15 @@
     window.onload = function(){
     openTab("Community");
     }
+   
     
 </script>
+<!--배너 관련 코드-->
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
+
 </head>
 <body>
 <!--Header 상단바-->
@@ -203,10 +226,31 @@
             <!--Authentication passed-->
             <!--Authentication NONE-->
         </div>
+
 </header>
+<!--배너-->
+<!-- Banner -->
+   <div id="banner">
+      <!--<b>NOTHING WILL WORK UNLESS<br/>YOU DO.</b>-->
+      <div id="container">
+         <div class="main_visual">
+            <center>
+               <div class="fotorama" data-nav="false" data-width="800" data-height="200" data-max-width="100%" data-click='false' data-swipe='false'
+            data-loop="true" data-autoplay="12000" data-stopautoplayontouch="false">
+               <div data-img="img/NWY.png"><a href="/" class="item" ></a></div>
+               <div data-img="img/myproteinGYM.png"><a href="/" class="item" ></a></div>
+               <div data-img="img/AA.jpg"><a href="/" class="item" ></a></div>
+            </div>
+            </center>
+            
+         </div>
+      </div>
+   </div>
 <main>
-	<li id="banner"><b>NOTHING WILL WORK UNLESS<br/>YOU DO.</b></li>
+	<!--
+	<li id="banner"><b>NOTHING WILL WORK UNLESS<br/>YOU DO.</b></li>-->
 	<div class="sidenav" onmouseover="activateNav()" onmouseout="deactivateNav()">
+		
 	    <!-- 오른쪽 일부분 화면 좌측에 넣기 -->
 	    <div class="left-placeholder"></div>
 	    
@@ -261,19 +305,22 @@
 		            <img src="img/mabi.png">
 		            <img src="img/mabi.png">
 		            <img src="img/mabi.png">
-		        </div>		        
+		        </div><br/>	
+		        <div class="number">
+					<li><</li><li style="background-color: rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
+				</div>	        
 		    </div>		
 		    <div id="Notice" class="tabcontent">
 				<li id="top"><b>자유 게시판</b></li> 
 				<div class="left-content">	   		 
 			        <button id="writebutton">글쓰기</button><br/>
-			        <hr>			    
+			        <hr>
 			        <div class="writelist">
-				        <ul id="list">
-							<script src="bbs.js">					
+				        <ul id="list1">
+							<script src="commufree.js">					
 							</script>
 						</ul>
-					</div>
+					</div>			    
 			    </div>
 		        <div class="right-content">
 		            <li id="hot"><b>인기글</b></li><hr>
@@ -291,7 +338,10 @@
 		            <img src="img/mabi.png">
 		            <img src="img/mabi.png">
 		            <img src="img/mabi.png">
-		        </div>
+		        </div><br/>	
+		        <div class="number">
+					<li><</li><li style="background-color: rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
+				</div>
 		    </div>
 		
 		    <div id="Humor" class="tabcontent">
@@ -322,7 +372,10 @@
 		            <img src="img/mabi.png">
 		            <img src="img/mabi.png">
 		            <img src="img/mabi.png">
-		        </div>
+		        </div><br/>	
+		        <div class="number">
+					<li><</li><li style="background-color: rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
+				</div>
 		        
 		    </div>
 		
@@ -331,6 +384,12 @@
 		        <div class="left-content">	        
 			        <button id="writebutton">글쓰기</button><br/>
 			        <hr>
+			        <div class="writelist">
+				        <ul id="list2">
+							<script src="commutip.js">					
+							</script>
+						</ul>
+					</div>
 			    </div>
 		        <div class="right-content">
 		            <li id="hot"><b>인기글</b></li><hr>
@@ -348,7 +407,10 @@
 		            <img src="img/mabi.png">
 		            <img src="img/mabi.png">
 		            <img src="img/mabi.png">
-		        </div>
+		        </div><br/>	
+		        <div class="number">
+					<li><</li><li style="background-color: rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
+				</div>
 		    </div>
 		
 		    <div id="Tips" class="tabcontent">
@@ -356,6 +418,12 @@
 		        <div class="left-content">        
 			        <button id="writebutton">글쓰기</button><br/>
 			        <hr>
+			        <div class="writelist">
+				        <ul id="list3">
+							<script src="commutoday.js">					
+							</script>
+						</ul>
+					</div>
 			    </div>
 		        <div class="right-content">
 		            <li id="hot"><b>인기글</b></li><hr>
@@ -373,7 +441,10 @@
 		            <img src="img/mabi.png">
 		            <img src="img/mabi.png">
 		            <img src="img/mabi.png">
-		        </div>
+		        </div><br/>	
+		        <div class="number">
+					<li><</li><li style="background-color: rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
+				</div>
 		    </div>
 		
 		    <div id="Questions" class="tabcontent">      
@@ -381,6 +452,12 @@
 				<div class="left-content">	   		 
 			        <button id="writebutton">글쓰기</button><br/>
 			        <hr>
+			        <div class="writelist">
+				        <ul id="list4">
+							<script src="commubodyking.js">					
+							</script>
+						</ul>
+					</div>
 			    </div>
 		        <div class="right-content">
 		            <li id="hot"><b>인기글</b></li><hr>
@@ -398,7 +475,10 @@
 		            <img src="img/mabi.png">
 		            <img src="img/mabi.png">
 		            <img src="img/mabi.png">
-		        </div>
+		        </div><br/>	
+		        <div class="number">
+					<li><</li><li style="background-color: rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
+				</div>
 		    </div>
 		</article>
 	</section>
