@@ -31,10 +31,10 @@
 			
 			
 			//
-			window.onresize = function(){
+			/*window.onresize = function(){
 				$("#dialog1_1").dialog('close');
 				$("#dialog1_1").dialog('open');
-			}
+			}*/
 			
 		})
 		
@@ -46,6 +46,27 @@
 			});
 			
 			$("#dialog1_2").dialog({
+				autoOpen : false
+				,buttons : {
+					START : function(){
+
+						location.href = "Program_ID.html"
+					}
+				}
+				, width : 1000
+				, height : 500
+				
+				, modal : true
+			})
+		})
+		//3번 사진
+		$(function(){
+			$("#dialogOpen1_3").click(function(){
+				$("#dialog1_3").dialog('open');
+				
+			});
+			
+			$("#dialog1_3").dialog({
 				autoOpen : false
 				,buttons : {
 					START : function(){
@@ -84,37 +105,81 @@
 			
 				<ul id = "top">
 						<!--1행1열-->
-						<div id = "dialogOpen1_1" ><img src = "../Program/img/taxasMethodLogo.PNG"></div>
+						<div id = "dialogOpen1_1" ><img src = "../Program/img/strLift55.PNG"></div>
 						<div id = "dialog1_1" title = "Strong Lift 5*5 Program" >
 							<ul>
-											<img src = "../Program/img/taxasMethodLogo.PNG"><br>
+											<img src = "../Program/img/strLift55.PNG"><br>
 												<li><p>
-												스트롱리프트 5×5 루틴은 3대 운동을 포함해 큰 근육을 타겟으로 수행되는 운동 루틴으로 초보자가 근력과 근육량을 빠르게 늘릴 수 있습니다.<br> 
-												스트롱리프트 5×5는 각 운동을 5회, 5세트 진행하기 때문에 다른 루틴보다 고중량으로 운동을 수행하게 됩니다.<Br>
+												스트롱리프트 5×5 루틴은 3대 운동을 포함해 큰 근육을 타겟으로 수행되는 운동 루틴으로 초보자가 근력과 근육량을 빠르게 늘릴 수 있습니다.<br>
+												<br> 
+												스트롱리프트 5×5는 각 운동을 5회, 5세트 진행하기 때문에 다른 루틴보다 고중량으로 운동을 수행하게 됩니다.<br>
 												세트 수와 반복 횟수가 적기 때문에 그만큼 무거운 중량으로 운동을 수행해야 합니다.<br>
-												본 루틴은 일반적으로 1RM의 70~80% 중량으로 수행하데 초보자의 경우 1RM 측정도 어렵고 처음부터 고중량으로 루틴을 수행하기 부담스러울 수 있습니다.<br>
+												본 루틴은 일반적으로 1RM의 70~80% 중량으로 수행하며 초보자의 경우 1RM 측정도 어렵고 처음부터 고중량으로 루틴을 수행하기 부담스러울 수 있습니다.<br>
 												하지만 스토링리프트 5×5 루틴 자체에 중량을 늘리는 프로그램이 설정되어 있기 때문에 수행 강도(중량)에 너무 신경 쓸 필요는 없습니다.<br>
+												<br>
 												본인이 5회 5세트를 겨우 채울 수 있는 정도의 무게로 시작하면 됩니다. 정확하지 않아도 됩니다.<br>
 												중량은 루틴이 종료되고 다시 루틴을 시작할 때 증가시킵니다.<br>
 												루틴은 A, B SET로 구성되며 각 세트 마지막에 팔과 복근 운동을 선택적으로 추가할 수 있습니다.<br>
+												<br>
 												A SET : 스쿼트 / 벤치 프레스 / 바벨 로우<br>
 												B SET : 스쿼트 / 밀리터리 프레스 / 데드리프트<br></p></li>
 							</ul>
 						</div>
 						
 						<!--1행2열-->
-						<div id = "dialogOpen1_2" ><img src = "../Program/img/taxasMethodLogo.PNG">
-						<div id = "dialog1_2" title = "Strong Lift 5*5 Program">
+						<div id = "dialogOpen1_2" ><img src = "img/program_PHUL.jpg"></div>
+						<div id = "dialog1_2" title = "PHUL Program">
 							<ul>
-											<img src = "../Program/img/taxasMethodLogo.PNG"><br>
+											<img src = "img/program_PHUL.jpg"><br>
 												<li><p>
+											PHUL (Power Hypertrophy Upper Lower) 루틴<br>
+											본 루틴은 머슬 앤 스트렝스의 브랜든 캠벨이 제안한 스트렝스와 근비대를 함께 향상시키기 위해 사용하는 루틴으로 크게 근력 2일, 근비대 2일로 구성됩니다.<br>
+											<br>
+											근력운동 후 근합성률은 최대 48시간까지 상승하므로 일주일에 최소한 2번 이상 각 근육 그룹을 훈련하는 것이 효과적이며, <br>
+											프로그램에 고립훈련이 없는 것은 아니지만 기본적인 운동은 복합다관절 운동을 메인으로 스트렝스 훈련이 기본이 된 프로그램입니다.<br>
+											<br>
+											복합다관절 운동인 벤치프레스, 바벨로우, 오버해드 프레스, 스쿼트 및 데드리프트는 가능하면 유지하고 <br>
+											다른 종목은 변경 가능하지만 가급적 유지하는 것을 추천합니다.<br>
+											복근은 운동 후 혹은 휴식일에 실시합니다.<br>
+											<br>
+											PHUL 역시 디로딩 기간을 가져주는 것이 좋습니다다. <br>
+											일반적으로는 12주 동안 프로그램을 돌린 후 1주일 간의 디로딩 기간을 가지는 것을 권고합니다.<br>
+											디로딩 기간에는 기존 무게의 50% 수준으로 세트를 돌리면 됩니다.
+
+												</p></li>	
 							</ul>
 						</div>
 						
 						<!--1행3열-->
-						<div id = "dialogOpen1_3" ><img src = "../Program/img/taxasMethodLogo.PNG"></div>
+						<div id = "dialogOpen1_3" ><img src = "img/taxasMethodLogo.PNG"></div>
+						<div id = "dialog1_3" title = "taxasMethod">
+									<ul>
+											<img src = "img/taxasMethodLogo.PNG"><br>
+												<li><p>
+													#텍사스메소드 #마크리피토 #펜들레이<br>
+												<br>
+												텍사스 메소드는 전 세계적으로 인기 있는 중급자 이상을 대상으로 한 운동 프로그램입니다. <br>
+												이 프로그램의 기원과 방식에 대해 알아보겠습니다.<br>
+												<br>
+												텍사스 메소드 프로그램이 생긴 기원<br>
+												<br>
+												마크 리피토와 글램 팬들레이의 체육관에서 5회 5세트의 스쿼트를 진행하다가 리프터 중 한 명이 운동량에 불평을 하자 <br>
+												"만약 네가 5회의 개인 최고 기록을 새롭게 세울 수 있다면 오늘은 그것만 하고 집에 가도 좋다"라고 말한 것에서 시작했습니다. <br>
+												이후 선수들은 금요일에 5회의 개인 최고 기록을 세우기 시작했고 이로 인해 프로그램이 세계적으로 확립되었습니다.<br>
+												<br>
+												프로그램 수행 방법<br>
+												<br>
+												이 프로그램은 월요일은 높은 볼륨의 운동을 하고, 수요일은 저강도 운동으로 회복을 위한 시간을 가지며, 금요일은 새로운 5RM을 도전하는 날입니다. <br>
+												이렇게 일주일에 월, 수, 금 3일을 수행합니다.<br>
+												<br>
+												5RM이란 최대로 5번 들 수 있는 무게를 말합니다.<br>
+												예를 들어 스쿼트를 4번도 아니고 6번도 아니고 딱 5번만 들 수 있는 무게입니다. <br>
+												
+
+										</p></li>	
+							</ul>
+						</div>
 				</ul>
-				
 				
 				<ul id = "middle">
 					<!--2행1열-->

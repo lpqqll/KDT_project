@@ -170,15 +170,16 @@ a:link, a:visited{
 	}		
 	
 	#dialogOpen1_2{
-		float : center;
-		
+		float : left;
+		margin-right : 125px;
 	}
 	#dialogOpen1_3{
-		float:right;
+		float: left;
 	}
 
 	#dialog1_1, #dialog1_2,#dialog1_3{
-		background-color: tomato;
+		background-color: white;
+		height: 500px;
 	}
 	#dialog1_1>ul>img,#dialog1_2>ul>img,#dialog1_3>ul>img{
 		float:left;
