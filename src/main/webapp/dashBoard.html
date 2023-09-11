@@ -42,48 +42,54 @@
 		<h2>대시보드</h2>
 		
 			<!-- 대시보드 시작 -->
-			<div id = "Profile">
-			<div class="pt-20 pb-56">
-				<div class="flex flex-col items-center xl:flex-row justify-between xl:items-start">
-				<div class=" w-full md:w-1/2 "><div class="bg-white dark:bg-gray-700 shadow-md rounded-md p-5 max-w-screen-sm w-full">
-				<div class="flex flex-col items-center md:items-start md:flex-row"><div class="w-40 relative">
+	<div id = "MainProfile">
+			<div id = "leftProfile">
+			 <div class="pt-20 pb-56">
+				 <div class="flex flex-col items-center xl:flex-row justify-between xl:items-start">
+			 	<div class=" w-full md:w-1/2 "><div class="bg-white dark:bg-gray-700 shadow-md rounded-md p-5 max-w-screen-sm w-full">
+				 <div class="flex flex-col items-center md:items-start md:flex-row"><div class="w-40 relative">
 					<img src="imgs_main/workout_profile_ex_circle.jpg" class="w-full rounded-full">
 				</div>
 				<div id = "UsNa">
-				<div class="md:ml-10 w-full">
-					<div class="mb-2 md:mb-4">
-						<span class="text-xs text-gray-500 dark:text-gray-300 block">Name</span>
-						<h3 class="font-medium dark:text-white text-3xl leading-8">이름</h3>
+					<div class="md:ml-10 w-full">
+						<div class="mb-2 md:mb-4">
+							<span class="text-xs text-gray-500 dark:text-gray-300 block">Name</span>
+							<h3 class="font-medium dark:text-white text-3xl leading-8">이름</h3>
+						</div>
+					<div class=" items-center grid grid-cols-2 mt-1">
+					<div>
+					<span class="text-xs text-gray-500 dark:text-gray-300 block">Username</span>
+					<h4 class="dark:text-white">닉네임</h4>
+						<div class="mt-10 flex justify-center w-full md:w-1/2">
+							<a class="inline-flex w-full dark:bg-transparent dark:text-white dark:hover:bg-transparent dark:hover:text-gray-300 items-center justify-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-400 active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150" 
+							href="Account/MyPage.html">Edit profile</a>
+						</div>
 					</div>
-				<div class=" items-center grid grid-cols-2 mt-1">
-				<div>
-				<span class="text-xs text-gray-500 dark:text-gray-300 block">Username</span>
-				<h4 class="dark:text-white">닉네임</h4>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
 				</div>
-				</div>
-				</div>
-				</div>
-				</div>
-				</div>
-				<div class="mt-10 flex justify-center w-full md:w-1/2">
-					<a class="inline-flex w-full dark:bg-transparent dark:text-white dark:hover:bg-transparent dark:hover:text-gray-300 items-center justify-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-400 active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150" 
-						href="Account/MyPage.html">Edit profile</a>
-					</div></div>
-					<div class=" bg-white dark:bg-gray-700 shadow-md rounded-md p-5 max-w-screen-sm mt-5 flex items-center col-span-2">
-						<div class="mr-5"><img src="imgs_main/program_strLift55.PNG" width="100" class="w-16"></div>
+				<div id = "rightProfile">
+					
+						<div class=" bg-white dark:bg-gray-700 shadow-md rounded-md p-5 max-w-screen-sm mt-5 flex items-center col-span-2">
+							<div class="mr-5"><img src="imgs_main/program_strLift55.PNG" width="100" class="w-16"></div>
+						</div>
+						<div class="mt-20">
+						</div>
 						
+						<div>
+						<h3>진행중인 프로그램</h3>
+						<div id="program">
+							<img src="Style/Fox.png" alt="">
+						</div>
+						</div>
 					</div>
-					</div>
-					<div class="mt-20">
-					</div>
-					</div>
-				</div>
-			<div>
-					<h3>진행중인 프로그램</h3>
-					<div id="program">
-						<img src="Style/Fox.png" alt="">
-					</div>
-				</div>
+		</div>
 			<!-- 대시보드 끝 -->
 			
 		

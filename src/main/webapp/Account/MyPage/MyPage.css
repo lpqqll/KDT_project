@@ -15,6 +15,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 #MainSection>h2{
     width: 100%;
@@ -89,13 +90,21 @@ body{
     flex-grow: 1;
     width: 30%;
 }
-#Profile{
+#leftProfile{
 	background-color: blue;
-	width : 500px;
+	width :450px;
+	margin : 0 auto;
+	float : left;
 }
 #UsNa{
 	background-color: red;
-	width : 250px;
+	float : left;
+}
+#rightProfile{
+	background-color : lightgreen;
+	width : 450px;
+	margin : 0 auto;
+	float:left;
 }
 
 /*inbody################################################*/
