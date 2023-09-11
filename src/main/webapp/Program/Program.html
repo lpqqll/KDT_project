@@ -11,6 +11,7 @@
  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 	<script>
 		//1번 사진
+		
 		$(function(){
 			$("#dialogOpen1_1").click(function(){
 				$("#dialog1_1").dialog('open');
@@ -27,14 +28,16 @@
 				, width : 1000
 				, height : 500
 				, modal : true
-							});
+			});
 			
 			
 			//
-			/*window.onresize = function(){
-				$("#dialog1_1").dialog('close');
-				$("#dialog1_1").dialog('open');
-			}*/
+			window.onresize = function(){
+				if($("#dialog1_1").dialog("isOpen")){
+					$("#dialog1_1").dialog('close');			
+					$("#dialog1_1").dialog('open');
+				}
+			}
 			
 		})
 		
