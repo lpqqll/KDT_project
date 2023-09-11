@@ -41,6 +41,10 @@ body{
     padding: 10px;
     background-color: white;
     text-decoration: none;
+    transition: 0.3s ease;
+}
+#main_top>a:hover{
+    background-color: #FF9F29;
 }
 
 /*Popular*/
@@ -48,14 +52,14 @@ body{
     --section-gap: calc(24px);
     --transform-origin-x: calc(var(--section-gap) * 0.8);
     width: 100%;
-    height: 10px;
+    /*height: 10px;*/
     padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-bottom: 15rem;
     transform-origin: var(--transform-origin-x);
     transform: skewY(-5deg);/*translateY(100px)*/
     background-color: #FF9F29;
     position: relative;
-    top: 11rem;
+    top: 20rem;
     z-index: -1;
 }
 #main_term1{
@@ -94,6 +98,11 @@ body{
     padding: 10px;
     background-color: white;
     text-decoration: none;
+    transition: 0.3s ease;
+}
+#main_term1>div>span>a:hover{
+    color: white;
+    background-color: mediumpurple;
 }
 #exPrgmTxts{
     width: 100%;
@@ -142,7 +151,7 @@ body{
 }
 #main_community>div>img{
     width: 50%;
-    min-width: 600px;
+    /*min-width: 600px;*/
     flex-grow: 1;
 }
 #main_community>div>h1{
@@ -173,41 +182,73 @@ body{
     padding: 10px;
     background-color: white;
     text-decoration: none;
+    transition: 0.3s ease;
+}
+#main_community>div>h1>span>a:hover{
+    background-color: #FF9F29;
 }
 
-.main_ad{
+/*광고*/
+#main_ad{
     background-color: rgb(250, 243, 227);
-    /* border: 1px solid red;  잠깐 표시만 해놓음 */
     text-align: center;
-    padding: 20px;
-    height: 500px;
+    padding: 40px;
+    height: 400px;
+    transform: skewY(-5deg);
+    margin-bottom: 100px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* 포스터 */
-#mainDiv{width:872px; height:164px; margin:0 auto;}
+#mainDiv{
+    /*width:872px;*/
+    /*height:164px;*/
+    /*margin:0 auto;*/
+    width: 100%;
+    height:100%;
+    margin: 0 auto;
+    display: flex;
+    /*align-items: center;*/
+    justify-content: space-around;
+    background-color: rgb(250, 243, 227);
+}
 #imgView, #mainDiv>input{
-    float:left; height: 364px;
+    /*float:left; height: 364px;*/
+    /*height: 100%;*/
+    width: fit-content;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(250, 243, 227);
+    color: #FF9F29;
+    font-size: 2rem;
+    transition: 0.3s ease;
 }
 #mainDiv>input{
-    width:30px;
+    width: 50px;
+    height: 100%;
+}
+#mainDiv>input:hover{
+    background-color: #FF9F29;
+    color: white;
 }
 #imgView{
-    width:812px; position:relative; overflow:hidden;
+    /*width:812px;*/
+    width: 80%;
+    height: 100%;
+    position:relative;
+    overflow:hidden;
+    /*margin-right: 10px;
+    margin-left: 10px;*/
 }
 #imgList{
-    width:2320px; position:absolute;
+    /*width:2320px;*/
+    width: fit-content;
+    height: 100%;
+    position:absolute;
+    display: flex;
+}
+#imgList>img{
+    height: 100%;
+    margin-right: 5px;
 }
 
 
@@ -227,9 +268,6 @@ body{
     }
     #main_community>div>img{
         width: 90%;
-    }
-    #main_community>div>h1{
-        width: 100%;
     }
 }
 @media(max-width: 800px) {

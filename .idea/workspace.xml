@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3d0235d-268b-40a1-8447-4ce7488f80f3" name="변경" comment="ㅎㅇㄹㅎ">
+    <list default="true" id="b3d0235d-268b-40a1-8447-4ce7488f80f3" name="변경" comment="ㅎㅇ">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Script/Advertisement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Script/Onload.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Script/Account.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Script/Account.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Script/Log.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Script/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Style/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Style/Main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,28 +58,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;LSW&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/leia_ira/Documents/GitHub/KDT_project/src/main/webapp/Account/Join&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "LSW",
+    "last_opened_file_path": "/Users/leia_ira/Documents/GitHub/KDT_project/src/main/webapp/Script",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/Script" />
       <recent name="$PROJECT_DIR$/src/main/webapp/Account/Join" />
       <recent name="$PROJECT_DIR$/src/main/webapp/Account/Login" />
       <recent name="$PROJECT_DIR$/src/main/webapp/Account" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/Style" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
@@ -86,6 +92,15 @@
       <updated>1694062730914</updated>
       <workItem from="1694062732286" duration="1039000" />
     </task>
+    <task id="LOCAL-00001" summary="ㅎㅇ">
+      <option name="closed" value="true" />
+      <created>1694392744985</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694392744985</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +108,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ㅎㅇㄹㅎ" />
-    <option name="LAST_COMMIT_MESSAGE" value="ㅎㅇㄹㅎ" />
+    <MESSAGE value="ㅎㅇ" />
+    <option name="LAST_COMMIT_MESSAGE" value="ㅎㅇ" />
   </component>
 </project>
