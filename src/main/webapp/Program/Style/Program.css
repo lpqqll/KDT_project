@@ -161,19 +161,27 @@ a:link, a:visited{
 		#MainSection>#top{
 			margin-top : 150px;
 		}
+		#MainSection>#middle{
+			margin-top: 450px;
+		}
+		#MainSection>#bottom{
+			margin-top: 750px;
+		
+		}
 		#MainSection > #top, #MainSection > #bottom, #MainSection > #middle{
 		 margin-bottom : 100px;
 		}
-	#dialogOpen1_1{
+	#dialogOpen1_1, #dialogOpen2_1, #dialogOpen3_1{
 		float : left;
 		margin-right : 125px;
 	}		
 	
-	#dialogOpen1_2{
+	#dialogOpen1_2, #dialogOpen2_2, #dialogOpen3_2{
 		float : left;
 		margin-right : 125px;
+		
 	}
-	#dialogOpen1_3{
+	#dialogOpen1_3, #dialogOpen2_3, #dialogOpen3_3{
 		float: left;
 	}
 

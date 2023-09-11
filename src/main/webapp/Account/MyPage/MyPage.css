@@ -89,7 +89,14 @@ body{
     flex-grow: 1;
     width: 30%;
 }
-
+#Profile{
+	background-color: blue;
+	width : 500px;
+}
+#UsNa{
+	background-color: red;
+	width : 250px;
+}
 
 /*inbody################################################*/
 #progress{
