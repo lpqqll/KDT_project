@@ -1,296 +1,110 @@
-<!DOCTYPE html>
+<!--<%@ page contentType="text/html;charset=UTF-8" language="java" %>-->
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="styles.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<style>
-	.main_term0 {
-    background-color: #202020;
-    padding: 20px;
-	}
-	.main_top {
-	    background-color: #202020;
-	    /*border: 1px solid red;  잠깐 표시만 해놓음 */
-	    text-align: center;
-	    padding: 20px;
-	}
-	.main_popular {
-	    /*background-color: rgb(255, 159, 41);*/
-	   /* border: 1px solid red;  잠깐 표시만 해놓음 */
-	    text-align: right;
-	    padding: 20px;
-	    background: linear-gradient(-5deg, rgb(255, 159, 41), rgb(255, 159, 41) 50%);
-	    height: 500px;
-	}
-	
-	.main_community{
-	    background-color: #202020;
-	   /* border: 1px solid red;  잠깐 표시만 해놓음 */
-	    text-align: center;
-	    padding: 20px;
-	    height: 500px;
-	}
-	.main_ad{
-	    background-color: rgb(250, 243, 227);
-	   /* border: 1px solid red;  잠깐 표시만 해놓음 */
-	    text-align: center;
-	    padding: 20px;
-	    height: 500px;
-	}
-	.main_term1 {
-	    /*border: 1px solid red;  잠깐 표시만 해놓음 */
-	    text-align: center;
-	    padding: 20px;
-	    background: linear-gradient(-5deg, rgb(255, 159, 41) 50%, #202020 50%);
-	}
-	.main_term2 {
-	    background-color: rgb(255, 159, 41);
-	    padding: 20px;
-	}
-	.main_term3 {
-	    background: linear-gradient(-5deg, rgb(250, 243, 227) 50%, #202020 50%);
-	    padding: 20px;
-	}
-	.main_term4 {
-	    background: linear-gradient(-5deg, #202020 50%, rgb(250, 243, 227) 50%);
-	    padding: 20px;
-	}
-	
-	    /* 헤더 스타일 */
-	.header {
-	    background-color: rgb(0, 0, 0);
-	    color: #fff;
-	    display: flex;
-	    justify-content: space-around;
-	    align-items: center;
-	    padding: 75px 40px;
-	    
-	}
-	
-	.header ul {
-	    list-style: none;
-	    margin: 0;
-	    padding: 0;
-	    display: flex;
-	    
-	}
-	
-	.header li {
-	    margin-right: 10px;
-	}
-	
-	.header li:last-child {
-	    margin-right: 0px; 
-	}
-	
-	.header a {
-	    text-decoration: none;
-	    color: #fff;
-	}
-	
-	.login-button {
-	    background-color: #ff5733;
-	    color: #fff;
-	    padding: 5px 10px;
-	    border: none;
-	    border-radius: 5px;
-	    cursor: pointer;
-	}
-    .login-signup {
-        display: flex;
-        align-items: center;
-    }
-
-    .login-signup .login-button {
-        margin-right: 10px;
-    }
-    
-    /* 포스터 */
-  #mainDiv{width:872px; height:164px; margin:0 auto;}
-   #imgView, #mainDiv>input{
-      float:left; height: 364px;
-   }
-   #mainDiv>input{
-   width:30px;
-   }
-   #imgView{
-   width:812px; position:relative; overflow:hidden;
-   }
-   #imgList{
-      width:2320px; position:absolute;
-   }
-</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>헬창놈들</title>
+	<link rel="stylesheet" href="Style/Main.css">
+	<script src="Script/Advertisement.js"></script>
+	<script src="Script/Account.js"></script>
+	<script src="Script/Onload.js"></script>
 </head>
-<script>
-   function setPosterList(){
-      var imgTag = "<div id='imgList'>";
-         
-      for(var i=1; i<=5; i++){
-         imgTag += "<img src='imgs_main/postAd/ad_" + i + ".png'/>";
-      }
-      imgTag += "</div>";
-      
-      document.getElementById("imgView").innerHTML = imgTag;
-   }
-   
-   // 포스트 이동
-   var xStep = -1;
-   var x = 0;
-   var timer;
-   
-   function posterMove(){
-      x += xStep;
-      document.getElementById("imgList").style.left = x + "px";
-      
-      // 방향 전환 left 이동 -> right 이동으로 변경
-      if(x <= -1800) xStep = 1;
-      
-      // right 이동 -> left 이동으로 변경
-      if(x >= 0) xStep = -1;
-   }
-   
-   window.onload = function(){
-      setPosterList();
-      timer = setInterval(posterMove, 10);
-      
-      document.getElementById("imgView").onmouseover = function(){
-         clearInterval(timer);
-      };
-      
-      document.getElementById("imgView").addEventListener('mouseout',function(){
-         timer = setInterval(posterMove, 10);
-      });
-   }
-</script>
-<body>
-    <!-- 헤더 -->
-    <div class="header">
-        <ul>ㅁ
-            <li><a href="Program/Program.html">프로그램</a></li>
-            <li><a href="Community/community.html">커뮤니티</a></li>
-            <li><a href="#">더미1</a></li>
-            <li><a href="#">더미2</a></li>
-        </ul>
-        <div class="login-signup">
-            <button class="login-button"><a href="Account/LogIn.html">로그인</a></button>
-            <button class="login-button"><a href="Account/Join.html">회원가입</a></button>
-        </div>
-    </div>
-
-    <!-- 내용 -->
-    <div class="main_term0">
-        <h1><br> 
-        </h1>
-        <div class="">
-            <div class="">
-                <span class=""> </span>
-            </div>
-        </div>
-    </div>
-    <div class="main_top">
-        <h1 style="text-shadow:2px 2px 4px; color: rgb(255, 255, 255)"; class="main_text">
-            NOTHING WILL <br> WORK UNLESS <br>YOU DO.<br>
-            <span class="" style="color: rgb(255, 255, 255);">텍스트 입력 테스트</span>
-        </h1>
-        <div class="">
-            <p style="line-break:strict;word-break:keep-all; color:white" class="">
-                나에게 가장 알맞은 운동 프로그램을 생성하고
-                <br>더욱 효과적으로 득근하세요!
-            </p>
-            <br><br>
-            <div class="">
-                <a class="" href="/start.html" style="border: solid 1px red; color:black; padding: 10px;
-                background-color: white;">시작하기</a>
-            </div>
-        </div>
-    </div>
-	<div class="main_term1">
-        <h1 style="text-shadow:2px 2px 4px black;">
-            <br><br><br>
-            <span style="font-size: 60px;color: white; position: relative; left:550px;">Popular</span>
-        </h1>
-        <h2 style="text-shadow:2px 2px 4px black; 
-        		position: relative; left:550px; color: white;"  class="main_text">
-			
-            가장 추천하는 베스트 프로그램<br>
-            
-        </h2>
-        <div>
-             <a class="" href="Program/Program.html" 
-             	style="position: relative; left:550px; font-size: 25px;"
-             	>시작하기</a>
-        </div>
-    </div>
-    <div class="main_popular">
-    <div id="exPrgmImgs" style="text-align: center;">
-        <img src="imgs_main/taxasMethodLogo.PNG" width="300px" style="margin-right: 50px;" />
-        <img src="imgs_main/strLift55.PNG" width="300px" style="margin-right: 50px;" />
-        <img src="imgs_main/program_PHUL.jpg" width="300px" />
-    </div>
-</div>    
-    </div>
-    
-     <div class="main_community">
-        <div id="commuImgs" style="text-align:left; margin-left: 380px; margin-top: 30px;">
-        <img src="imgs_main/workout2_social.jpg" width="800px" style="margin-right: 50px; float:left" />
-    	<h1 style="text-shadow:2px 2px 4px black;">
-            <br>
-            <span style="font-size: 60px;color: white; position: relative; left:150px;">
-				Train together<br>
-            	&amp; <br>
-				Share your experience.<br></span>
-			<h2 style="text-shadow:2px 2px 4px black; 
-        		position: relative; left:250px; color: white;"  class="main_text">
-				함께 할 수록 강해집니다.<br>
-            
-        	</h2>
-        <div>
-             <a class="" href="Community/community.html" 
-             	style="position: relative; left:250px; font-size: 25px;">커뮤니티 이동</a>
-	        </div>
-	    </div>
-        </h1>
-        
-    </div>
-       
-    <div class="main_term3" >
-        <h1><br>   <br>  <br>
-            <span class=""> </span>
-        </h1>
-        <div class="">
-            <p class="">
-                <br> 
-            </p>
-            <div class="">
-                <span class=""> </span>
-            </div>
-        </div>
-    </div>
-    <div class="main_ad">
-   <div id="mainDiv">
-   <input type="button" value="◁" onclick="xStep=-1; posterMove();"/>
-   <div id="imgView" style="position: relative;"></div>
-   <input type="button" value="▷" onclick="xStep=1; posterMove();"/>
+<body><!-- onload="acc = new Account(true);"-->
+<!--Header-->
+<header id="headContainer">
+	<!--Logo-->
+	<h1 class="head" id="Logo">
+		<a href="index.html">
+			<img src="_Icon/PageLogo_White.png" alt="헬창놈들 로고">
+		</a>
+	</h1>
+	<!--Navigation-->
+	<nav class="head" id="Nav">
+		<ul>
+			<li><a href="#">Project</a></li>
+			<li><a href="#">Community</a></li>
+			<li><a href="#">Reviews</a></li>
+			<li><a href="#">Advertisement</a></li>
+		</ul>
+	</nav>
+	<!--Account-->
+	<div class="head" id="Auth">
+		<!--Authentication passed-->
+		<!--Authentication NONE-->
 	</div>
-    </div>
-    
+</header>
 
-    <div class="main_term4">
-        <h1><br>   <br>  <br>
-            <span class=""> </span>
-        </h1>
-        <div class="">
-            <p class="">
-                <br> 
-            </p>
-            <div class="">
-                <span class=""> </span>
-            </div>
-        </div>
-    </div>
-    
+<!--Bodies-->
+<section id="container" onclick="acc.hideAccount();">
+	<!--Contents-->
+	<header id="main_top">
+		<h1>
+			<span>NOTHING WILL</span>
+			<span>WORK UNLESS</span>
+			<span>YOU DO.</span>
+		</h1>
+		<p>
+			나에게 가장 알맞은 운동 프로그램을 생성하고
+			<br>더욱 효과적으로 득근하세요!
+		</p>
+		<a href="/start.html">
+			시작하기
+		</a>
+	</header>
+	
+	<div class="skewYBackground"></div>
+	<article id="main_term1">
+		<div id="exPrgmTxts">
+			<h1 class="term1Txt">
+				Popular
+			</h1>
+			<p class="term1Txt">
+				가장 추천하는 베스트 프로그램
+			</p>
+			<span class="term1Txt">
+				    <a href="Program/Program.html">
+					    시작하기
+				    </a>
+			    </span>
+		</div>
+		<div id="exPrgmImgs" style="text-align: center;">
+			<img src="imgs_main/taxasMethodLogo.PNG">
+			<img src="imgs_main/strLift55.PNG">
+			<img src="imgs_main/program_PHUL.jpg">
+		</div>
+	</article>
+	
+	<article id="main_community">
+		<div>
+			<img src="imgs_main/workout2_social.jpg">
+			<h1>
+				<div>
+					Train together<br>
+					&amp; <br>
+					Share your experience.
+				</div>
+				<span>함께 할 수록 강해집니다.</span>
+				<span>
+					    <a href="Community/community.html">커뮤니티 이동</a>
+				    </span>
+			</h1>
+		</div>
+	</article>
+	
+	<article id="main_ad">
+		<div id="mainDiv">
+			<input type="button" value="◁" onclick="xStep=-1; posterMove();"/>
+			<div id="imgView" style="position: relative;"></div>
+			<input type="button" value="▷" onclick="xStep=1; posterMove();"/>
+		</div>
+	</article>
 
+</section>
+
+<!--Footer-->
+<footer>
+	@copyright
+	<br>
+</footer>
 </body>
 </html>

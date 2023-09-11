@@ -1,3 +1,33 @@
+*{
+   box-sizing: border-box;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+				
+				background-color: #323336;
+    height: calc(100% - 100px);
+    margin: 0px;
+}
+
+
+a:link, a:visited{
+	text-decoration: none;
+	color : white;
+}
+
+	img{
+		border : 1px solid white;
+		width : 250px;
+		height : 250px;
+
+		
+		
+	}
+
 /*Header 페이지*/
 #headContainer, #headContainer>*, #headContainer>*>*, #headContainer>*>*>*,#headContainer>*>*>*>*  {
     background-color: black;
@@ -8,7 +38,8 @@
 
 }
 #headContainer{
-				color : white;
+	
+	color : white;
     position: fixed;
     display: flex;
     top: 0px;
@@ -130,26 +161,33 @@
 		#MainSection>#top{
 			margin-top : 150px;
 		}
+		#MainSection>#middle{
+			margin-top: 450px;
+		}
+		#MainSection>#bottom{
+			margin-top: 750px;
+		
+		}
 		#MainSection > #top, #MainSection > #bottom, #MainSection > #middle{
 		 margin-bottom : 100px;
 		}
-		
-		/*dialog*/
-	#dialogOpen1_1{
+	#dialogOpen1_1, #dialogOpen2_1, #dialogOpen3_1{
 		float : left;
 		margin-right : 125px;
 	}		
 	
-	#dialogOpen1_2{
-		float : center;
+	#dialogOpen1_2, #dialogOpen2_2, #dialogOpen3_2{
+		float : left;
+		margin-right : 125px;
 		
 	}
-	#dialogOpen1_3{
-		float:right;
+	#dialogOpen1_3, #dialogOpen2_3, #dialogOpen3_3{
+		float: left;
 	}
 
 	#dialog1_1, #dialog1_2,#dialog1_3{
-		background-color: tomato;
+		background-color: white;
+		height: 500px;
 	}
 	#dialog1_1>ul>img,#dialog1_2>ul>img,#dialog1_3>ul>img{
 		float:left;
@@ -157,8 +195,6 @@
 		margin-bottom:200px;
 		background: white;
 	}
-	
-
 /*footer 페이지*/
 #container{
     margin-top: 75px;

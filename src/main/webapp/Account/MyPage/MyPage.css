@@ -89,7 +89,14 @@ body{
     flex-grow: 1;
     width: 30%;
 }
-
+#Profile{
+	background-color: blue;
+	width : 500px;
+}
+#UsNa{
+	background-color: red;
+	width : 250px;
+}
 
 /*inbody################################################*/
 #progress{
@@ -175,7 +182,7 @@ body{
     font-size: 1rem;
     font-weight: 800;
 }
-/*로그인//////////////////////////////////////////////////////////////////*/
+/*마이페이지//////////////////////////////////////////////////////////////////*/
 @media(max-width: 800px) {
     #account{
         flex-direction: column;
