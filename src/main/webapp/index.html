@@ -5,50 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>헬창놈들</title>
 	<link rel="stylesheet" href="Style/Main.css">
+	<script src="Script/Advertisement.js"></script>
 	<script src="Script/Account.js"></script>
-	<script>
-		function setPosterList(){
-			var imgTag = "<div id='imgList'>";
-			
-			for(var i=1; i<=5; i++){
-				imgTag += "<img src='imgs_main/postAd/ad_" + i + ".png'/>";
-			}
-			imgTag += "</div>";
-			
-			document.getElementById("imgView").innerHTML = imgTag;
-		}
-		
-		// 포스트 이동
-		var xStep = -1;
-		var x = 0;
-		var timer;
-		
-		function posterMove(){
-			x += xStep;
-			document.getElementById("imgList").style.left = x + "px";
-			
-			// 방향 전환 left 이동 -> right 이동으로 변경
-			if(x <= -1800) xStep = 1;
-			
-			// right 이동 -> left 이동으로 변경
-			if(x >= 0) xStep = -1;
-		}
-		
-		window.onload = function(){
-			setPosterList();
-			timer = setInterval(posterMove, 10);
-			
-			document.getElementById("imgView").onmouseover = function(){
-				clearInterval(timer);
-			};
-			
-			document.getElementById("imgView").addEventListener('mouseout',function(){
-				timer = setInterval(posterMove, 10);
-			});
-		}
-	</script>
+	<script src="Script/Onload.js"></script>
 </head>
-<body onload="acc = new Account(true);">
+<body><!-- onload="acc = new Account(true);"-->
 <!--Header-->
 <header id="headContainer">
 	<!--Logo-->
@@ -130,13 +91,14 @@
 		</div>
 	</article>
 	
-	<article class="main_ad">
+	<article id="main_ad">
 		<div id="mainDiv">
 			<input type="button" value="◁" onclick="xStep=-1; posterMove();"/>
 			<div id="imgView" style="position: relative;"></div>
 			<input type="button" value="▷" onclick="xStep=1; posterMove();"/>
 		</div>
 	</article>
+
 </section>
 
 <!--Footer-->
