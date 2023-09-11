@@ -33,24 +33,24 @@ listArr4 = [
         writer : "김계란",
         writedDate : "2023-09-06"
     },{
-        title : "인증합니다.",
+        title : "굿?",
         vote : 2,
-        writer : "강남헬스트레이너",
+        writer : "빠삐용",
         writedDate : "2023-09-06"
     },{
-        title : "오늘은 모닝 헬스장",
+        title : "운동 후 한 컷",
         vote : 19,
         writer : "근육메이드",
         writedDate : "2023-09-06"
     },{
-        title : "크로스핏 1일차 인증 + 후기",
+        title : "타락한 헬스 트레이너 보고가세요",
         vote : 11,
-        writer : "나나7",
+        writer : "LOVE",
         writedDate : "2023-09-06"
     },{
-        title : "오늘도 파이팅! 오!운!완!",
+        title : "제 근육 어때요?",
         vote : 23,
-        writer : "이선왕",
+        writer : "김준수",
         writedDate : "2023-09-06"
     },
 ]
