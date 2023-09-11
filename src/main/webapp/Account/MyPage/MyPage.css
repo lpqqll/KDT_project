@@ -91,20 +91,48 @@ body{
     width: 30%;
 }
 #leftProfile{
-	background-color: blue;
-	width :450px;
+	border-radius: 20px;
+	background-color: white;
+	width :400px;
+	height : 350px;
 	margin : 0 auto;
 	float : left;
+	box-shadow: 5px 5px 5px 5px lightgray;
 }
 #UsNa{
-	background-color: red;
+	margin-left : 10px;
+	color:black;
 	float : left;
+	width :150px;
+	padding: 20px;	
+	height: 270px;
 }
-#rightProfile{
-	background-color : lightgreen;
-	width : 450px;
-	margin : 0 auto;
+
+#Proimg{
+	width: 225px;
 	float:left;
+}
+
+#rightProfile{
+	
+	width : 500px;
+	height : 400px;
+	float : left;
+	margin : 0 auto;
+	margin-left : 40px;
+	
+}
+#edit{
+	color : white;
+	float : left;
+	width : 170px;
+	margin-left : 120px;
+	margin-top : 30px;
+}
+#program{
+	background-color: blue;
+	float:left;
+	margin : 0 auto;
 }
 
 /*inbody################################################*/
