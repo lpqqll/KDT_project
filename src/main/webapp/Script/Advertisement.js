@@ -2,7 +2,7 @@ function setPosterList(){
     var imgTag = "<div id='imgList'>";
 
     for(var i=1; i<=5; i++){
-        imgTag += "<img src='../imgs_main/postAd/ad_" + i + ".png'/>";
+        imgTag += "<img src='/KDT_project/src/main/webapp/imgs_main/postAd/ad_" + i + ".png'/>";
     }
     imgTag += "</div>";
 
