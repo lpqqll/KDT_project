@@ -2,7 +2,7 @@
 
 	/*
 	 body{
-		 background-color: slategray;
+		 background-color: gray;
 		 color:white;
 	 }*/
     /* 카테고리 탭 스타일 */
@@ -48,7 +48,7 @@
 	#top{
 		font-size: 2em; color:  rgb(243, 156, 18);  list-style: none;
 		display:flex; flex-basis:100%; align-items: left; margin:8px 0px;
-		margin-bottom:70px;
+		margin-bottom:50px;
 	}
 	/*글자 옆에 선*/
 	#top::after{
@@ -71,7 +71,12 @@
    }
 	/*글쓰기 버튼*/
 	#writebutton{
-		color:white; background-color: #202020; float: right; border-radius: 5px;
+		color:white; background-color: #202020; float: right;
+		font-size: 16px; 
+	}
+	/*오.운.완 가는 버튼-현재 사용 안 하는중*/
+	#gotoday{
+		color:white; background-color: #202020; float:right;border-radius: 5px;
 	}
 	main{
 		min-width:700px;
@@ -132,7 +137,7 @@
  	.writelist *{
             list-style-type: none;
         }
-    #list, #list1, #list2, #list3{
+    #list, #list1, #list2, #list3, #list4{
             margin: 0;
             padding: 0;
         }
