@@ -7,7 +7,6 @@ html {
 body{
     height: calc(100% - 100px);
     margin: 0;
-    /*background-color: #202020;*/
 }
 
 /*Header 페이지*/
@@ -27,6 +26,7 @@ body{
     border-radius: 5px;
     box-shadow: 0 8px 10px -5px black;
     justify-content: center;
+    z-index: 100;
 }
 .head{
     max-width: 400px;
@@ -98,7 +98,6 @@ body{
 }
 #join:hover{
     background-color: #FF9F29;
-    /*background-color: #1A4D2E;*/
 }
 #Auth>#SessionIn li{
     font-size: 0.8rem;
@@ -144,10 +143,7 @@ body{
 /*bodies 페이지*/
 #container{
     display: flex;
-    flex-direction: row;
-    /*padding: 10px;*/
-    /*justify-content: center;*/
-    /*background-color: black;*/
+    flex-direction: column;
 }
 
 
@@ -166,7 +162,6 @@ footer{
     height: 75px;
 
     background-color: black;
-    /*border-top: 2px solid #15ae84;*/
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 
@@ -197,7 +192,6 @@ footer{
     }
     #Nav>ul>li{
         flex-grow: 1;
-        /*flex-basis: 100px;*/
     }
     #management{
         top: 105px;
