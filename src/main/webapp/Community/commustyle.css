@@ -2,8 +2,8 @@
 
 	/*
 	 body{
-		 background-color: gray;
-		 color:white;
+		 background-color: rgb(192, 192, 192);
+		 color:black;
 	 }*/
     /* 카테고리 탭 스타일 */
     .sidenav {
@@ -44,6 +44,11 @@
 	#hrstyle{
 		background-color: white; width:120px; border:none; height: 0.01em; margin-left: 10px;
 	}
+	
+	/*메인 페이지 소카테고리*/
+	#category{
+		font-size:1em; color: rgb(243, 156, 18);
+	}
 	/*각 페이지의 이름*/
 	#top{
 		font-size: 2em; color:  rgb(243, 156, 18);  list-style: none;
@@ -55,6 +60,35 @@
 		content:""; flex-grow:1; margin:20px 12px; height:2px; font-size:0; line-height:0px;
 		background:darkgray;
 	}
+	/*검색창*/
+	.search-box {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+	}
+
+	#search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+	}
+
+	#search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #202020;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; float:left;
+	}	
+
+	#search-button:hover {
+    background-color: #202020;
+  
+	}
 	/*좌우정렬*/
 	.left-content {
         float: left; width: 75%;
@@ -63,16 +97,17 @@
     .right-content {
         float: right; width: 20%; text-align: right; list-style: none; text-align: left;
     }
-	/*배너, 추후 사진 등으로 교체?*/
+	/*배너*/
 	#banner {
-      color : white; background-color: #202020; text-align:center; list-style: none;
+      color : white; background-color: rgb(26, 188, 156);
       padding-top: 10px; padding-bottom: 10px; border-color:#202020; font-size:2.5em;
       
    }
 	/*글쓰기 버튼*/
 	#writebutton{
-		color:white; background-color: #202020; float: right;
-		font-size: 16px; 
+	padding: 10px 20px; font-size: 16px;
+    background-color: #202020; color: #fff;
+    border: none; border-radius: 4px; float: right; 
 	}
 	/*오.운.완 가는 버튼-현재 사용 안 하는중*/
 	#gotoday{
@@ -114,6 +149,7 @@
 	.writelist li{
 		list-style: none;
 	}*/
+	
 	/*글 사이 줄 긋기*/
 	.writelist{
 		margin-bottom: 20px;
@@ -137,7 +173,7 @@
  	.writelist *{
             list-style-type: none;
         }
-    #list, #list1, #list2, #list3, #list4{
+    #list, #list1, #list2, #list3, #list4,#list5, #list6, #list7, #list8, #list9{
             margin: 0;
             padding: 0;
         }
@@ -149,6 +185,12 @@
             flex-direction: row;
             justify-content: space-between;
         }
+        /*
+     .redbutton{
+		 float:left; background-color: orangered; color:white;
+		 border:none; border-radius: 1px; font-size:15px;
+	 }
+	 */
     /*페이지 넘기는 버튼*/
     .number{
 		list-style: none; font-size: 20px;

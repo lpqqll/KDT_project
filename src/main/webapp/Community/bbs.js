@@ -1,20 +1,20 @@
 let bbs = document.getElementById("list");
 
-let listArr = new Array(10);
+window.listArr = new Array(10);
 listArr = [
     {
-        title : "ㅋㅋㅋㅋ",
-        vote : 20,
+        title : " ㅋㅋㅋㅋ",
+        vote : 40,
         writer : "나는 슈퍼맨",
         writedDate : "2023-09-06"
     },{
-        title : "왕이 넘어지면?",
-        vote : 15,
+        title : " 왕이 넘어지면?",
+        vote : 33,
         writer : "아재개그러버",
         writedDate : "2023-09-06"
     },{
-        title : "ㅇwㅇ",
-        vote : 12,
+        title : " ㅇwㅇ",
+        vote : 32,
         writer : "근육맨",
         writedDate : "2023-09-06"
     },{
@@ -56,20 +56,29 @@ listArr = [
 ]
 
 let board = '';
-listArr.forEach(list => {
+for (let index = 0; index < listArr.length; index++) {
+    let list = listArr[index];
+    let hotStyle = index === 0 || index === 1 ? 'color: black;' : '';
+    let titleId = `title-${index}`; // 고유한 id 생성
     let table = `
     <li class="line">
+    	<span id=redbutton style="float:left; float:top;" >
+    		${index <= 2 ? `<button style=" background-color: orangered; color:white; 
+    		border:none; border-radius: 1px; font-size:15px; margin-right:10px;" onclick="handleButtonClick(${index})">Best</button>` : ''}
+    	</span>
         <div>
-            <span id="title" style="font-size:19px;"><b>${list.title}</b></span>
-            <span id="vote" style="font-size:14px;">추천수 : ${list.vote}</span>
-        </div>
+   			<span id="${titleId}" style="font-size:19px;${hotStyle}"><b>${list.title}</b></span>  			
+    		<span id="vote" style="font-size:14px;">추천수 : ${list.vote}</span>
+		</div>
+		
         <div>
             <span id="writer" style="font-size:14px;">${list.writer}</span>
             <span id="date" style="font-size:14px;">${list.writedDate}</span>
         </div>
+        
     </li>
-`;
+    `;
     board += table;
-});
+}
 
 bbs.innerHTML = board;

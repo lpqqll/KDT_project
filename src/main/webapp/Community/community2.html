@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <title>커뮤니티</title>
 <link rel="stylesheet" href="../Style/MainFrame.css">
-<<<<<<< HEAD
 <link rel="stylesheet" href="commustyle.css">
 	
 <script>
@@ -46,7 +45,7 @@
 <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
-
+<!--커뮤 글 내용 관련 코드-->
 
 </head>
 <body>
@@ -55,7 +54,7 @@
         <!--Logo-->
         <h1 class="head" id="Logo">
             <a href="index.html">
-                <img src="_Icon/PageLogo_White.png" alt="헬창놈들 로고">
+                <img src="../_Icon/PageLogo_White.png" alt="헬창놈들 로고" style="width:100%;">
             </a>
         </h1>
         <!--Navigation-->
@@ -63,7 +62,7 @@
             <ul>
                 <li><a href="#">Project</a></li>
                 <li><a href="#">Community</a></li>
-                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Reviews</a></li>/ 
                 <li><a href="#">Advertisement</a></li>
             </ul>
         </nav>
@@ -101,7 +100,7 @@
 	    <div class="left-placeholder"></div>
 	    
 	    <!-- 각각의 카테고리 탭 버튼 생성 -->
-	    <button class="tablinks" id="Community-button" onclick="openTab('Community')"><b>커뮤니티</b></button>
+	    <button class="tablinks" id="Community-button" onclick="openTab('Community')" style="font-size: 1.5em;"><b>커뮤니티</b></button>
 	    <br/>
 	    <button class="tablinks" id="Notice-button" onclick="openTab('Notice')"><b>자유 게시판</b></button>
 	    <hr id="hrstyle">
@@ -122,17 +121,53 @@
 		<article id="content">
 		    <div id="Community" class="tabcontent">
 				<li id="top"><b>커뮤니티</b></li>   
-		        <div class="left-content">                
-		            <b>자유 게시판</b>
-		            <hr>                       
-		            <b>유머 게시판</b>
-		            <hr>
-		            <b>팁 게시판</b>
-		            <hr>
-		            <b>오.운.완</b>
-		            <hr>
-		            <b>몸짱 인증</b>
-		            <hr>
+		        <div class="left-content">    
+					<script src="commumain.js"></script>            
+		            <b id="category">자유 게시판 +</b>
+		            <hr style="color: black; background-color: black; height:3px;">     
+		            <div class="writelist">
+				        <ul id="list5">
+							<script>
+							a1();
+							</script>
+						</ul>
+					</div>                  
+		            <b id="category">유머 게시판 +</b>
+		            <hr style="color: black; background-color: black; height:3px;">
+		            <div class="writelist">
+				        <ul id="list6">
+							<script>
+							a2();
+							</script>
+						</ul>
+					</div>    
+		            <b id="category">팁 게시판 +</b>
+		            <hr style="color: black; background-color: black; height:3px;">
+		            <div class="writelist">
+				        <ul id="list7">
+							<script>
+							a3();
+							</script>
+						</ul>
+					</div>    
+		            <b id="category">오.운.완 +</b>
+		            <hr style="color: black; background-color: black; height:3px;">
+		            <div class="writelist">
+				        <ul id="list8">
+							<script>
+							a4();
+							</script>
+						</ul>
+					</div>    
+		            <b id="category">몸짱 인증 +</b id="category">
+		            <hr style="color: black; background-color: black; height:3px;">
+		            <div class="writelist">
+				        <ul id="list9">
+							<script>
+							a5();
+							</script>
+						</ul>
+					</div>    
 		        </div>
 		        <div class="right-content">
 		            <li id="hot"><b>인기글 +</b></li><hr>
@@ -156,13 +191,17 @@
 		            <img src="img/protein.jpg" style="width: 220px; height: 220px; margin-top:40px;">
 		        </div><br/>	
 		        <div class="number">
-					<li><</li><li style="background-color: rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
+					<li><</li><li style="border: 3px solid rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
 				</div>	        
 		    </div>		
 		    <div id="Notice" class="tabcontent">
 				<li id="top"><b>자유 게시판</b></li> 
 				<div class="left-content">	   		 
-			        <button id="writebutton">글쓰기</button><br/>
+			        <button id="writebutton">글쓰기</button>
+			        <div class="search-box">
+	       				 <input type="text" id="search-input" placeholder="검색어를 입력하세요">
+	       				 <button id="search-button">검색</button>
+    				</div><br/>
 			        <hr>
 			        <div class="writelist">
 				        <ul id="list1">
@@ -191,14 +230,18 @@
 		            <img src="img/protein.jpg" style="width: 220px; height: 220px; margin-top:40px;">
 		        </div><br/>	
 		        <div class="number">
-					<li><</li><li style="background-color: rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
+					<li><</li><li style="border: 3px solid rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
 				</div>
 		    </div>
 		
 		    <div id="Humor" class="tabcontent">
 				<li id="top"><b>유머 게시판</b></li> 
 				<div class="left-content">	       
-			        <button id="writebutton">글쓰기</button><br/>
+			        <button id="writebutton">글쓰기</button>
+			        <div class="search-box">
+	       				 <input type="text" id="search-input" placeholder="검색어를 입력하세요">
+	       				 <button id="search-button">검색</button>
+    				</div><br/>
 			        <hr>
 			        <div class="writelist">
 				        <ul id="list">
@@ -227,7 +270,7 @@
 		            <img src="img/protein.jpg" style="width: 220px; height: 220px; margin-top:40px;">
 		        </div><br/>	
 		        <div class="number">
-					<li><</li><li style="background-color: rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
+					<li><</li><li style="border: 3px solid rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
 				</div>
 		        
 		    </div>
@@ -235,7 +278,11 @@
 		    <div id="Free" class="tabcontent">     
 		        <li id="top"><b>팁 게시판</b></li> 
 		        <div class="left-content">	        
-			        <button id="writebutton">글쓰기</button><br/>
+			        <button id="writebutton">글쓰기</button>
+			        <div class="search-box">
+	       				 <input type="text" id="search-input" placeholder="검색어를 입력하세요">
+	       				 <button id="search-button">검색</button>
+    				</div><br/>
 			        <hr>
 			        <div class="writelist">
 				        <ul id="list2">
@@ -264,14 +311,18 @@
 		            <img src="img/protein.jpg" style="width: 220px; height: 220px; margin-top:40px;">
 		        </div><br/>	
 		        <div class="number">
-					<li><</li><li style="background-color: rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
+					<li><</li><li style="border: 3px solid rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
 				</div>
 		    </div>
 		
 		    <div id="Tips" class="tabcontent">
 				<li id="top"><b>오.운.완</b></li> 
 		        <div class="left-content">        
-			        <button id="writebutton">글쓰기</button><br/>
+			        <button id="writebutton">글쓰기</button>
+			        <div class="search-box">
+	       				 <input type="text" id="search-input" placeholder="검색어를 입력하세요">
+	       				 <button id="search-button">검색</button>
+    				</div><br/>
 			        <hr>
 			        <div class="writelist">
 				        <ul id="list3">
@@ -300,14 +351,18 @@
 		            <img src="img/protein.jpg" style="width: 220px; height: 220px; margin-top:40px;">
 		        </div><br/>	
 		        <div class="number">
-					<li><</li><li style="background-color: rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
+					<li><</li><li style="border: 3px solid rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
 				</div>
 		    </div>
 		
 		    <div id="Questions" class="tabcontent">      
 				<li id="top"><b>몸짱 인증</b></li> 
 				<div class="left-content">	   		 
-			        <button id="writebutton">글쓰기</button><br/>
+			        <button id="writebutton">글쓰기</button>
+			        <div class="search-box">
+	       				 <input type="text" id="search-input" placeholder="검색어를 입력하세요">
+	       				 <button id="search-button">검색</button>
+    				</div><br/>
 			        <hr>
 			        <div class="writelist">
 				        <ul id="list4">
@@ -336,7 +391,7 @@
 		            <img src="img/protein.jpg" style="width: 220px; height: 220px; margin-top:40px;">
 		        </div><br/>	
 		        <div class="number">
-					<li><</li><li style="background-color: rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
+					<li><</li><li style="border: 3px solid rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
 				</div>
 			</div>
 		</article>

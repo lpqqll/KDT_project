@@ -56,11 +56,18 @@ listArr2 = [
 ]
 
 let board2 = '';
-listArr2.forEach(list => {
+
+listArr2.forEach((list, index) => {
+    let hotStyle2 = index === 0 || index === 1 ? 'color: black;' : '';
+    let titleId2 = `title-${index}`; // 고유한 id 생성
     let table2 = `
     <li class="line">
+        <span id="redbutton" style="float:left; float:top;">
+            ${index <= 2 ? `<button style=" background-color: orangered; color:white; 
+            border:none; border-radius: 1px; font-size:15px; margin-right:10px;" onclick="handleButtonClick(${index})">Best</button>` : ''}
+        </span>
         <div>
-            <span id="title" style="font-size:19px;"><b>${list.title}</b></span>
+            <span id="${titleId2}" style="font-size:19px;${hotStyle2}"><b>${list.title}</b></span>
             <span id="vote" style="font-size:14px;">추천수 : ${list.vote}</span>
         </div>
         <div>
@@ -68,7 +75,7 @@ listArr2.forEach(list => {
             <span id="date" style="font-size:14px;">${list.writedDate}</span>
         </div>
     </li>
-`;
+    `;
     board2 += table2;
 });
 
