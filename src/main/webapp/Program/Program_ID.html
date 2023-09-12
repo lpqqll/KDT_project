@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>헬창놈들</title>
 
+	<script src="../Script/Account.js"></script>
 	<link rel="stylesheet" href="Program_ID.css">
 		<style>
 			
@@ -76,18 +77,32 @@
 	</script>
 </head>
 
-<body>
-	<!--Header-->
-	<header id="headContainer">
-		<h1>헬창놈들</h1>
-	</header>
+<body onload="acc = new Account(true);">
 	
-	<!--Bodies-->
-	<section id="container">
-		<!--Navigation-->
-		<nav id="navSection">
-		
-		</nav>
+	<header id="headContainer">
+        <!--Logo-->
+        <h1 class="head" id="Logo">
+            <a href="../index.html">
+                <img src="../_Icon/PageLogo_White.png" alt="헬창놈들 로고">
+            </a>
+        </h1>
+        <!--Navigation-->
+        <nav class="head" id="Nav">
+            <ul>
+                <li><a href="Program/Program.html">Program</a></li>
+                <li><a href="Community/community2.html">Community</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Advertisement</a></li>
+            </ul>
+        </nav>
+        <!--Account-->
+        <div class="head" id="Auth">
+            <!--Authentication passed-->
+            <!--Authentication NONE-->
+        </div>
+    </header>
+
+		<section id="container" onclick="acc.hideAccount();">
 		
 		<!--Contents-->
 		<article id="MainSection">
@@ -97,7 +112,7 @@
 				<div><img src = "img/strLift55.PNG" style="padding-right:20px;"></div>
 				<form id = "content">
 						<ul id = "side" style="overflow:auto">
-							<div>
+							<div style = "font-weight: bold;">
 								<li>종목</li>
 							 <li>횟수</li>
 							 <li>수행 가능 최대 중량</li>
@@ -124,13 +139,13 @@
 							 <div>
 							 <li>Barbelrow</li>
 							 <li>1회</li>
-							 <li><input type ="number" min="0" id = "Barbelrow" style="height:30px; text-align: center;" required></li>
+							 <li><input type ="number" min="0" id = "Barbelrow" style="height:30px; text-align: center;" step = "0.1" required></li>
 							 </div>
 							 
 							 <div>
 							 <li>OHP</li>
 							 <li>1회</li>
-							 <li><input type ="number" min="0" id = "OHP" style = "height:30px; text-align: center;" required></li>
+							 <li><input type ="number" min="0" id = "OHP" style = "height:30px; text-align: center;" step = "0.1" required></li>
 							 </div>
 							 
 							 <div>
@@ -138,17 +153,17 @@
 						  <li>&nbsp;</li>
 						  <li>
 									<div id="result" style = "font-size : 15px;"></div>
-									<button onclick="convertKilogramsToPounds()">킬로그램(kg)</button>
-									<button onclick="convertPoundsToKilograms()">파운드(lb)</button>			
+									<button style = "margin-right : 20px; padding : 12px 25px; font-weight: bold; font-size: 15px;" onclick="convertKilogramsToPounds()">KG</button>
+									<button style = "padding : 12px 25px; font-weight: bold; font-size: 15px;" onclick="convertPoundsToKilograms()">LB</button>			
 								</li>
 								</div>	
 								
 								<div>
-								<li>&nbsp;</li>
+								<li><input type = "button" value="Reset" style = " font-size : 20px; width:80px; height : 50px; margin-left:120px; background-color: rgb(52,152,219); color:white; font-weight: bold;"  onclick="resetForm()"></li>
 							<li>		
 								
-							<input type = "button" value="Reset" onclick="resetForm()">
-							<input type = "submit" value="Done">
+							
+							<input type = "submit" value="Done" onclick = "location.href = 'Program_calendar.html'" style = " font-size : 20px; width:80px; height : 50px; margin-right:120px; background-color: rgb(52,152,219); color : white; font-weight: bold;" >
 								</li>
 								<li>&nbsp;</li>
 								</div>

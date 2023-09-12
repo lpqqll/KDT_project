@@ -42,48 +42,64 @@
 		<h2>대시보드</h2>
 		
 			<!-- 대시보드 시작 -->
-			<div id = "Profile">
-			<div class="pt-20 pb-56">
-				<div class="flex flex-col items-center xl:flex-row justify-between xl:items-start">
-				<div class=" w-full md:w-1/2 "><div class="bg-white dark:bg-gray-700 shadow-md rounded-md p-5 max-w-screen-sm w-full">
-				<div class="flex flex-col items-center md:items-start md:flex-row"><div class="w-40 relative">
-					<img src="imgs_main/workout_profile_ex_circle.jpg" class="w-full rounded-full">
-				</div>
+	<div id = "MainProfile">
+			<div id = "leftProfile">
+			 <div class="pt-20 pb-56">
+				 <div class="flex flex-col items-center xl:flex-row justify-between xl:items-start">
+			 	<div class=" w-full md:w-1/2 "><div class="bg-white dark:bg-gray-700 shadow-md rounded-md p-5 max-w-screen-sm w-full">
+				 <div class="flex flex-col items-center md:items-start md:flex-row"><div class="w-40 relative">
+					<div id = "Proimg"><img src="imgs_main/workout_profile_ex_circle.jpg" class="w-full rounded-full"></div>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+		</div>
 				<div id = "UsNa">
-				<div class="md:ml-10 w-full">
-					<div class="mb-2 md:mb-4">
-						<span class="text-xs text-gray-500 dark:text-gray-300 block">Name</span>
-						<h3 class="font-medium dark:text-white text-3xl leading-8">이름</h3>
+					<div class="md:ml-10 w-full">
+						<div class="mb-2 md:mb-4">
+							<span class="text-xs text-gray-500 dark:text-gray-300 block">Name</span>
+							<h3 class="font-medium dark:text-white text-3xl leading-8">이름</h3>
+						</div>
+					<div class=" items-center grid grid-cols-2 mt-1">
+					<div>
+						<span class="text-xs text-gray-500 dark:text-gray-300 block">Username</span>
+						<h4 class="dark:text-white">닉네임</h4>
 					</div>
-				<div class=" items-center grid grid-cols-2 mt-1">
-				<div>
-				<span class="text-xs text-gray-500 dark:text-gray-300 block">Username</span>
-				<h4 class="dark:text-white">닉네임</h4>
 				</div>
 				</div>
+					</div>
+				<div id = "edit">
+						<div class="mt-10 flex justify-center w-full md:w-1/2">
+								
+								<button><a class="inline-flex w-full dark:bg-transparent dark:text-white dark:hover:bg-transparent dark:hover:text-gray-300 items-center justify-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-400 active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150" 
+							href="Account/MyPage.html">Edit profile</a></button>
+								
+								<button><a class="inline-flex w-full dark:bg-transparent dark:text-white dark:hover:bg-transparent dark:hover:text-gray-300 items-center justify-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-400 active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150" 
+							href="Account/MyPage.html">See profile</a></button>
+				</div>						
+					
 				</div>
-				</div>
-				</div>
-				</div>
-				<div class="mt-10 flex justify-center w-full md:w-1/2">
-					<a class="inline-flex w-full dark:bg-transparent dark:text-white dark:hover:bg-transparent dark:hover:text-gray-300 items-center justify-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-400 active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150" 
-						href="Account/MyPage.html">Edit profile</a>
-					</div></div>
-					<div class=" bg-white dark:bg-gray-700 shadow-md rounded-md p-5 max-w-screen-sm mt-5 flex items-center col-span-2">
-						<div class="mr-5"><img src="imgs_main/program_strLift55.PNG" width="100" class="w-16"></div>
+				</div>			
+							<div id = "nowdata">
+							<img src = "imgs_main/program_strLift55.PNG" style = "width : 150px; height : 150px;">
+							<h2>진행중인 프로그램</h2>
+							<div id = "setting"><button>관리</button></div>
+							<div id = "contentName"><h3>Strong Lift 5*5</h3></div>
+							<div id = "contentWeek"><h3>(8 weeks)</h3></div>
+							<div id = "dal"><h3>달성률</h3></div>
+							<div id = "percent"><h3>52%</h3></div>
+							<div id = "thefirst"><h3>13/25(회차)</h3></div>
+						</div>
 						
-					</div>
-					</div>
-					<div class="mt-20">
-					</div>
-					</div>
+							<div id = "title">
+					<h1>종목별 레벨 or 뱃지 or Leveling요소</h1>
+					
 				</div>
-			<div>
-					<h3>진행중인 프로그램</h3>
-					<div id="program">
-						<img src="Style/Fox.png" alt="">
+				
+				
 					</div>
-				</div>
+		
 			<!-- 대시보드 끝 -->
 			
 		

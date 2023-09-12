@@ -1,140 +1,37 @@
-*{
-    box-sizing: border-box;
-}
-html{
-	height : 100%;
-	
-}
+@import "../Style/MainFrame.css";
+
 body{
-				background-color: #323336;
-    height: calc(100% - 100px);
-    margin: 0px;
-}
-
-
-
-/*Header 페이지*/
-#headContainer, #headContainer>*, #headContainer>*>*, #headContainer>*>*>*,#headContainer>*>*>*>*  {
-    background-color: black;
-    text-decoration: none;
-    align-items: center;
-    list-style: none;
-    
-
-}
-#headContainer{
-	  
-    color: white;
-    position: fixed;
-    display: flex;
-    top: 0px;
-    right: 0px;
-    width: 100%;
-    height: 75px;
-    
-    border-bottom: 2px solid #15ae84;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    transition-delay: 0.7s;
-    transition: 0.3s ease;
-    z-index: 100;
-}
-.head{
-    flex-grow: 1;
-    flex-direction: column;
-    flex-basis: 33%;
-    justify-content: space-between;
-}
-#headContainer>h1{
-				
-    padding-left: 20px;
-    min-width: 200px;
+				background-color: #202020;
     
 }
-#headContainer>h1>div{
-    align-items: center;
-    width: max-content;
-    display: flex;
-}
-#headContainer>h1>div>img{
-    /*width: 70px;*/
-    height: 50px;
-}
-#headContainer>div{
-    text-align: center;
-}
-#headContainer>div>span{
-    font-size: 0.80em;
-}
-#headContainer>ul{
-    text-align: right;
-    padding-right: 20px;
-}
-	#headContainer>h1{
-			width: 1100px;
-			margin : 0 auto;
-		}
 
-#Log0, #Log1{
-    position: fixed;
-    background: #15ae84;
-    padding: 0px;
-    display: none;
-    border: 1px solid #15ae84;
-    border-bottom-left-radius: 10px;
-    top: 75px;
-    right: 0px;
-}
-#Log0>li, #Log0>li>a, #Log1>li, #Log1>li>a{
-    background-color: #15ae84;
-    margin: 5px;
-    z-index: -100;
-}
-
-
-/*bodies 페이지*/
-#container{
-    display: flex;
-    flex-direction: row;
-    /*padding: 10px;*/
-    /*justify-content: center;*/    
-}
-
-/*전체 리스트 설정*/
-#navSection, #navSection>*, #navSection>*>*, #navSection>*>*>*,#navSection>*>*>*>*,#navSection>*>*>*>*>*,#navSection>*>*>*>*>*>*  {
-    background-color: #15ae84;
-    text-decoration: none;
-    list-style: none;
-    padding: 0px;
-}
-
-#navSection{
-    padding: 10px;
-    z-index: 90;
-    position: fixed;
-    left: -250px;
-    top: 75px;
-    width: 250px;
-    height: 100%;
-    min-height: calc(100% - 150px);
-    transition: 1s ease;
-				}
-
-				#navSection .tab_ico{
-    		width: 25px;
-    		height: 25px;
-				}
+			#container{
+				color : white;
+				text-decoration: none;
+			}
 
 				#MainSection{
     		/*flex-grow: 3;*/
-   			width : 1000px;
+   			width : 1300px;
    			margin : 0 auto;
 				}
-					#MainSection > div >img{
-					width : 300px;
-					float:left;
-					height : 300px;
+				#MainSection>#content{
+				 border-radius: 20px;
+				 box-shadow: 5px 5px 5px 5px lightgray;
+				 height:500px;
+				 
 				}
+					#MainSection > div >img{
+					margin-top : 25px;
+					margin-left : 20px;
+					margin-right : 50px;
+					width : 450px;
+					float:left;
+					height : 450px;
+					border-radius : 10%;
+					
+				}
+			
 				ul,li{
 					list-style-type: none;
 					margin : 0px;
@@ -145,12 +42,14 @@ body{
 					color : rgb(231, 76, 60);
 					text-align: center;
 					font-size: 50px;
+					text-shadow: 5px 5px black;
 				}
 				
 				#MainSection > #content > ul{
 					float : left;
 					width : 700px;
 					height : 600px;
+					margin-top : 30px;
 				}
 				
 				#side > div{
@@ -161,7 +60,7 @@ body{
 				
 				#side > div > li{
 					color : white;
-					text-align: center;
+					text-align: left;
 					font-size: 1.5rem;
 					flex-grow: 1;
 					width : 33%;
@@ -169,21 +68,3 @@ body{
 				}
 
 
-/*footer 페이지*/
-#container{
-    margin-top: 75px;
-    min-height: calc(100% - 50px);
-}
-footer{
-    position: absolute;
-    z-index: 100 !important;
-    width: 100%;
-    height: 75px;
-
-    background-color: black;
-    border-top: 2px solid #15ae84;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-
-    text-align: center;
-}
