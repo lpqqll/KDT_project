@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--<%@ page contentType="text/html;charset=UTF-8" language="java" %>-->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>헬창놈들</title>
+	<link rel="stylesheet" href="DashBoard/DashBoard.css">
+	<script src="../Script/Account.js"></script>
+</head>
+<body onload="acc = new Account(true);">
+<!--Header-->
+<header id="headContainer">
+	<!--Logo-->
+	<h1 class="head" id="Logo">
+		<a href="../index.html">
+			<img src="../_Icon/PageLogo_White.png" alt="헬창놈들 로고">
+		</a>
+	</h1>
+	<!--Navigation-->
+	<nav class="head" id="Nav">
+		<ul>
+			<li><a href="../Program/Program.html">Program</a></li>
+			<li><a href="../Community/community.html">Community</a></li>
+			<li><a href="#">Reviews</a></li>
+			<li><a href="#">Advertisement</a></li>
+		</ul>
+	</nav>
+	<!--Account-->
+	<div class="head" id="Auth">
+		<!--Authentication passed-->
+		<!--Authentication NONE-->
+	</div>
+</header>
+
+
+<!--Bodies-->
+<section id="container" onclick="acc.hideAccount();">
+	<!--header-->
+	<header id="MainHeader">
+		<h2>Dash Board</h2>
+		<span></span>
+	</header>
+	<!--Contents-->
+	<article id="MainSection">
+		<div id="user">
+			<div id="profile">
+				<img src="../Style/Fox.png">
+				<div id="info">
+					<div class="infoData">
+						<span>Email </span>
+						<h3>leiaira92@gmail.com</h3>
+					</div>
+					<div id="AccInfo">
+						<div class="infoData">
+							<span>Name </span>
+							<h4>이선왕</h4>
+						</div>
+						<div class="infoData">
+							<span>Username</span>
+							<h4>Leia1ra</h4>
+						</div>
+					</div>
+					<div id="link">
+						<a href="MyPage.html">Edit profile</a>
+						<a href="../Program/Program.html">Edit program</a>
+					</div>
+				</div>
+			</div>
+			<div id="level">
+				<div>
+					<span>Squat</span>
+					<img src="../_Icon/Tier1.png" alt="Squat">
+				</div>
+				<div>
+					<span>Deadlift</span>
+					<img src="../_Icon/Tier1.png" alt="Deadlift">
+				</div>
+				<div>
+					<span>Bench Press</span>
+					<img src="../_Icon/Tier1.png" alt="Bench Press">
+				</div>
+			</div>
+		</div>
+		
+		<span id="line"></span>
+		
+		<div id="progress">
+			<div>
+				<img src="../imgs_main/strLift55.PNG" alt="">
+				<div id="progInfo">
+					<div>
+						<span>진행중</span>
+						<a href="#">관리</a>
+					</div>
+					<div>
+						<span>Strong Lift 5X5</span>
+						<span>(8 weeks)</span>
+					</div>
+					<div>
+						
+						<span>달성률 52%</span>
+						<span>13/25 회차</span>
+						
+					</div>
+					<progress id="prgs" value="80" max="100"></progress>
+				</div>
+			</div>
+			<div id="prgsInfo">
+				<div id="prgsRank">
+					<span>Next!</span>
+					<div>A</div>
+				</div>
+				<div id="prgsData">
+					<div>
+						<span>스쿼트</span>
+						<span>140kg</span>
+						<span>5reps * 5set</span>
+						<span>✓</span>
+					</div>
+					<div>
+						<span>스쿼트</span>
+						<span>110kg</span>
+						<span>5reps * 5set</span>
+						<span>✓</span>
+					</div>
+					<div>
+						<span>바벨로우</span>
+						<span>80kg</span>
+						<span>5reps * 5set</span>
+						<span>✓</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+</section>
+
+<!--Footer-->
+<footer>
+	@copyright
+</footer>
+</body>
+</html>

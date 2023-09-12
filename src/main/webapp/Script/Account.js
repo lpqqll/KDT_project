@@ -27,8 +27,8 @@ class Account{
             </ul>
             <ul id="management"><!--style="display: none"-->
                 <span>Leiaira92@gmail.com</span>
-                <li><a href="#">계정관리</a></li>
-                <li><a href="#">대시보드</a></li>
+                <li><a href="../Account/MyPage.html">계정관리</a></li>
+                <li><a href="../Account/dashBoard.html">대시보드</a></li>
                 <li><a href="#">로그아웃</a></li>
             </ul>
         `;
