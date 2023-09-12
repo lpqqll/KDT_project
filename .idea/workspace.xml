@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3d0235d-268b-40a1-8447-4ce7488f80f3" name="변경" comment="ㅎㅇ">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Account/DashBoard/DashBoard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Account/dashBoard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/_Icon/Tier1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Account/Join.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Account/Join.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Account/LogIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Account/LogIn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Account/MyPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Account/MyPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Script/Account.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Script/Account.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashBoard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashBoard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Account/dashBoard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Account/dashBoard.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +37,13 @@
         <option name="url" value="https://github.com/lpqqll/KDT_project.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="mouxnkxa" />
@@ -87,6 +86,33 @@
       <recent name="$PROJECT_DIR$/src/main/webapp/Account" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="톰좆냥이" type="com.poratu.idea.plugins.tomcat">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="contextPath" value="/" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
+      <option name="extraClassPath" value="" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/9.0.79" />
+          <option name="path" value="/Volumes/Disk_2ra/Code/apache-tomcat/9.0.79" />
+          <option name="version" value="9.0.79.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <module name="KDT_project" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">
@@ -97,7 +123,7 @@
       <updated>1694062730914</updated>
       <workItem from="1694062732286" duration="1039000" />
       <workItem from="1694443781156" duration="44000" />
-      <workItem from="1694482308976" duration="2757000" />
+      <workItem from="1694482308976" duration="9283000" />
     </task>
     <task id="LOCAL-00001" summary="ㅎㅇ">
       <option name="closed" value="true" />
@@ -123,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694410385702</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ㅎㅇ">
+      <option name="closed" value="true" />
+      <created>1694491680377</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694491680377</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
