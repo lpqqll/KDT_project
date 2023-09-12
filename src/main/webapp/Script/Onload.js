@@ -1,6 +1,6 @@
 window.onload = function(){
     /*게정관련*/
-    acc = new Account(true);
+    acc = new Account(false);
 
     /*하단 광고*/
     setPosterList();

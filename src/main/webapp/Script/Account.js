@@ -9,8 +9,8 @@ class Account{
         if(this.Session === false){
             state.innerHTML = `
             <ul id="SessionNone">
-                <li id="login"><a href="../Account/LogIn.html"><span>로그인</span></a></li>
-                <li id="join"><a href="../Account/Join.html"><span>회원가입</span></a></li>
+                <li id="login"><a href="/KDT_project/Account/LogIn.html"><span>로그인</span></a></li>
+                <li id="join"><a href="/KDT_project/Account/Join.html"><span>회원가입</span></a></li>
             </ul>
         `;
         } else if(this.Session === true){
@@ -21,14 +21,14 @@ class Account{
                     <br>안녕하세요!
                 </li>
                 <li id="userProfile">
-                    <img src="../Style/Fox.png" alt="">
+                    <img src="/KDT_project/Style/Fox.png" alt="">
                 </li>
                 
             </ul>
             <ul id="management"><!--style="display: none"-->
                 <span>Leiaira92@gmail.com</span>
-                <li><a href="../Account/MyPage.html">계정관리</a></li>
-                <li><a href="../Account/dashBoard.html">대시보드</a></li>
+                <li><a href="/KDT_project/Account/MyPage.html">계정관리</a></li>
+                <li><a href="/KDT_project/Account/dashBoard.html">대시보드</a></li>
                 <li><a href="#">로그아웃</a></li>
             </ul>
         `;
