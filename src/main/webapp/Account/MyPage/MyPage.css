@@ -1,4 +1,9 @@
 @import "../../Style/MainFrame.css";
+@media(max-width : 1000px){
+	
+}
+	
+
 body{
     background-color: #202020;
 }
@@ -91,20 +96,97 @@ body{
     width: 30%;
 }
 #leftProfile{
-	background-color: blue;
-	width :450px;
+	border-radius: 20px;
+	background-color: white;
+	width :400px;
+	height : 350px;
 	margin : 0 auto;
 	float : left;
+	box-shadow: 5px 5px 5px 5px lightgray;
+}
+#title{
+	background-color: pink;
+	border-top : 1px solid white;
+	margin-top : 40px;
+	margin-bottom : 100px;
+	height: 100px;
+	width : 400px;
+	
+	float : left;
+}
+#title>h1{
+	margin-top:20px;
+	
 }
 #UsNa{
-	background-color: red;
+	margin-left : 10px;
+	color:black;
 	float : left;
+	width :150px;
+	padding: 20px;	
+	height: 270px;
 }
-#rightProfile{
-	background-color : lightgreen;
-	width : 450px;
-	margin : 0 auto;
+
+#Proimg{
+	width: 225px;
 	float:left;
+}
+
+
+#nowdata{
+	
+	float : right;
+	
+	margin-left : 40px;
+	width : 500px;
+	height : 350px;
+}
+#nowdata>img{
+		float:left;
+		margin-right : 50px;
+		margin-top : 25px;
+		}
+#nowdata>h2{
+	float : left;
+	margin-right:30px;
+}
+#nowdata>#setting{
+	float : left;
+	margin-top : 25px;
+}
+#nowdata>#contentName{
+	float : left;
+	margin-right : 60px;
+}
+#nowdata>#contentWeek, #nowdata>#thefirst{
+	float:left;
+}
+#nowdata>#dal{
+	float:left;
+	margin-right:45px;
+}
+#nowdata>#percent{
+	float : left; 
+	margin-right:40px;
+	
+}
+
+
+ 
+#edit{
+	color : white;
+	float : left;
+	width : 170px;
+	margin-left : 120px;
+	margin-top : 30px;
+}
+#program{
+	
+	float:left;
+	margin : 0 auto;
+}
+#bottomline{
+	border-bottom : 1px solid white;
 }
 
 /*inbody################################################*/

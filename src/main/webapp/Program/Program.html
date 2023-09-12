@@ -7,6 +7,7 @@
 	
 	<link rel="stylesheet" href="Style/Program.css">
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<script src="../Script/Account.js"></script> 
 	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 	<script>
@@ -90,20 +91,32 @@
 
 </head>
 
-<body>
-	<!--Header-->
-	<header id="headContainer">
-		<h1>헬창놈들</h1>
-	</header>
+<body onload="acc = new Account(true);">
 	
-	<!--Bodies-->
-	<section id="container">
-		<!--Navigation-->
-		<nav id="navSection">
-		
-		</nav>
-		
-		<!--Contents-->
+	<header id="headContainer">
+        <!--Logo-->
+        <h1 class="head" id="Logo">
+            <a href="../index.html">
+                <img src="../_Icon/PageLogo_White.png" alt="헬창놈들 로고">
+            </a>
+        </h1>
+        <!--Navigation-->
+        <nav class="head" id="Nav">
+            <ul>
+                <li><a href="Program/Program.html">Program</a></li>
+                <li><a href="Community/community2.html">Community</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Advertisement</a></li>
+            </ul>
+        </nav>
+        <!--Account-->
+        <div class="head" id="Auth">
+            <!--Authentication passed-->
+            <!--Authentication NONE-->
+        </div>
+    </header>
+
+		<section id="container" onclick="acc.hideAccount();">
 		<article id="MainSection">
 			
 				<ul id = "top">
@@ -186,33 +199,35 @@
 				
 				<ul id = "middle">
 					<!--2행1열-->
-						<div id = "dialogOpen2_1" ><img src = "../Program/img/btn.png"></div>
+						<div id = "dialogOpen2_1" ><img src = "../Program/img/FST_7.jpg"></div>
 						
 					<!--2행2열-->
-						<div id = "dialogOpen2_2" ><img src = "../Program/img/btn.png"></div>
+						<div id = "dialogOpen2_2" ><img src = "../Program/img/GTV11.jpg"></div>
 					
 					<!--2행3열-->
-						<div id = "dialogOpen2_3" ><img src = "../Program/img/btn.png"></div>
+						<div id = "dialogOpen2_3" ><img src = "../Program/img/PHAT.jpg"></div>
 				</ul>
 			
 				
 				<ul id = "bottom">
 					<!--3행1열-->
-						<div id = "dialogOpen3_1" ><img src = "../Program/img/strLift55.PNG" ></div>
+						<div id = "dialogOpen3_1" ><img src = "../Program/img/nSuns531.jpg" ></div>
 					
 					<!--3행2열-->
-						<div id = "dialogOpen3_2" ><img src = "../Program/img/strLift55.PNG" ></div>
+						<div id = "dialogOpen3_2" ><img src = "../Program/img/jimWendler531.PNG" ></div>
 					
 					<!--3행3열-->
-						<div id = "dialogOpen3_3" ><img src = "../Program/img/strLift55.PNG" ></div>
+						<div id = "dialogOpen3_3" ><img src = "../Program/img/chrisBumstead.PNG" ></div>
 				</ul>
 	
 		</article>
+		
 	</section>
 	
 	<!--Footer-->
 	<footer>
 		@copyright
+		
 	</footer>
 </body>
 </html>
