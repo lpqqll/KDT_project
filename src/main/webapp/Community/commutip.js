@@ -4,17 +4,17 @@ let listArr2 = new Array(10);
 listArr2 = [
     {
         title : "프로틴 선택시 꿀팁",
-        vote : 12,
+        vote : 54,
         writer : "민수아빠",
         writedDate : "2023-09-06"
     },{
         title : "벌크업에 좋은 식단",
-        vote : 7,
+        vote : 47,
         writer : "김현주",
         writedDate : "2023-09-06"
     },{
         title : "헬린이들 필독",
-        vote : 25,
+        vote : 41,
         writer : "근육킹",
         writedDate : "2023-09-06"
     },{
@@ -34,7 +34,7 @@ listArr2 = [
         writedDate : "2023-09-06"
     },{
         title : "헬스장 이용 시 매너",
-        vote : 2,
+        vote : 20,
         writer : "강남헬스트레이너",
         writedDate : "2023-09-06"
     },{
@@ -63,7 +63,7 @@ listArr2.forEach((list, index) => {
     let table2 = `
     <li class="line">
         <span id="redbutton" style="float:left; float:top;">
-            ${index <= 2 ? `<button style=" background-color: orangered; color:white; 
+            ${index <= 2 ? `<button style="background-color: orangered; color:white; 
             border:none; border-radius: 1px; font-size:15px; margin-right:10px;" onclick="handleButtonClick(${index})">Best</button>` : ''}
         </span>
         <div>

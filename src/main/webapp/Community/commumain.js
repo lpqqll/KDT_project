@@ -6,17 +6,17 @@ let listArr5 = new Array(4);
 listArr5 = [
     {
         title : "오늘 점심 메뉴",
-        vote : 12,
+        vote : 35,
         writer : "운동하는 나무늘보",
         writedDate : "2023-09-06"
     },{
         title : "소개팅 가려는데 옷 좀 봐주십쇼ㅜㅠ",
-        vote : 7,
+        vote : 33,
         writer : "공대남",
         writedDate : "2023-09-06"
     },{
         title : "와이프한테 닌텐도 산거 걸린 썰 푼다.",
-        vote : 25,
+        vote : 32,
         writer : "하체부실",
         writedDate : "2023-09-06"
     },{
@@ -55,21 +55,21 @@ window.listArr = new Array(4);
 listArr = [
     {
         title : "ㅋㅋㅋㅋ",
-        vote : 20,
+        vote : 40,
         writer : "나는 슈퍼맨",
         writedDate : "2023-09-06"
     },{
         title : "왕이 넘어지면?",
-        vote : 15,
+        vote : 33,
         writer : "아재개그러버",
         writedDate : "2023-09-06"
     },{
         title : "ㅇwㅇ",
-        vote : 12,
+        vote : 32,
         writer : "근육맨",
         writedDate : "2023-09-06"
     },{
-        title : "ㅋㅋㅋㅋ",
+        title : "MZ 용어 모음",
         vote : 20,
         writer : "나는 슈퍼맨",
         writedDate : "2023-09-06"
@@ -104,17 +104,17 @@ window.listArr7 = new Array(4);
 listArr7 = [
     {
         title : "프로틴 선택시 꿀팁",
-        vote : 12,
+        vote : 54,
         writer : "민수아빠",
         writedDate : "2023-09-06"
     },{
         title : "벌크업에 좋은 식단",
-        vote : 7,
+        vote : 47,
         writer : "김현주",
         writedDate : "2023-09-06"
     },{
         title : "헬린이들 필독",
-        vote : 25,
+        vote : 41,
         writer : "근육킹",
         writedDate : "2023-09-06"
     },{
@@ -177,7 +177,7 @@ let board8 = '';
 listArr8.forEach(list => {
     let table8 = `
     <li class="line">
-    	<img src="img/mabi.png" style="float:left; margin-left:20px; width:50px; height:50px;">
+    	<img src="img/todayHealth.png" style="float:left; margin-left:20px; width:50px; height:50px;">
         <div>     
             <span id="title" style="font-size:19px; margin-left:20px;"><b>${list.title}</b></span>
             <span id="vote" style="font-size:14px;">추천수 : ${list.vote}</span>
@@ -226,7 +226,7 @@ let board9 = '';
 listArr9.forEach(list => {
     let table9 = `
     <li class="line">
-    	<img src="img/mabi.png" style="float:left; margin-left:20px; width:50px; height:50px;">
+    	<img src="img/healthtoday.png" style="float:left; margin-left:20px; width:50px; height:50px;">
         <div>
         
             <span id="title" style="font-size:19px; margin-left:20px;"><b>${list.title}</b></span>

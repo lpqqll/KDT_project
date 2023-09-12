@@ -4,17 +4,17 @@ let listArr1 = new Array(10);
 listArr1 = [
     {
         title : "오늘 점심 메뉴",
-        vote : 12,
+        vote : 35,
         writer : "운동하는 나무늘보",
         writedDate : "2023-09-06"
     },{
         title : "소개팅 가려는데 옷 좀 봐주십쇼ㅜㅠ",
-        vote : 7,
+        vote : 33,
         writer : "공대남",
         writedDate : "2023-09-06"
     },{
         title : "와이프한테 닌텐도 산거 걸린 썰 푼다.",
-        vote : 25,
+        vote : 32,
         writer : "하체부실",
         writedDate : "2023-09-06"
     },{

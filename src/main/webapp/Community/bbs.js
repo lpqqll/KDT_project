@@ -18,7 +18,7 @@ listArr = [
         writer : "근육맨",
         writedDate : "2023-09-06"
     },{
-        title : "ㅋㅋㅋㅋ",
+        title : "MZ 용어 모음",
         vote : 20,
         writer : "나는 슈퍼맨",
         writedDate : "2023-09-06"
@@ -33,7 +33,7 @@ listArr = [
         writer : "이건아",
         writedDate : "2023-09-06"
     },{
-        title : "ㅋㅋㅋㅋ",
+        title : "아ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
         vote : 20,
         writer : "나는 슈퍼맨",
         writedDate : "2023-09-06"

@@ -59,7 +59,7 @@ let board4 = '';
 listArr4.forEach(list => {
     let table4 = `
     <li class="line">
-    	<img src="img/mabi.png" style="float:left; margin-left:20px; width:50px; height:50px;">
+    	<img src="img/healthtoday.png" style="float:left; margin-left:20px; width:50px; height:50px;">
         <div>
         
             <span id="title" style="font-size:19px; margin-left:20px;"><b>${list.title}</b></span>
