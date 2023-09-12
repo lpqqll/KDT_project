@@ -5,6 +5,7 @@ listArr4 = [
     {
         title : "제 등근육 보실?",
         vote : 17,
+
         writer : "민수아빠",
         writedDate : "2023-09-06"
     },{
