@@ -4,163 +4,9 @@
 <meta charset="UTF-8">
 <title>커뮤니티</title>
 <link rel="stylesheet" href="../Style/MainFrame.css">
-<style>
-	/*
-	 body{
-		 background-color: slategray;
-		 color:white;
-	 }*/
-    /* 카테고리 탭 스타일 */
-    .sidenav {
-        height: 100%; width: 240px; position: fixed; z-index: 1;
-        top: 0; left: -170px; /* 왼쪽으로 조금 숨김 */
-        background-color: black; padding-top: 20px;
-        transition: left 0.3s; margin-top:100px;
-        border-top-right-radius: 20px;
-    }
-
-    .sidenav:hover, .sidenav.active {
-        left: 0; /* 마우스를 올리거나 활성화 상태일 때 나타남 */
-    }
-
-
-    /* 각각의 카테고리 탭 버튼 스타일 */
-    .sidenav button {
-        background-color: inherit; border: none; outline: none; cursor: pointer;
-        padding: 10px 15px; display: block; width: 100%; text-align: left;
-        transition: 0.3s; color: white;
-    }
-
-    /* 활성 탭 버튼 스타일 */
-    .sidenav button.active {
-        font-size:1.5em; color: rgb(243, 156, 18);
-    }
-
-    /* 카테고리 탭 내용 스타일 */
-    #content {
-		width:100%;
-        margin-left: 75px;
-        padding: 20px;
-    }
-    
-    .tabcontent{
-		display: none;
-	}
-	#hrstyle{
-		background-color: white; width:120px; border:none; height: 0.01em; margin-left: 10px;
-	}
-	/*각 페이지의 이름*/
-	#top{
-		font-size: 2em; color:  rgb(243, 156, 18);  list-style: none;
-		display:flex; flex-basis:100%; align-items: left; margin:8px 0px;
-		margin-bottom:70px;
-	}
-	/*글자 옆에 선*/
-	#top::after{
-		content:""; flex-grow:1; margin:20px 12px; height:2px; font-size:0; line-height:0px;
-		background:darkgray;
-	}
-	/*좌우정렬*/
-	.left-content {
-        float: left; width: 75%;
-    }
-
-    .right-content {
-        float: right; width: 20%; text-align: right; list-style: none; text-align: left;
-    }
-	/*배너, 추후 사진 등으로 교체?*/
-	#banner {
-      color : white; background-color: #202020; text-align:center; list-style: none;
-      padding-top: 10px; padding-bottom: 10px; border-color:#202020; font-size:2.5em;
-      
-   }
-	/*글쓰기 버튼*/
-	#writebutton{
-		color:white; background-color: #202020; float: right; border-radius: 5px;
-	}
-	main{
-		min-width:700px;
-		max-width: 1400px;
-		margin:0 auto;
-	}
+<link rel="stylesheet" href="commustyle.css">
+<script src="../Script/Account.js"></script>
 	
-	/*li 4개씩 그룹화 및 정렬*//*
-	ul li:nth-child(odd){
-		float: left; clear: left; list-style: none; margin-right: 10px;
-	}
-	ul li:nth-child(even){
-		float: right; clear:right; list-style: none; margin-left: 10px;
-	}
-	
-	ul li:nth-child(4n-1){
-		float: left; list-style: none; margin-right: 10px;
-	}	
-	ul li:nth-child(4n){
-		float: right; list-style: none; margin-left: 10px;
-	}*/
-	
-	
-	
-	/*
-	.writelist{
-		display: flex;
-		flex-wrap: wrap;
-		gap:20px;
-	}
-	.writelist ul{
-		flex-basis: calc(50%-20px);
-		margin-bottom: 20px;
-	}
-	.writelist li{
-		list-style: none;
-	}*/
-	/*글 사이 줄 긋기*/
-	.writelist{
-		margin-bottom: 20px;
-	}
-	.line{
-		margin-bottom: 15px;
-		border-bottom:2px solid darkgray;
-		padding-bottom: 15px;
-		
-	}
-	.right-content>li{
-		margin-bottom:10px;
-	}
-	
-	img{
-		width: 70px;
-		height: 70px;
-	}
-	
-	/*게시글 목록 스타일*/
- 	.writelist *{
-            list-style-type: none;
-        }
-    #list, #list1, #list2, #list3{
-            margin: 0;
-            padding: 0;
-        }
-    .line{
-            border-bottom: 1px solid darkgray;
-        }
-    .line>div{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-    /*페이지 넘기는 버튼*/
-    .number{
-		list-style: none; font-size: 20px;
-		padding:0; display: flex; justify-content: center; width: 75%;
-	}
-	.number>li{
-		 padding-right:10px; padding-left:10px; border-radius: 20px;
-	}
-    </style>
-	
-	
-</style>
 <script>
     // 현재 활성화된 탭의 ID를 저장할 변수
     var activeTab = "Community";
@@ -192,6 +38,7 @@
     // 초기 카테고리 탭 설정
     window.onload = function(){
     openTab("Community");
+    acc = new Account(true);
     }
    
     
@@ -200,23 +47,24 @@
 <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
-
+<!--커뮤 글 내용 관련 코드-->
 
 </head>
 <body>
+
 <!--Header 상단바-->
 <header id="headContainer">
         <!--Logo-->
         <h1 class="head" id="Logo">
             <a href="index.html">
-                <img src="_Icon/PageLogo_White.png" alt="헬창놈들 로고">
+                <img src="../_Icon/PageLogo_White.png" alt="헬창놈들 로고" style="width:100%;">
             </a>
         </h1>
         <!--Navigation-->
         <nav class="head" id="Nav">
             <ul>
-                <li><a href="#">Project</a></li>
-                <li><a href="#">Community</a></li>
+                <li><a href="../Program/Program.html">Program</a></li>
+                <li><a href="community2.html">Community</a></li>
                 <li><a href="#">Reviews</a></li>
                 <li><a href="#">Advertisement</a></li>
             </ul>
@@ -228,6 +76,8 @@
         </div>
 
 </header>
+
+<section id="container" onclick="acc.hideAccount();">
 <!--배너-->
 <!-- Banner -->
    <div id="banner">
@@ -255,7 +105,7 @@
 	    <div class="left-placeholder"></div>
 	    
 	    <!-- 각각의 카테고리 탭 버튼 생성 -->
-	    <button class="tablinks" id="Community-button" onclick="openTab('Community')"><b>커뮤니티</b></button>
+	    <button class="tablinks" id="Community-button" onclick="openTab('Community')" style="font-size: 1.5em;"><b>커뮤니티</b></button>
 	    <br/>
 	    <button class="tablinks" id="Notice-button" onclick="openTab('Notice')"><b>자유 게시판</b></button>
 	    <hr id="hrstyle">
@@ -270,26 +120,62 @@
 	
 	<!-- 카테고리 탭 내용 생성 -->
 	<!--Bodies-->
-	<section id="container" onclick="acc.hideAccount();">
+	
 	<!--Contents-->
 	   
 		<article id="content">
 		    <div id="Community" class="tabcontent">
 				<li id="top"><b>커뮤니티</b></li>   
-		        <div class="left-content">                
-		            <b>자유 게시판</b>
-		            <hr>                       
-		            <b>유머 게시판</b>
-		            <hr>
-		            <b>팁 게시판</b>
-		            <hr>
-		            <b>오.운.완</b>
-		            <hr>
-		            <b>몸짱 인증</b>
-		            <hr>
+		        <div class="left-content">    
+					<script src="commumain.js"></script>            
+		            <b id="category">자유 게시판 +</b>
+		            <hr style="color: black; background-color: black; height:3px;">     
+		            <div class="writelist">
+				        <ul id="list5">
+							<script>
+							a1();
+							</script>
+						</ul>
+					</div>                  
+		            <b id="category">유머 게시판 +</b>
+		            <hr style="color: black; background-color: black; height:3px;">
+		            <div class="writelist">
+				        <ul id="list6">
+							<script>
+							a2();
+							</script>
+						</ul>
+					</div>    
+		            <b id="category">팁 게시판 +</b>
+		            <hr style="color: black; background-color: black; height:3px;">
+		            <div class="writelist">
+				        <ul id="list7">
+							<script>
+							a3();
+							</script>
+						</ul>
+					</div>    
+		            <b id="category">오.운.완 +</b>
+		            <hr style="color: black; background-color: black; height:3px;">
+		            <div class="writelist">
+				        <ul id="list8">
+							<script>
+							a4();
+							</script>
+						</ul>
+					</div>    
+		            <b id="category">몸짱 인증 +</b id="category">
+		            <hr style="color: black; background-color: black; height:3px;">
+		            <div class="writelist">
+				        <ul id="list9">
+							<script>
+							a5();
+							</script>
+						</ul>
+					</div>    
 		        </div>
 		        <div class="right-content">
-		            <li id="hot"><b>인기글</b></li><hr>
+		            <li id="hot"><b>인기글 +</b></li><hr>
 		            <li>운동 루틴 추천</li>
 		            <li>닭가슴살 맛있게 먹는 법</li>
 		            <li>헬창 옷장 구경하실?</li>
@@ -297,23 +183,30 @@
 		            <li>형님들 3대 몇 치세요?</li>
 		            <hr><br/>
 		            <br/>
-		            <li><b>오.운.완 인증</b></li>
+		            <li><b>오.운.완 인증 +</b></li>
+		            <!--<button id="gotoday">+</button><br/>-->
 		            <hr>
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">            
+		            <hr>
+		            <img src="img/protein.jpg" style="width: 220px; height: 220px; margin-top:40px;">
 		        </div><br/>	
 		        <div class="number">
-					<li><</li><li style="background-color: rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
+					<li><</li><li style="border: 3px solid rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
 				</div>	        
 		    </div>		
 		    <div id="Notice" class="tabcontent">
 				<li id="top"><b>자유 게시판</b></li> 
 				<div class="left-content">	   		 
-			        <button id="writebutton">글쓰기</button><br/>
+			        <button id="writebutton">글쓰기</button>
+			        <div class="search-box">
+	       				 <input type="text" id="search-input" placeholder="검색어를 입력하세요">
+	       				 <button id="search-button">검색</button>
+    				</div><br/>
 			        <hr>
 			        <div class="writelist">
 				        <ul id="list1">
@@ -323,31 +216,37 @@
 					</div>			    
 			    </div>
 		        <div class="right-content">
-		            <li id="hot"><b>인기글</b></li><hr>
+		            <li id="hot"><b>인기글 +</b></li><hr>
 		            <li>운동 루틴 추천</li>
 		            <li>닭가슴살 맛있게 먹는 법</li>
 		            <li>헬창 옷장 구경하실?</li>
 		            <li>팔씨름 레전드</li>
 		            <li>형님들 3대 몇 치세요?</li>
 		            <hr><br/>
-		            <li><b>오.운.완 인증</b></li>
+		            <li><b>오.운.완 인증 +</b></li>
 		            <hr>
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png"> 
+		            <hr>
+		            <img src="img/protein.jpg" style="width: 220px; height: 220px; margin-top:40px;">
 		        </div><br/>	
 		        <div class="number">
-					<li><</li><li style="background-color: rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
+					<li><</li><li style="border: 3px solid rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
 				</div>
 		    </div>
 		
 		    <div id="Humor" class="tabcontent">
 				<li id="top"><b>유머 게시판</b></li> 
 				<div class="left-content">	       
-			        <button id="writebutton">글쓰기</button><br/>
+			        <button id="writebutton">글쓰기</button>
+			        <div class="search-box">
+	       				 <input type="text" id="search-input" placeholder="검색어를 입력하세요">
+	       				 <button id="search-button">검색</button>
+    				</div><br/>
 			        <hr>
 			        <div class="writelist">
 				        <ul id="list">
@@ -357,24 +256,26 @@
 					</div>
 			    </div>
 		        <div class="right-content">
-		            <li id="hot"><b>인기글</b></li><hr>
+		            <li id="hot"><b>인기글 +</b></li><hr>
 		            <li>운동 루틴 추천</li>
 		            <li>닭가슴살 맛있게 먹는 법</li>
 		            <li>헬창 옷장 구경하실?</li>
 		            <li>팔씨름 레전드</li>
 		            <li>형님들 3대 몇 치세요?</li>
 		            <hr><br/>
-		            <li><b>오.운.완 인증</b></li>
+		            <li><b>오.운.완 인증 +</b></li>
 		            <hr>
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png"> 
+		            <hr>
+		            <img src="img/protein.jpg" style="width: 220px; height: 220px; margin-top:40px;">
 		        </div><br/>	
 		        <div class="number">
-					<li><</li><li style="background-color: rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
+					<li><</li><li style="border: 3px solid rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
 				</div>
 		        
 		    </div>
@@ -382,7 +283,11 @@
 		    <div id="Free" class="tabcontent">     
 		        <li id="top"><b>팁 게시판</b></li> 
 		        <div class="left-content">	        
-			        <button id="writebutton">글쓰기</button><br/>
+			        <button id="writebutton">글쓰기</button>
+			        <div class="search-box">
+	       				 <input type="text" id="search-input" placeholder="검색어를 입력하세요">
+	       				 <button id="search-button">검색</button>
+    				</div><br/>
 			        <hr>
 			        <div class="writelist">
 				        <ul id="list2">
@@ -392,31 +297,37 @@
 					</div>
 			    </div>
 		        <div class="right-content">
-		            <li id="hot"><b>인기글</b></li><hr>
+		            <li id="hot"><b>인기글 +</b></li><hr>
 		            <li>운동 루틴 추천</li>
 		            <li>닭가슴살 맛있게 먹는 법</li>
 		            <li>헬창 옷장 구경하실?</li>
 		            <li>팔씨름 레전드</li>
 		            <li>형님들 3대 몇 치세요?</li>
 		            <hr><br/>
-		            <li><b>오.운.완 인증</b></li>
+		            <li><b>오.운.완 인증 +</b></li>
 		            <hr>
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png"> 
+		            <hr>
+		            <img src="img/protein.jpg" style="width: 220px; height: 220px; margin-top:40px;">
 		        </div><br/>	
 		        <div class="number">
-					<li><</li><li style="background-color: rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
+					<li><</li><li style="border: 3px solid rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
 				</div>
 		    </div>
 		
 		    <div id="Tips" class="tabcontent">
 				<li id="top"><b>오.운.완</b></li> 
 		        <div class="left-content">        
-			        <button id="writebutton">글쓰기</button><br/>
+			        <button id="writebutton">글쓰기</button>
+			        <div class="search-box">
+	       				 <input type="text" id="search-input" placeholder="검색어를 입력하세요">
+	       				 <button id="search-button">검색</button>
+    				</div><br/>
 			        <hr>
 			        <div class="writelist">
 				        <ul id="list3">
@@ -426,31 +337,37 @@
 					</div>
 			    </div>
 		        <div class="right-content">
-		            <li id="hot"><b>인기글</b></li><hr>
+		            <li id="hot"><b>인기글 +</b></li><hr>
 		            <li>운동 루틴 추천</li>
 		            <li>닭가슴살 맛있게 먹는 법</li>
 		            <li>헬창 옷장 구경하실?</li>
 		            <li>팔씨름 레전드</li>
 		            <li>형님들 3대 몇 치세요?</li>
 		            <hr><br/>
-		            <li><b>오.운.완 인증</b></li>
+		            <li><b>오.운.완 인증 +</b></li>
 		            <hr>
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png"> 
+		            <hr>
+		            <img src="img/protein.jpg" style="width: 220px; height: 220px; margin-top:40px;">
 		        </div><br/>	
 		        <div class="number">
-					<li><</li><li style="background-color: rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
+					<li><</li><li style="border: 3px solid rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
 				</div>
 		    </div>
 		
 		    <div id="Questions" class="tabcontent">      
 				<li id="top"><b>몸짱 인증</b></li> 
 				<div class="left-content">	   		 
-			        <button id="writebutton">글쓰기</button><br/>
+			        <button id="writebutton">글쓰기</button>
+			        <div class="search-box">
+	       				 <input type="text" id="search-input" placeholder="검색어를 입력하세요">
+	       				 <button id="search-button">검색</button>
+    				</div><br/>
 			        <hr>
 			        <div class="writelist">
 				        <ul id="list4">
@@ -460,29 +377,31 @@
 					</div>
 			    </div>
 		        <div class="right-content">
-		            <li id="hot"><b>인기글</b></li><hr>
+		            <li id="hot"><b>인기글+</b></li><hr>
 		            <li>운동 루틴 추천</li>
 		            <li>닭가슴살 맛있게 먹는 법</li>
 		            <li>헬창 옷장 구경하실?</li>
 		            <li>팔씨름 레전드</li>
 		            <li>형님들 3대 몇 치세요?</li>
 		            <hr><br/>
-		            <li><b>오.운.완 인증</b></li>
+		            <li><b>오.운.완 인증+</b></li>
 		            <hr>
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
-		            <img src="img/mabi.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png">
+		            <img src="img/todayHealth.png"> 
+		            <hr>
+		            <img src="img/protein.jpg" style="width: 220px; height: 220px; margin-top:40px;">
 		        </div><br/>	
 		        <div class="number">
-					<li><</li><li style="background-color: rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
+					<li><</li><li style="border: 3px solid rgb(243, 156, 18);">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>></li>
 				</div>
-		    </div>
+			</div>
 		</article>
-	</section>
 </main>
+</section>
 <!--Footer-->
 <footer>
     @copyright
