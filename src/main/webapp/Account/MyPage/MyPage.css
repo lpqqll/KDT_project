@@ -1,4 +1,9 @@
 @import "../../Style/MainFrame.css";
+@media(max-width : 1000px){
+	
+}
+	
+
 body{
     background-color: #202020;
 }
@@ -99,6 +104,20 @@ body{
 	float : left;
 	box-shadow: 5px 5px 5px 5px lightgray;
 }
+#title{
+	background-color: pink;
+	border-top : 1px solid white;
+	margin-top : 40px;
+	margin-bottom : 100px;
+	height: 100px;
+	width : 400px;
+	
+	float : left;
+}
+#title>h1{
+	margin-top:20px;
+	
+}
 #UsNa{
 	margin-left : 10px;
 	color:black;
@@ -113,15 +132,47 @@ body{
 	float:left;
 }
 
-#rightProfile{
+
+#nowdata{
 	
-	width : 500px;
-	height : 400px;
-	float : left;
-	margin : 0 auto;
+	float : right;
+	
 	margin-left : 40px;
+	width : 500px;
+	height : 350px;
+}
+#nowdata>img{
+		float:left;
+		margin-right : 50px;
+		margin-top : 25px;
+		}
+#nowdata>h2{
+	float : left;
+	margin-right:30px;
+}
+#nowdata>#setting{
+	float : left;
+	margin-top : 25px;
+}
+#nowdata>#contentName{
+	float : left;
+	margin-right : 60px;
+}
+#nowdata>#contentWeek, #nowdata>#thefirst{
+	float:left;
+}
+#nowdata>#dal{
+	float:left;
+	margin-right:45px;
+}
+#nowdata>#percent{
+	float : left; 
+	margin-right:40px;
 	
 }
+
+
+ 
 #edit{
 	color : white;
 	float : left;
@@ -130,9 +181,12 @@ body{
 	margin-top : 30px;
 }
 #program{
-	background-color: blue;
+	
 	float:left;
 	margin : 0 auto;
+}
+#bottomline{
+	border-bottom : 1px solid white;
 }
 
 /*inbody################################################*/
