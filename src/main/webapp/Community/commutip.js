@@ -33,9 +33,9 @@ listArr2 = [
         writer : "김계란",
         writedDate : "2023-09-06"
     },{
-        title : "헬스장 이용 시 매너",
-        vote : 20,
-        writer : "강남헬스트레이너",
+        title : "김종국 홈짐 꿀팁",
+        vote : 17,
+        writer : "맥주통",
         writedDate : "2023-09-06"
     },{
         title : "덩치 키우고 싶은 멸치들 꿀팁 알려준다.",
@@ -55,10 +55,17 @@ listArr2 = [
     },
 ]
 
+var targetIndex = 1;
+
+var linkElement = document.createElement("a");
+linkElement.href = "communityPost.html";
+linkElement.textContent = listArr2[targetIndex];
+
+listArr[targetIndex] = linkElement;
+
 let board2 = '';
 
 listArr2.forEach((list, index) => {
-    let hotStyle2 = index === 0 || index === 1 ? 'color: black;' : '';
     let titleId2 = `title-${index}`; // 고유한 id 생성
     let table2 = `
     <li class="line">
@@ -67,7 +74,7 @@ listArr2.forEach((list, index) => {
             border:none; border-radius: 1px; font-size:15px; margin-right:10px;" onclick="handleButtonClick(${index})">Best</button>` : ''}
         </span>
         <div>
-            <span id="${titleId2}" style="font-size:19px;${hotStyle2}"><b>${list.title}</b></span>
+            <span id="${titleId2}" style="font-size:19px;"><b><a href="communityPost.html"style="color:black; text-decoration-line: none; ">${list.title}</a></b></span>
             <span id="vote" style="font-size:14px;">추천수 : ${list.vote}</span>
         </div>
         <div>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>post</title>
+<link rel="stylesheet" href="../Style/MainFrame.css">
+<link rel="stylesheet" href="communityCss/post.css">
+<script src="../Script/Advertisement.js"></script>
+<script src="../Script/Account.js"></script>
+<script src="../Script/Onload.js"></script>
+
+<!--배너 관련 코드-->
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+</head>
+<body>
+
+<!--Header 상단바-->
+<header id="headContainer">
+        <!--Logo-->
+        <h1 class="head" id="Logo">
+            <a href="../index.html">
+                <img src="../_Icon/PageLogo_White.png" alt="헬창놈들 로고" style="width:100%;">
+            </a>
+        </h1>
+        <!--Navigation-->
+        <nav class="head" id="Nav">
+            <ul>
+                <li><a href="../Program/Program.html">Program</a></li>
+                <li><a href="community2.html">Community</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Advertisement</a></li>
+            </ul>
+        </nav>
+        <!--Account-->
+        <div class="head" id="Auth">
+            <!--Authentication passed-->
+            <!--Authentication NONE-->
+        </div>
+</header>
+
+<section id="container" onclick="acc.hideAccount();" style="margin : 0;">
+
+
+<!-- Banner -->
+<div id="banner">
+	<!--<b>NOTHING WILL WORK UNLESS<br/>YOU DO.</b>-->
+    <div id="container">
+    	<div class="main_visual">
+        	<center>
+            	<div class="fotorama" data-nav="false" data-width="800" data-height="200" data-max-width="100%" data-click='false' data-swipe='false'
+            data-loop="true" data-autoplay="12000" data-stopautoplayontouch="false">
+            		<div data-img="img/AA.jpg"><a href="/" class="item" ></a></div>
+                	<div data-img="img/myproteinGYM.png"><a href="/" class="item" ></a></div>
+                 </div>
+            </center> 
+        </div>
+    </div>
+</div>   
+
+<!-- Post -->
+<main>
+	
+<div class="left-content">
+	<li id="top"><b>팁 게시판</b></li> 
+	<div class="post-main">
+		<div class="post-left">
+			<!-- Title -->
+			<div class="post-title">
+					<li style="text-align: center; margin-top: 10px; display: flex;  justify-content: left; margin-bottom: 20px; margin-left:60px;">
+   						<img src="img/user.png" style="width: 50px; height: 50px; margin-right: 20px; ">
+    					<div style="font-size:1em; text-align: left;">
+							<b>맥주통</b><br/>
+							1시간 전  | 👍 17  | ✨ 31 | 👀 102 
+					</li>
+				<h1 style="text-align: left; margin-bottom:50px; margin-left:60px;">김종국 홈짐 꿀팁</h1>
+				<div class="post-user">
+				</div>
+				
+				<br/>
+			</div>
+			
+			<!-- Contents -->
+			<div class="post-titleContents">
+				<img src="img/post_img1.jpg" style="width: 80%;"><br/>
+				<p style="text-align: center; font-size:1.2em">
+					운동을 꾸준히 하고 있는 닝겐입니다.<br><br>
+					오늘은 김종국님이알려주는<br><br>
+					집에서하는 헬스<br><br>
+					<b>남녀 상체운동 꿀팁</b>을 전해드리겠습니다.<br/>
+				</p>
+				<img src="img/post_img3.png" style="width: 80%;"><br/><br/><hr style="margin-bottom: 30px;">
+				<!--<button class="back"><b>글 목록</b></button>-->
+				<div class="container">
+       				 <div class="post-box">
+           				<textarea rows="5" cols="110" placeholder=" 댓글을 입력해주세요."></textarea>
+        			</div>
+       				<button class="comment-button"><b>댓글<br>등록</b></button>
+    			</div>
+    			<div class="comment">
+					<li><b>댓글[5]</b></li><hr>
+					<li><b>채이스내</b></li>
+					<li>와 감사합니다! 집에서 따라해볼게요~</li>
+					<hr>
+					<li><b>이건아</b></li>
+					<li>그래도 역시 헬스장이 최고긴 해요ㅋㅋㅋ</li>
+					<hr>
+					<li><b>김현주</b></li>
+					<li>오...</li>
+					<hr>
+					<li><b>이선왕</b></li>
+					<li>꿀팁 감사합니다!</li>
+					<hr>
+					<li><b>김준수</b></li>
+					<li>코로나 걸려서 근손실 걱정했는데 집에서 따라해봐야겠어요</li>
+					<hr>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+				
+				
+
+	<div class="post-right">
+		<div class="right-content">
+				
+		        <li id="hot"><b>인기글 +</b></li><hr>
+		        <li>운동 루틴 추천</li>
+		        <li>닭가슴살 맛있게 먹는 법</li>
+		        <li>헬창 옷장 구경하실?</li>
+		        <li>팔씨름 레전드</li>
+		        <li>형님들 3대 몇 치세요?</li>
+		        
+		        <hr><br/>
+		        <li><b>오.운.완 인증 +</b></li>
+		        <hr>
+		        <img src="img/todayHealth.png" style="width: 70px; height: 70px;">
+		        <img src="img/todayHealth.png" style="width: 70px; height: 70px;">
+		        <img src="img/todayHealth.png" style="width: 70px; height: 70px;">
+		        <img src="img/todayHealth.png" style="width: 70px; height: 70px;">
+		        <img src="img/todayHealth.png" style="width: 70px; height: 70px;">
+		        <img src="img/todayHealth.png" style="width: 70px; height: 70px;">
+		        <hr><br/>
+		        <img src="img/protein.jpg" style="width: 220px; height: 220px; margin: auto;">
+		   	</div><br/>
+        </div>
+
+</main>
+</section>
+<footer>
+        @copyright
+        <br>
+</footer>
+</body>
+
+</html>
