@@ -7,8 +7,9 @@
 	<title>헬창놈들</title>
 	<link rel="stylesheet" href="DashBoard/DashBoard.css">
 	<script src="../Script/Account.js"></script>
+	<script src="DashBoard/DashBoard.js"></script>
 </head>
-<body onload="acc = new Account(true);">
+<body onload="acc = new Account(true); progress();">
 <!--Header-->
 <header id="headContainer">
 	<!--Logo-->
@@ -97,13 +98,11 @@
 						<span>Strong Lift 5X5</span>
 						<span>(8 weeks)</span>
 					</div>
-					<div>
-						
-						<span>달성률 52%</span>
-						<span>13/25 회차</span>
-						
+					<div id="achieve">
+						<!--<span>달성률 52%</span>-->
+						<!--<span>13/25 회차</span>-->
 					</div>
-					<progress id="prgs" value="80" max="100"></progress>
+					<progress id="prgs" max="100"></progress>
 				</div>
 			</div>
 			<div id="prgsInfo">

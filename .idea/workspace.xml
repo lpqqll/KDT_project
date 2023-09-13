@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3d0235d-268b-40a1-8447-4ce7488f80f3" name="변경" comment="ㅎㅇ">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Account/DashBoard/DashBoard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Account/DashBoard/DashBoard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Account/DashBoard/DashBoard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Account/dashBoard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Account/dashBoard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Script/Onload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Script/Onload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,28 +63,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "LSW",
-    "last_opened_file_path": "/Users/leia_ira/Documents/GitHub/KDT_project/src/main/webapp/_Icon",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;LSW&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/leia_ira/Documents/GitHub/KDT_project/src/main/webapp/Account/DashBoard&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/Account/DashBoard" />
       <recent name="$PROJECT_DIR$/src/main/webapp/_Icon" />
       <recent name="$PROJECT_DIR$/src/main/webapp/Account" />
       <recent name="$PROJECT_DIR$/src/main/webapp/Script" />
       <recent name="$PROJECT_DIR$/src/main/webapp/Account/Join" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/Account/Login" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/Account" />
@@ -95,9 +99,6 @@
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="contextPath" value="/" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
         <TomcatInfo>
@@ -123,7 +124,9 @@
       <updated>1694062730914</updated>
       <workItem from="1694062732286" duration="1039000" />
       <workItem from="1694443781156" duration="44000" />
-      <workItem from="1694482308976" duration="9283000" />
+      <workItem from="1694482308976" duration="9871000" />
+      <workItem from="1694564045882" duration="1593000" />
+      <workItem from="1694566052602" duration="4265000" />
     </task>
     <task id="LOCAL-00001" summary="ㅎㅇ">
       <option name="closed" value="true" />
