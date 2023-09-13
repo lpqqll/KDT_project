@@ -3,7 +3,7 @@ let bbs = document.getElementById("list");
 window.listArr = new Array(10);
 listArr = [
     {
-        title : " ㅋㅋㅋㅋ",
+        title : "이 드립 이해하면 상위 1%ㅋㅋㅋㅋ",
         vote : 40,
         writer : "나는 슈퍼맨",
         writedDate : "2023-09-06"
@@ -13,7 +13,7 @@ listArr = [
         writer : "아재개그러버",
         writedDate : "2023-09-06"
     },{
-        title : " ㅇwㅇ",
+        title : "헬스기구 웃기게 사용하는 법",
         vote : 32,
         writer : "근육맨",
         writedDate : "2023-09-06"
@@ -67,7 +67,7 @@ for (let index = 0; index < listArr.length; index++) {
     		border:none; border-radius: 1px; font-size:15px; margin-right:10px;" onclick="handleButtonClick(${index})">Best</button>` : ''}
     	</span>
         <div>
-   			<span id="${titleId}" style="font-size:19px;${hotStyle}"><b>${list.title}</b></span>  			
+   			<span id="${titleId}" style="font-size:19px;"><b>${list.title}</b></span>  			
     		<span id="vote" style="font-size:14px;">추천수 : ${list.vote}</span>
 		</div>
 		

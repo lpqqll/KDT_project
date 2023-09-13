@@ -58,7 +58,6 @@ listArr1 = [
 let board1 = '';
 
 listArr1.forEach((list, index) => {
-    let hotStyle1 = index === 0 || index === 1 ? 'color: black;' : '';
     let titleId1 = `title-${index}`; // 고유한 id 생성
     let table1 = `
     <li class="line">
@@ -67,7 +66,7 @@ listArr1.forEach((list, index) => {
             border:none; border-radius: 1px; font-size:15px; margin-right:10px;" onclick="handleButtonClick(${index})">Best</button>` : ''}
         </span>
         <div>
-            <span id="${titleId1}" style="font-size:19px;${hotStyle1}"><b>${list.title}</b></span>
+            <span id="${titleId1}" style="font-size:19px;"><b>${list.title}</b></span>
             <span id="vote" style="font-size:14px;">추천수 : ${list.vote}</span>
         </div>
         <div>

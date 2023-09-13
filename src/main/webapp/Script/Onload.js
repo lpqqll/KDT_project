@@ -1,12 +1,17 @@
 window.onload = function(){
     /*게정관련*/
-    acc = new Account(false);
+    acc = new Account(true);
 
 
+ let start = document.getElementById("start");
     if(acc.Session === false){
-        document.getElementById("start").href="../Account/LogIn.html";
+        start.href="/KDT_project/Account/LogIn.html";
+        start.innerHTML = "로그인";
+
     } else if(acc.Session === true){
-        document.getElementById("start").href="../Account/dashBoard.html";
+        start.href="/KDT_project/Account/dashBoard.html";
+        start.innerHTML = "Go to DashBoard";
+        start.style.width = "200px";
     }
 
 

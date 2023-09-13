@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<meta charset="UTF-8">
+<title>post</title>
+<link rel="stylesheet" href="../Style/MainFrame.css">
+<link rel="stylesheet" href="commustyle.css">
+<link rel="stylesheet" href="communityCss/editer.css">
+<link rel="stylesheet" href="communityCss/post.css">
+<script src="../Script/Advertisement.js"></script>
+<script src="../Script/Account.js"></script>
+<script src="../Script/Onload.js"></script>
+
+<!--배너 관련 코드-->
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
+<!-- include libraries(jQuery, bootstrap) -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script> 
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
+
+<!-- include summernote css/js-->
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
+
+<script>
+	$(document).ready(function() {
+  $('#summernote').summernote({
+	  placeholder: '내용을 입력해주세요.',
+	  tabsize: 2,
+	  height: 400
+  });});
+</script>
+
+</head>
+<body>
+
+<!--Header 상단바-->
+<header id="headContainer">
+        <!--Logo-->
+        <h1 class="head" id="Logo">
+            <a href="../index.html">
+                <img src="../_Icon/PageLogo_White.png" alt="헬창놈들 로고" style="width:100%;">
+            </a>
+        </h1>
+        <!--Navigation-->
+        <nav class="head" id="Nav">
+            <ul>
+                <li><a href="../Program/Program.html">Program</a></li>
+                <li><a href="community2.html">Community</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Advertisement</a></li>
+            </ul>
+        </nav>
+        <!--Account-->
+        <div class="head" id="Auth">
+            <!--Authentication passed-->
+            <!--Authentication NONE-->
+        </div>
+</header>
+
+<section id="container" onclick="acc.hideAccount();" style="margin : 0;">
+
+<!-- Banner -->
+   <div id="banner">
+      <!--<b>NOTHING WILL WORK UNLESS<br/>YOU DO.</b>-->
+      <div id="container">
+         <div class="main_visual">
+            <center>
+               <div class="fotorama" data-nav="false" data-width="800" data-height="200" data-max-width="100%" data-click='false' data-swipe='false'
+            data-loop="true" data-autoplay="12000" data-stopautoplayontouch="false">
+            	<div data-img="img/AA.jpg"><a href="/" class="item" ></a></div>
+                <div data-img="img/myproteinGYM.png"><a href="/" class="item" ></a></div>
+            </div>
+            </center>
+            
+         </div>
+      </div>
+   </div> 
+
+<!-- editer -->
+<main>
+	<div class="editer-main">
+	<div class="editer-edit">
+		<li id="top_2"><b>글쓰기</b></li>
+	</div>
+	<div class="editerWritingTitle">
+		
+		<div class="editer-row">
+			<div class="editer-columnTitle">
+				<div class="editer-formSelectButton">
+					<select class="button">
+						<option value="1">자유 게시판</option>
+						<option value="2">유머 게시판</option>
+						<option value="3">팁 게시판</option>
+						<option value="4">오.운.완</option>
+						<option value="5">몸짱 인증</option>
+					</select>
+				</div>
+				<div class="editer-selectOption" style="display: none;">
+					<ul class="option-list">
+						<li aria-selected="false" class="item">
+							<button type="button" class="option">
+								<span class="option-text">자유 게시판</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="editer-columnCategory">
+				<div class="editer-formSelectButton">
+					<select class="button">
+						<option value="1">말머리 선택</option>
+						<option value="2">기타</option>
+					</select>
+				</div>
+			</div>
+			<div class="editer-enter">
+				<button id="writebutton" type="button" style="width: 90px; height: 40px;">
+					글쓰기
+				</button>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="editer-fixableTextArea">
+				<textarea placeholder="제목을 입력해 주세요." class="textarea-input" style="height: 40px;"></textarea>
+			</div>
+		</div>
+	</div>
+	
+	<div id="summernote"></div> 
+	</div>
+</main>
+</section>
+<footer>
+        @copyright
+        <br>
+</footer>
+</body>
+</html>

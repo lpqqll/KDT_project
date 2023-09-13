@@ -35,7 +35,7 @@
     /* 카테고리 탭 내용 스타일 */
     #content {
 		width:100%;
-        margin-left: 75px;
+        
         padding: 20px;
     }
     
@@ -92,17 +92,17 @@
 	}
 	/*좌우정렬*/
 	.left-content {
-        float: left; width: 75%;
+        float: left; width: 68%;
     }
 
     .right-content {
-        float: right; width: 20%; text-align: right; list-style: none; text-align: left;
+        float: right; width: 27%; text-align: right; list-style: none; text-align: left;
+        
     }
 	/*배너*/
 	#banner {
-      color : white; background-color: rgb(26, 188, 156);
+      color : white; background-color: rgb(26, 188, 156); margin:0 0 0 0;
       padding-top: 10px; padding-bottom: 10px; border-color:#202020; font-size:2.5em;
-      
    }
 	/*글쓰기 버튼*/
 	#writebutton{
@@ -116,7 +116,7 @@
 	}
 	main{
 		min-width:700px;
-		max-width: 1400px;
+		max-width: 1600px;
 		margin:0 auto;
 	}
 	

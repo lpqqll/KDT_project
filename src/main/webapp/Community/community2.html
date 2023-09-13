@@ -40,13 +40,12 @@
     openTab("Community");
     acc = new Account(true);
     }
-   
-    
 </script>
 <!--배너 관련 코드-->
 <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
 <!--커뮤 글 내용 관련 코드-->
 
 </head>
@@ -74,10 +73,9 @@
             <!--Authentication passed-->
             <!--Authentication NONE-->
         </div>
-
 </header>
 
-<section id="container" onclick="acc.hideAccount();">
+<section id="container" onclick="acc.hideAccount();" style="margin : 0;">
 <!--배너-->
 <!-- Banner -->
    <div id="banner">
@@ -87,9 +85,8 @@
             <center>
                <div class="fotorama" data-nav="false" data-width="800" data-height="200" data-max-width="100%" data-click='false' data-swipe='false'
             data-loop="true" data-autoplay="12000" data-stopautoplayontouch="false">
-               <div data-img="img/NWY.png"><a href="/" class="item" ></a></div>
+            	<div data-img="img/AA.jpg"><a href="/" class="item" ></a></div>
                <div data-img="img/myproteinGYM.png"><a href="/" class="item" ></a></div>
-               <div data-img="img/AA.jpg"><a href="/" class="item" ></a></div>
             </div>
             </center>
             
@@ -105,6 +102,7 @@
 	    <div class="left-placeholder"></div>
 	    
 	    <!-- 각각의 카테고리 탭 버튼 생성 -->
+	    <button style="font-size: 1.5em; text-align: right; color:white; padding-right:25px;"><b>☰</b></button>
 	    <button class="tablinks" id="Community-button" onclick="openTab('Community')" style="font-size: 1.5em;"><b>커뮤니티</b></button>
 	    <br/>
 	    <button class="tablinks" id="Notice-button" onclick="openTab('Notice')"><b>자유 게시판</b></button>
@@ -202,7 +200,7 @@
 		    <div id="Notice" class="tabcontent">
 				<li id="top"><b>자유 게시판</b></li> 
 				<div class="left-content">	   		 
-			        <button id="writebutton">글쓰기</button>
+			        <button id="writebutton"><a href="communityEditer.html" style="text-decoration: none; color: white;">글쓰기</a></button>
 			        <div class="search-box">
 	       				 <input type="text" id="search-input" placeholder="검색어를 입력하세요">
 	       				 <button id="search-button">검색</button>
@@ -242,7 +240,7 @@
 		    <div id="Humor" class="tabcontent">
 				<li id="top"><b>유머 게시판</b></li> 
 				<div class="left-content">	       
-			        <button id="writebutton">글쓰기</button>
+			        <button id="writebutton"><a href="communityEditer.html" style="text-decoration: none; color: white;">글쓰기</a></button>
 			        <div class="search-box">
 	       				 <input type="text" id="search-input" placeholder="검색어를 입력하세요">
 	       				 <button id="search-button">검색</button>
@@ -283,7 +281,7 @@
 		    <div id="Free" class="tabcontent">     
 		        <li id="top"><b>팁 게시판</b></li> 
 		        <div class="left-content">	        
-			        <button id="writebutton">글쓰기</button>
+			        <button id="writebutton"><a href="communityEditer.html" style="text-decoration: none; color: white;">글쓰기</a></button>
 			        <div class="search-box">
 	       				 <input type="text" id="search-input" placeholder="검색어를 입력하세요">
 	       				 <button id="search-button">검색</button>
@@ -293,6 +291,7 @@
 				        <ul id="list2">
 							<script src="commutip.js">					
 							</script>
+							
 						</ul>
 					</div>
 			    </div>
@@ -323,7 +322,7 @@
 		    <div id="Tips" class="tabcontent">
 				<li id="top"><b>오.운.완</b></li> 
 		        <div class="left-content">        
-			        <button id="writebutton">글쓰기</button>
+			        <button id="writebutton"><a href="communityEditer.html" style="text-decoration: none; color: white;">글쓰기</a></button>
 			        <div class="search-box">
 	       				 <input type="text" id="search-input" placeholder="검색어를 입력하세요">
 	       				 <button id="search-button">검색</button>
@@ -363,7 +362,7 @@
 		    <div id="Questions" class="tabcontent">      
 				<li id="top"><b>몸짱 인증</b></li> 
 				<div class="left-content">	   		 
-			        <button id="writebutton">글쓰기</button>
+			        <button id="writebutton"><a href="communityEditer.html" style="text-decoration: none; color: white;">글쓰기</a></button>
 			        <div class="search-box">
 	       				 <input type="text" id="search-input" placeholder="검색어를 입력하세요">
 	       				 <button id="search-button">검색</button>
