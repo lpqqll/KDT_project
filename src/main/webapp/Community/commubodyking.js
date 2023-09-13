@@ -4,22 +4,23 @@ let listArr4 = new Array(10);
 listArr4 = [
     {
         title : "제 등근육 보실?",
-        vote : 12,
+        vote : 17,
+
         writer : "민수아빠",
         writedDate : "2023-09-06"
     },{
         title : "헬스 3년차 몸 변화",
-        vote : 7,
+        vote : 12,
         writer : "김현주",
         writedDate : "2023-09-06"
     },{
         title : "복근득근",
-        vote : 25,
+        vote : 16,
         writer : "근육킹",
         writedDate : "2023-09-06"
     },{
         title : "멸치 인증",
-        vote : 16,
+        vote : 2,
         writer : "나는 슈퍼맨",
         writedDate : "2023-09-06"
     },{
@@ -34,7 +35,7 @@ listArr4 = [
         writedDate : "2023-09-06"
     },{
         title : "굿?",
-        vote : 2,
+        vote : 22,
         writer : "빠삐용",
         writedDate : "2023-09-06"
     },{
@@ -44,12 +45,12 @@ listArr4 = [
         writedDate : "2023-09-06"
     },{
         title : "타락한 헬스 트레이너 보고가세요",
-        vote : 11,
+        vote : 43,
         writer : "LOVE",
         writedDate : "2023-09-06"
     },{
         title : "제 근육 어때요?",
-        vote : 23,
+        vote : 21,
         writer : "김준수",
         writedDate : "2023-09-06"
     },
@@ -59,7 +60,7 @@ let board4 = '';
 listArr4.forEach(list => {
     let table4 = `
     <li class="line">
-    	<img src="img/mabi.png" style="float:left; margin-left:20px; width:50px; height:50px;">
+    	<img src="img/healthtoday.png" style="float:left; margin-left:20px; width:50px; height:50px;">
         <div>
         
             <span id="title" style="font-size:19px; margin-left:20px;"><b>${list.title}</b></span>

@@ -4,17 +4,17 @@ let listArr1 = new Array(10);
 listArr1 = [
     {
         title : "오늘 점심 메뉴",
-        vote : 12,
+        vote : 35,
         writer : "운동하는 나무늘보",
         writedDate : "2023-09-06"
     },{
         title : "소개팅 가려는데 옷 좀 봐주십쇼ㅜㅠ",
-        vote : 7,
+        vote : 33,
         writer : "공대남",
         writedDate : "2023-09-06"
     },{
         title : "와이프한테 닌텐도 산거 걸린 썰 푼다.",
-        vote : 25,
+        vote : 32,
         writer : "하체부실",
         writedDate : "2023-09-06"
     },{
@@ -56,11 +56,18 @@ listArr1 = [
 ]
 
 let board1 = '';
-listArr1.forEach(list => {
+
+listArr1.forEach((list, index) => {
+    let hotStyle1 = index === 0 || index === 1 ? 'color: black;' : '';
+    let titleId1 = `title-${index}`; // 고유한 id 생성
     let table1 = `
     <li class="line">
+        <span id="redbutton" style="float:left; float:top;">
+            ${index <= 2 ? `<button style=" background-color: orangered; color:white; 
+            border:none; border-radius: 1px; font-size:15px; margin-right:10px;" onclick="handleButtonClick(${index})">Best</button>` : ''}
+        </span>
         <div>
-            <span id="title" style="font-size:19px;"><b>${list.title}</b></span>
+            <span id="${titleId1}" style="font-size:19px;${hotStyle1}"><b>${list.title}</b></span>
             <span id="vote" style="font-size:14px;">추천수 : ${list.vote}</span>
         </div>
         <div>
@@ -68,7 +75,7 @@ listArr1.forEach(list => {
             <span id="date" style="font-size:14px;">${list.writedDate}</span>
         </div>
     </li>
-`;
+    `;
     board1 += table1;
 });
 
